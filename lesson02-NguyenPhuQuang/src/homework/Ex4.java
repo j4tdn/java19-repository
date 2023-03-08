@@ -1,8 +1,9 @@
 package homework;
 
+import java.util.Random;
 import java.util.Scanner;
 
-public class Ex3 {
+public class Ex4 {
 
 	public static void main(String[] args) {
 		/*
@@ -21,18 +22,20 @@ public class Ex3 {
 				+ "= 6  false\r\n"
 				+ "= 8  true\r\n"
 				+ "= 9  false");
-		
-		int n = Ex1.inputPositiveNumber();
-
-		System.out.println(n +"! = " + factorial(n));
-	}
-
-	public static long factorial(int input) {
-		long result = 1;
-		while (input != 0 && input!=1) {
-			result *= (int) input;
-			input--;
+		Random rd = new Random();
+		long result = 0L;		
+		for (int i = 0; i < 5; i++) {
+			
+		int n = 10 + rd.nextInt(11);
+		result += Ex3.factorial(n);
+		System.out.print(n +"!" );
+		if (i < 4) {
+		System.out.print(" + " );
 		}
-		return result;
+		}
+		System.out.print(" = " + result );
+		
 	}
+
+
 }
