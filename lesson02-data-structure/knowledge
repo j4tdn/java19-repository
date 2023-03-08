@@ -1,0 +1,33 @@
+Kiểu dữ liệu (KDL) nguyên thủy:
+	+ dùng để lưu trữ dữ liệu (đơn) tại vùng nhớ STACK (ko liên quan đến STACK của LIFO)
+	+ Chỉ sử dụng kiểu dữ liệu có sẵn của JAVA
+	+ Giá trị lưu trữ ở vùng nhớ STACK
+		Vd: số nguyên, số thực, kí tự...
+			int:	số nguyên	4 bytes = 32bits
+								MIN, MAX = [-2^(n-1), 2^(n-1)-1] với n là số bit
+			long:	số nguyên	8 bytes
+			float:	số thực
+			char:	kí tự
+
+KDL đối tượng
+	+ Dùng để lưu trữ dữ liệu (đơn, đa)
+	+ Có thể dùng KDL có sẵn của JAVA hoặc tự định nghĩa
+		. có sẵn: 
+				Integer(value):	
+					Phân biệt int vs Integer:
+						giống nhau: đều lưu trữ dữ liệu
+						khác nhau: 	
+						int: luôn có giá trị, mặc định =0
+						
+						có thể có giá trị hoặc ko 
+						hỗ trợ các hàm
+						
+		. Tự định nghĩa: Item(id, name, price)
+	+ Giá trị lưu trữ ở vùng nhớ HEAP
+		VD: Khai báo KDL Mặt hàng: mã mặt hàng, tên mặt hàng, giá bán
+			Item: id, name, price
+			Giá trị của ô nhớ mà Item trỏ đến phải luôn có 3 giá trị cho id, name, price
+			
++ Biến cục bộ:
+	Khai báo bên trong 1 hàm
+	Phạm vi sử dụng: ở trong hàm chứa nó ( block code {} )
