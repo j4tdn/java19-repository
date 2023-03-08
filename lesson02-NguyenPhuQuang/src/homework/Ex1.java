@@ -16,32 +16,15 @@ public class Ex1 {
 				+ "Yêu cầu: N là số nguyên dương được nhập từ bàn phím, bắt buộc nhập lại nếu N không hợp lệ (tối\r\n"
 				+ "đa 5 lần)\r\n" + "VD: Nhập N = abc  báo lỗi, yêu cầu nhập lại\r\n" + "\r\n" + "= 4  true\r\n"
 				+ "= 6  true\r\n" + "= 7  false\n\n" + "===========");
-		int errorCounter = 0; // đếm số lần nhập sai
-		String input;
+		
 
-		Scanner ip = new Scanner(System.in);
-
-		do {
-			System.out.println("Nhập số nguyên dương N");
-			input = ip.nextLine();
-			// Kiểm tra ip
-			if (isPositiveInt(input)) {
-				System.out.println("Nhập thành công");
-				break;
-			} else {
-				errorCounter++;
-				System.out.println("Bạn nhập sai " + errorCounter + " lần");
-			}
-
-		} while (errorCounter < 5);
-
-		int n = Integer.parseInt(input);
+		int n = inputPositiveNumber();
 
 		if (isEvenNumber(n) == true) {
-			System.out.println(input + " là số chẵn.");
+			System.out.println(n + " là số chẵn.");
 		} else {
 
-			System.out.println(input + " là số lẻ.");
+			System.out.println(n + " là số lẻ.");
 		}
 
 	}
@@ -66,5 +49,28 @@ public class Ex1 {
 		} else {
 			return false;
 		}
+	}
+	
+	public static int inputPositiveNumber() {
+		int errorCounter = 0; // đếm số lần nhập sai
+		String input;
+
+		Scanner ip = new Scanner(System.in);
+
+		do {
+			System.out.println("Nhập số nguyên dương N");
+			input = ip.nextLine();
+			// Kiểm tra ip
+			if (isPositiveInt(input)) {
+				System.out.println("Nhập thành công");
+				break;
+			} else {
+				errorCounter++;
+				System.out.println("Bạn nhập sai " + errorCounter + " lần");
+			}
+
+		} while (errorCounter < 5);
+		
+		return Integer.parseInt(input);
 	}
 }
