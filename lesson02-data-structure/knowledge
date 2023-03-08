@@ -1,0 +1,17 @@
+KDL nguyên thuỷ
++ dùng để lưu trữ dữ liệu tại vùng nhớ STACK
++ lưu trữ dữ liệu đơn
++ dùng kiểu dữ liệu có sẵn của JAVA
+VD: số nguyên, số thực, kí tự,...
+
+
+KDL đối tượng
++ dùng để lưu trữ dữ liệu(đơn,đa)
++ giá trị được lưu ở vùng nhớ HEAP
++ dùng kiểu dữ liệu có sẵn của JAVA hoặc tự định nghĩa
+VD: khai báo KDL Student : id, name, age, address 
+	=>> giá trị của ô nhớ mà Student trỏ đến luôn có 4 giá trị : id, name, age and address
+
++ Biến cục bộ:
+. Khai báo bên trong 1 hàm
+. Phạm vi sử dụng : bên trong hàm đó
