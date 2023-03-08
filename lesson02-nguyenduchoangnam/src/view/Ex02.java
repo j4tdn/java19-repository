@@ -2,7 +2,7 @@ package view;
 
 import java.util.Scanner;
 
-public class Ex01 {
+public class Ex02 {
 	static int n;
 	static int count = 0;
 
@@ -23,8 +23,8 @@ public class Ex01 {
 		}
 	}
 
-	static boolean isMultipleOfTwo() {
-		if (n % 2 == 0 && n > 0) {
+	static boolean isPowerOfTwo() {
+		if ((Math.log(n))%(Math.log(2)) == 0) {
 			return true;
 		}
 		return false;
@@ -34,13 +34,12 @@ public class Ex01 {
 
 		getInput();
 		if (n > 0) {
-			if (isMultipleOfTwo() == true) {
-				System.out.println(n + " is multiple of two.");
+			if (isPowerOfTwo() == true) {
+				System.out.println(n + " is Power Of Two.");
 			} else {
-				System.out.println(n + " is not multiple of two.");
+				System.out.println(n + " is not Power Of Two.");
 			}
 		}
 
 	}
-
 }
