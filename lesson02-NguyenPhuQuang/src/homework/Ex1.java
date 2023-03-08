@@ -34,13 +34,13 @@ public class Ex1 {
 			}
 
 		} while (errorCounter < 5);
-		
+
 		int n = Integer.parseInt(input);
-		
-		if (isEvenNumber(n)==true) {
+
+		if (isEvenNumber(n) == true) {
 			System.out.println(input + " là số chẵn.");
 		} else {
-			
+
 			System.out.println(input + " là số lẻ.");
 		}
 
@@ -59,9 +59,9 @@ public class Ex1 {
 		}
 		return true;
 	}
-	
-	public static boolean isEvenNumber (int input) {
-		if (input%2==0) {
+
+	public static boolean isEvenNumber(int input) {
+		if (input % 2 == 0) {
 			return true;
 		} else {
 			return false;
