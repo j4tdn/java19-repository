@@ -1,0 +1,16 @@
+KDL nguyên thủy
++ dùng để lưu trữ dữ liệu tại vùng nhớ STACK
++ lưu trữ dữ liệu đơn
+  VD: số nguyên, số thực, kí tự
+    : int: số nguyên  ---> 4 byte 
+      long: số nguyên  ---> 8 byte
+      float: số thực  
+
+KDL đối tượng 
++ dùng để lưu trữ dữ liệu (đơn, đa)
++ sử dụng kiểu dữ liệu có sẵn của java hoặc tự định nghĩa
++ giá trị lưu trữ ở vùng nhớ HEAP
+   VD: khai báo KDL: mã mặt hàng, tên mặt hàng, giá bán
+		Item: id, name, price
+		giá trị ô nhớ mà Item trỏ đến phải luôn có 3 giá trị cho id, name, price
+		
