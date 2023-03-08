@@ -1,0 +1,76 @@
+Primitive data
+	+	dùng lưu dữ liệu đơn 
+	+	chỉ sử dụng dữ liệu có sẵn của java
+	+	giá trị lưu ở vùng nhớ STACK
+	vd: số nguyên , số thực, kí tự
+		int: số nguyên --> 4 bytes = 32bit --> bit (0,1)
+						MIN,MAX [-2^(n-1) ; 2^(n-1)-1]
+						n: số bit
+		long: số nguyên --> 8 bytes
+		float: số thực
+		char: kí tự
+		
+Object data
+	+	dùng để lưu trữ dữ liệu đơn và đa
+	+	sử dụng dữ liệu có sẵn của java hoặc tự định nghĩa
+		.có sẵn: Integer(value), Character, Float,String, Boolean, Date, Time
+		-->c1. create object --> new 
+		-->c2. không cần new, gán trực tiếp --> HEAP --> constant pool
+		
+		
+		.tự định nghĩa: Item(id,name,price)
+		--> create object --> new 
+		
+		
+	+	giá trị lưu ở vùng nhớ HEAP
+	vd: data type --> Mặt Hàng: Mã MH, Tên MH, giá bán
+	Item: id, name, price
+	giá trị của ô nhớ mà Item trỏ đến phải luôn chứa 
+	giá trị của id, name, price
+
+==> Phân biệt int, Integer ?
+Giống nhau: lưu trữ data
+Khác nhau: 
+	.int(primitive type: kiểu nguyên thủy)
+			: luôn luôn có giá trị (default = 0)
+			: không hỗ trợ function
+		
+	.Integer(object: kiểu tham chiếu)
+			: có thể lưu giá trị hoặc không (null) --> khi chưa biết rõ giá trị nên dùng
+			: có khởi tạo và dùng nó như 1 đối tượng có thuộc tính và hành vi
+			: như function max,min,parse,abs,v.v
+	
+		
+local variable
+	declare in method
+	area: only use in own method
+
+========================================
+--> khai báo biến, hàm cơ bản
+
+--> nhập dữ liệu, random
+
+--> Xử lý chức năng: cấu trúc điều kiện, vòng lặp
+
+========================================
+	
+-->function ---> nhận vào tham số là 1 dãy các số nguyên N
+-->testing:100 số -- TH1: nhập từng số
+					 TH2: lấy dữ liệu ngẫu nhiên
+					 -->code đoạn code để tự tạo ra 100 số ngẫu nhiên
+					 
+--> nhiệm vụ: tìm những số lẻ trong dãy số
+					 
+Controlling
+	.if else
+	.tenary operator
+	.Switch case
+		+break:thoát khỏi switch case khi gặp break
+		+non-break:sau khi switch đúng case 1 sẽ nhảy vào body các case phía sau thực thi
+
+	Duyệt:
+	.for       -> duyệt mảng, danh sách biết số lần lặp
+	.while     -> code logic, 
+	.do while  -> giống while nhưng do ít nhất 1 lần mới check điều kiện
+
+	 
