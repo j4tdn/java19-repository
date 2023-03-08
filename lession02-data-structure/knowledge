@@ -1,0 +1,21 @@
+KDL nguyên thủy
+	+ Dùng để lưu trữ dữ liệu
+	+ Lưu trữ được dữ liệu đơn
+	--> VD : số nguyên, số thực, kí tự
+		int : số nguyên
+		long : số nguyên
+		float : số thực
+		
+KDL đối tượng
+	+ Dùng để lưu trữ dữ liệu (đơn, đa)
+	+ Sử dụng KDL có sẵn của JAVA haojwc tự định nghĩa
+	+ Lưu trữ vùng nhớ HEAP
+	
+	
+==> Phân biệt int và Integer
+Gioosng nhau :
+	+ Lưu trữ
+Khác nhau:
+	+ int : luôn luôn có giá trị
+	+ Integer : Có thể lưu gia strij hoặc không
+				Hỗ trợ các hàm tiện ích min, max, parse ...
