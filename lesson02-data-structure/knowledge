@@ -1,0 +1,35 @@
+KDL nguyên thủy
++ dùng để lưu trữ dữ liệu(đơn)  tại vùng nhớ STACK
++ lưu trữ dữ liệu đơn
++ sử dụng kiểu dữ liệu có sẵn của Java
+VD: số nguyên, chuỗi, số thực, kí tự     
+  : int: số nguyên    -> 4 bytes =32 bit 
+  					  -> MIN,MAX <=> [-2^(n-1),2^(n-1)-1]
+  					  n: số bit
+  	long: số nguyên   -> 8 bytes
+  	float: số thực    -> 4 byte 
+  	double: số thực   -> 8 byte
+  	char: kiểu ký tự
+ KDL đối tượng 
+ + dùng để lưu trữ dữ liệu (đơn,đa)
+ + sử dụng KDL có sẵn của Java hoặc tự định nghĩa 
+ + giá trị lưu trữ ở vùng nhớ HEAP
+       VD: Khai báo KDL Mặt Hàng: mã mặt hàng, tên mặt hàng, giá bán
+       Item: id,name,price
+       Giá trị của ô nhớ mà Item trỏ đến phải luôn có 3 giá trị
+  
+  
+  ==> Phân biệt int,Integer ?
+  Giống nhau:
+  	. Lưu trữ
+  Khác nhau:
+    . int: luôn luôn có giá trị(mặc định = 0)
+         : không hỗ trợ hàm
+    . Integer: có thể lưu giá trị hoặc không(null)
+             : hỗ trợ các hàm tiện ích 
+    
+  
+ + Biến cục bộ
+     . Khai báo bên trong 1 hàm 
+     . Phạm vi sử dụng: Là ở trong hàm chứa nó {}
+  	
