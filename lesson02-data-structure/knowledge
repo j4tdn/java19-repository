@@ -1,0 +1,21 @@
+KDL nguyên thuỷ:
++ dùng để lưu trữ DL(đơn)
++ Sd KDL có sẵn của JAVA
++ dùng để lưu trữ DL
++ Lưu trữ DL đơn
+VD: số nguyên, số thực, kí tự
+	+ int: số nguyên  --> 4 bytes (BIT, BYTE, KB,...)
+	+ long: số nguyên  --> 8 bytes
+	+ float: số thực
+	+ char: kí tự
+	
+KDL đối tượng
++dùng để lưu trữ DL (đơn, đa)
++sử dụng KDL có sẵn của JAVA hoặc tự định nghĩa
++giá trị lưu trữ trong vùng nhớ HEAP
+VD: Khai báo KDL mặt hàng, tên mặt hàng, giá bán
+	Item: id, name,  price
+	Giá trị của ô nhớ mà Item trỏ đến phải luôn
+	có 3 giá trị id, name, price
+
++Biến cục bộ
