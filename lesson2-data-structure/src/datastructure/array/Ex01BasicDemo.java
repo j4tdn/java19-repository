@@ -8,4 +8,5 @@ public class Ex01BasicDemo {
 		System.out.println("digits -->" + Arrays.toString(digits));
 		System.out.println("digits length: " + digits.length);
 	}
+	
 }
