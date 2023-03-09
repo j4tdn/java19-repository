@@ -38,7 +38,7 @@ public class Item {
 	public String toString() {
 		// TODO Auto-generated method stub
 		//return super.toString();
-		return this.id + ", " + this.name + ", " + this.price;
+		return this.id + ", " + this.name + ", " + this.price + "\n";
 	}
 	
 }
