@@ -1,0 +1,20 @@
+KDL nguyên thuỷ
++ dùng để lưu trữ dữ liệu
++ lưu trữ dữ liệu đơn
++ su dung KDL co san cua JAVA
++ gia tri luu o vung nho STACK
+	int: 4byte
+	long: 8byte
+	float
+	
+	
+KDL doi tuong
++ dung de luu tru du lieu(don, da)
++ gia tri luu o vung nho HEAP
++ su dung KDL co san cua JAVA hoac tu dinh nghia
+VD: khai bao KDL Mat Hang: ma mat hang, ten mat hang, gia mat hang
+	Item: id, name, price
+	Gia tro cua o nho ma Item tro den phai luon co 3 gia trị cho id, name, price
+	
+
+ 
