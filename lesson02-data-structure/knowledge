@@ -1,0 +1,24 @@
+KDL nguyên thuỷ:
++ dùng để lưu trữ dữ liệu (đơn)
++ chỉ sử dụng kiểu giữ liệu có sẵn của JAVA
++ giá trị lưu trữ ở vùng nhớ STACK
+  VD: số nguyên, chuỗi, số thực, kí tự,...
+  	: int: số nguyên	-> 4 bytes = 32 bits	-> BIT, BYTE, KB, GB, GIGA, TERA
+  	  					-> MIN, MAX <=> [-2^(n-1), 2^(n-1) - 1]
+  	  long: số nguyên	-> 8 bytes
+  	  float: số thực
+  	  char: kí tự
+  	 
+KDL đối tượng:
++ dùng để lưu trữ dữ liệu(đơn, đa)
++ sử dụng KDL có sẵn của JAVA hoặc tự định nghĩa
++ giá trị lưu trữ ở vùng nhớ HEAP
+  VD: Khai báo KDL mặt hàng: mã mặt hàng, tên mặt hàng, giá bán
+  	  Item: id, name, price
+  	  Giá trị của ô nhớ mà Item trỏ đến phải luôn có 3 giá trị cho id, name, price
+  
++ Biến cục bộ
+	. Khai báo bên trong 1 hàm
+	. Phạm vi sử dụng trong hàm {}	
+	
++ Random 1 số có bound từ [6, 24) --> int bounder  = 6 + rd.nextInt(18)
