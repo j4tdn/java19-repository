@@ -19,7 +19,7 @@ public class Ex8 {
 		}
 	}
 	public static boolean isPrimeNumber(int input) {
-		for (int i = 2; i < Math.sqrt(input); i++) {
+		for (int i = 2; i <= Math.sqrt(input); i++) {
 			if (input % i == 0) {
 				return false;
 			}
