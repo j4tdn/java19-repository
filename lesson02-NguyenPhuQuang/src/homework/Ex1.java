@@ -74,6 +74,33 @@ public class Ex1 {
 		return Integer.parseInt(input);
 	}
 	
+	public static int inputPositiveNumberRange(int lower, int upper) {
+		int errorCounter = 0; // đếm số lần nhập sai
+		String input;
+
+		Scanner ip = new Scanner(System.in);
+
+		do {
+			System.out.println("Nhập số nguyên dương N [" + lower + ", " + upper +")");
+			input = ip.nextLine();
+			// Kiểm tra ip
+			if (isPositiveInt(input)) {
+				if (Integer.parseInt(input) >= lower && Integer.parseInt(input) < upper){
+					System.out.println("Nhập thành công");
+					break;
+				}
+				errorCounter++;
+				System.out.println("Bạn nhập sai " + errorCounter + " lần");
+			} else {
+				errorCounter++;
+				System.out.println("Bạn nhập sai " + errorCounter + " lần");
+			}
+
+		} while (errorCounter < 5);
+		
+		return Integer.parseInt(input);
+	}
+	
 	public static String inputTwoDigitsNumber() {
 		int errorCounter = 0; // đếm số lần nhập sai
 		String input;
