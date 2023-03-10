@@ -12,24 +12,18 @@ public class Ex3 {
 		 * 
 		 * = 4  true = 6  true = 7  false
 		 */
-		System.out.println("Bài 2: Viết chương trình(hàm) kiểm tra số nguyên N có phải là lũy thừa của 2 hay không\r\n"
-				+ "Biết rằng N là số nguyên dương được nhập từ bàn phím, bắt buộc nhập lại nếu N không hợp lệ\r\n"
-				+ "(tối đa 5 lần) hoặc khai báo biến có sẵn giá trị hợp lệ\r\n"
-				+ "VD: Nhập N = abc  báo lỗi, yêu cầu nhập lại\r\n"
-				+ "\r\n"
-				+ "= 4  true\r\n"
-				+ "= 6  false\r\n"
-				+ "= 8  true\r\n"
-				+ "= 9  false");
-		
+		System.out.println("Bài 3: Viết chương trình tìm giai thừa của một số nguyên dương N\r\n"
+				+ "Biết rằng: N có thể được nhập từ bàn phím hoặc khai báo sẵn\r\n" + "Ví dụ: Nhập N = 1  1! = 1\r\n"
+				+ "Nhập N = 5  5! = 5.4.3.2.1 = 120");
+
 		int n = Ex1.inputPositiveNumber();
 
-		System.out.println(n +"! = " + factorial(n));
+		System.out.println(n + "! = " + factorial(n));
 	}
 
 	public static long factorial(int input) {
 		long result = 1;
-		while (input != 0 && input!=1) {
+		while (input != 0 && input != 1) {
 			result *= (int) input;
 			input--;
 		}
