@@ -29,3 +29,4 @@ public class Ex10_5Random {
 		return false;
 	}
 }
+
