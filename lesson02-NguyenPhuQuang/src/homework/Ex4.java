@@ -49,18 +49,26 @@ public class Ex4 {
 	public static Integer[] randomIntArray(int n, int lower, int upper) {
 		Integer[] numbers = new Integer[n];
 		Random rd = new Random();
+		int running = 0;
 		//Ngẫu nhiên số nguyên [10,21)
 			//== phần tử trong mảng?
-			for (int i = 0; i < n; i++) {
-				while (true) {
-				int temp = lower + rd.nextInt(upper + 1);
-				if (numbers[i].equals(temp)==true) {
-					continue;
-				}
-				numbers[i] = temp;
-				break;
-				}
+		while (running < n) {
+			Integer temp = lower + rd.nextInt(upper - lower + 1);
+			if (isExisted(numbers, temp)) {
+				continue;
 			}
+				numbers[running++] = temp;
+				
+		}
 		return numbers;
+	}
+	
+	public static boolean isExisted(Integer[] numbers, Integer value) {
+		for (int i = 0; i < numbers.length; i++) {
+			if (numbers[i] == (value)) {
+				return true;
+			}
+		}
+		return false;
 	}
 }
