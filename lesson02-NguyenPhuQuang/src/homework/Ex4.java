@@ -43,8 +43,6 @@ public class Ex4 {
 		Integer[] numbers = new Integer[n];
 		Random rd = new Random();
 		int running = 0;
-		// Ngẫu nhiên số nguyên [10,21)
-		// == phần tử trong mảng?
 		while (running < n) {
 			Integer temp = lower + rd.nextInt(upper - lower + 1);
 			if (isExisted(numbers, temp)) {
