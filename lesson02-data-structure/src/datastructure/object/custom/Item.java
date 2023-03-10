@@ -21,6 +21,6 @@ public class Item {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return this.id + ", " + this.name + ", " + this.price;
+		return this.id + ", " + this.name + ", " + this.price + "\n";
 	}
 }
