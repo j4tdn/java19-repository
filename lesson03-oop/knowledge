@@ -1,0 +1,12 @@
+Rectangle: class
+	+ Kiểu dữ liệu đối tượng
+	+ Chứa thuộc tính bên trong
+	
+Ex01RectangleDemo: class
+	+ Demo, chạy bài toán (hàm main)
+	
+bean: package chứa các class là KDL mình tạo ra để tạo dối tượng
+	VD: Item, Rectangle, Employee
+	
+Vì sao các thuộc tính trong class KDL đối tượng thường phải để private? Vì sao?
++ Hạn chế, không cho phéo truy cập trực tiếp từ bên ngoài
