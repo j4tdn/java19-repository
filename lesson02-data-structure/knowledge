@@ -13,7 +13,7 @@ Primitive data
 Object data
 	+	dùng để lưu trữ dữ liệu đơn và đa
 	+	sử dụng dữ liệu có sẵn của java hoặc tự định nghĩa
-		.có sẵn: Integer(value), Character, Float,String, Boolean, Date, Time
+		.có sẵn: Array, Integer(value), Character, Float,String, Boolean, Date, Time
 		-->c1. create object --> new 
 		-->c2. không cần new, gán trực tiếp --> HEAP --> constant pool
 		

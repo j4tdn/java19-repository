@@ -1,0 +1,76 @@
+Rectangle: class
+	+ data type: object
+	+ obtain attribute
+	
+Ex01RectangleDemo: class
+	+ demo
+
+bean: package obtains class (data type: object)  which define by programer
+
+*interview: 
+why attribute in object data type usually private access modifier 
++ avoid access directly to value of attribute
+Thông thường access modifier là private vì:
+	.không cho phép truy cập trực tiếp từ bên ngoài
+	.chỉ có chính class đó quản lý thông tin thuộc tính của nó
+	.Nếu cho !private --> thì truy cập được ở những nơi khác --> FOP
+
+-->private
+.bên ngoài class không thể truy cập, lấy, cập nhật giá trị thuộc tính của object
+.nếu muốn truy cập --> hàm getter, setter
+
+VD: getter, setter --> truy cập, thay đổi giá trị
+--> tránh truy cập trục tiếp vào thuộc tính --> làm sai dữ liệu
+--> setter, getter --> kiểm tra tính hợp lệ của tham số truyền vào 
+	trước khi gán giá trị cho thuộc tính
+
+setter: bài toán nhân viên,công ty
+nhân viên: làm task từ KH, KH trả tiền về công cty
+		nhận lương từ nhân viên
+cty:  tìm dự án, deal thu nhập cho dự án kiếm task cho nhân viên làm
+	nhận tiền từ dự án
+	trả lương cho nhân viên
+FOP: tài khoản --> public --> nhân viên và cty đều biết số tiền trong tài khoản
+OOP: 			   private --> ko biết của ai cả
+		chuyển lương:   cty --> setter - tài khoản
+				 		nhân viên --> setter + tài khoản
+				 		
+JAVA OOP
++ Class: trừu tượng, chỉ tập hợp các đối tượng có chung thuộc tính và hành động ( xe có màu sắc và giá bán )
++ Object: khái niệm để chỉ thực thể tồn tại trong thế giới thực, rõ ràng cụ thể phân biệt được với các đối tượng khác ( xe xanh 500tr, xe đỏ 600tr)
+--> tính chất tương đối: 1thông tin có thể là object hoặc class tùy thuộc vào ngữ cảnh đang xét
+
+
+
+
+
+FOP: FUNCTIONAL
+chia bài toán thành các chức năng để xử lý
+chức năng =  hàm
+phù hợp cho bài toán logic, thuật toán
+ Hạn chế:
++ toàn bộ sử dụng chung sample data
+     không có access modifier
+      không có phân quyền, hạn chế truy cập
++ chia bài toán bằng các phần nhỏ, nhỏ hơn bên trong
+     khi 1 hàm con bị lỗi có thể keo lỗi của cả bài toán
+
+OOP: OBJECT
+chia bài toán thành các đối tượng 
+mỗi đối tượng chứa thông tin( attribute), và chức năng (method) của riêng nó
+CLASS: kiểu dữ liệu đối tượng
+             ô nhớ HEAP được tạo  ra thông qua từ khóa new
+             ô nhớ đó, giá trị đó được gọi là đối tượng
+VD1:
+Item: id, name, price
+Item item1 = new Item();
+Item item2 = new Item(1,"A",123);
+
+VD2:
+Library
+.BOOK( id, name, author, position, price)
+.customer ( id, name, address, email)
+.employee( id, name, birthday, department, position )
+
+AOP: 
+	
