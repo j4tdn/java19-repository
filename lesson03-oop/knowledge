@@ -1,0 +1,36 @@
+Rectangle: Class
+	+ KDL đối tượng
+	+ Chứa thuộc tính bên trong
+
+Ex01RectangleDemo: Class
+	+ Demo, chạy bài toán
+	
+bean: package chứa các class là KDL mình tạo ra để tạo đối tượng
+	vd: Item, Rectangle, Employee
+	
+Vì sao các thuộc tính trong class KDL đối tượng Item, Employee thường phải để private?
+	+ Tránh truy cập trực tiếp vào giá trị thuộc tính
+	+ sử dụng getter, setter
+
+Thông thường các access modifier của thuộc tính trong class KDL đối tượng là private vì:
+	+ Không cho phép truy cập trực tiếp từ bên ngoài
+	+ Chỉ có chính class đó quản lí thông tin thuộc tính của nó (idea of OOP)
+	+ Nếu cho !private thì truy cập được ở những nơi khác --> giống FOP
+
+--> private
+	+ Nếu muốn truy cập:
+		+ Hàm getter
+		+ Hàm getter	
+		
+VD: getter, setter --> truy cập, thay đổi giá trị
+ --> kiểm tra tính hợp lệ của tham số truyền vào trước khi gán giá trị cho thuộc tính
+ 
+ setter --> bài toán Nhân viên & công ty
+ 	+ Nhân viên	: làm task từ khách hàng, khách hàng trả tiền về công ty
+ 				: nhận lương từ nhân viên
+ 	
+ 	+ Công ty	: Tìm dự án, deal thu nhập cho dự án, tìm task cho nhân viên
+ 				: Nhận tiền từ dự án
+ 				: Trả lương cho nhân viên
+ 				
+ 	Nhân viên
