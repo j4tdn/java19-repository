@@ -1,0 +1,119 @@
+JAVA OOP
+Class:
+ + Lý thuyết
+− Là một khái niệm trừu tượng, dùng để chỉ tập hợp các đối tượng có chung thuộc tỉnh, phương thức 
++ VD: Xe xanh, xe đó, xe vàng --> Xe: màu sắc 100 300 --) : giá bán
+Object:
+- là một khái niệm dùng để chỉ các thực thể tồn tại trong thế giới thực, rõ ràng cụ thể phân biệt được với những đối tượng khác -- đối tượng
++ VD: Xe xanh 500 DN, Xe đó 200 SG
+
+Tất cả chỉ mang tính chất tương đối
+
++ 1 thông tin có thể là đối tượng hoặc là class tùy vào ngữ cảnh đang xét
+
+VD: Quạt
+Là class: đối tượng sẽ là quạt đứng, quạt treo tường
+hãng A, hãng B
+
+Là object: class sẽ là Vật dụng thì đối tượng sẽ là
+
++ quạt
++ bàn
++ ghế
+
++Thực tế code
+--> Phân Lích bài Loán phải tạo class
+Để tạo class: xác định thuộc tính, phương thức bên trong
+Từ class tạo ra các đối tượng 
+Mỗi đối tượng là 1 ô nhớ ở HEAP
+
++FOP: functional oriented programing --> lập trình hướng chứng năng, hàm 
+vd: pascal, C, c++(50%)
+--> chia bài toán thành các chức năng để xử lý
+chức năng = hàm
+VD: Tìm những phần tử thoả mãn điều yêu cầu
++Thay vì code toàn bộ trong hàm main
++chia thành hàm fetchItems, filter
+
+			Han che:
+
+			+ Toàn bộ sử dụng chung sample dala,
+			. ko có access modifer
+			. ko có phần quyển, hạn chế truy cập 
+			+ Chia bài toán thành các hàm nhỏ, nhỏ hơn bên trong
+			, khi 1 hàm con bị lỗi có thể kéo theo lỗi cả bài Loán lớn
+
+			Giải quyết --> DOP
+			+ Chia bài toán thành các đối tượng
+			+ Mỗi đối tượng sẻ quản lý thuộc tính, phương thức của riêng nó . Hạn chế lỗi ở những class ko liên quan, gọi nhau. . Có thể thêm access modifer để quản lý quyền truy cập
+
++OOP: object oriented programing --> lập trình hướng đối tượng
+VD: C++, c#, java --> hỗ trợ cả FOP và Opp	
+--> chia bài toán thành các đối tượng
+    mỗi đối tượng chứa thông tin(thuộc tính) và chức năng(phương thức) của riêng nó
+    Class: KDL đối tượng
+    	 : Ô nhớ ở HEAP được tạo ra từ class thông qua từ khoá new
+    	 : Ô nhớ đó, giá trị đó được gọi là đối tượng
+    	 Vd: Item : id, name, salesPrice
+    	     Item it1 = new Item();
+    	     Item it2 = new Item(1, "A", 123);
+    	     
+================================================================
+Rectangle. class 
++ Kiểu dữ liệu đối tượng + Chứa thuộc tính bên trong
+
+Ex01RectangleDemo: class
+
++ Demo, chạy bài toán
+bean: package chứa các class là KDL minh tạo ra để tạo đối tượng 
+VD: Item, Rectangle, Employee
+
+==========Interview===============
+Vì sao các thuộc tính trong class KDL đối tượng Item, Employee thường phải đê private? vì sao
++ Tránh truy cập trực tiếp và gán giá trị thuộc tính
++ sử dụng getter, setter
+--> Vì sao ko chấm thẳng cho khoẻ mà phải private rồi getter, setter
+
+Thông thường access modifier của thuộc trong class KDL đối tượng
+--> là private. Vì
+Hạn chế, ko cho phép truy cập trực tiếp từ bên ngoài
+Chỉ có chính class đó quản lý thông tin thuộc tỉnh của nó (idea of o0p) 
+Nếu cho !private --> thì truy cập được ở những nơi khác --> giống FOP
+of oop)
+
+--> private
+Bên ngoài ko thể truy cập, lấy, cập nhật giá trị cho thuộc tỉnh của đối
+Nếu muốn truy cập, thay đổi giá trị sử dụng, tạo ra
+	+ hàm getter --> lấy giá trị của thuộc tính
+	+ hàm setter --> cập nhật giá trị của thuộc tính
+	
+vd: getter, setter --> truy cập, thay đổi giá trị
+
+VD: getter, setter --> truy cập, thay đổi giá trị 
+--> tránh việc truy cập trực tiếp vào thuộc tính --> làm sai dữ liệu 
+--> getter, setter --> kiểm tra tính hợp lệ của tham số truyền vào trước khi gán giá trị cho thuộc tính
+	setter-> Bài toán Nhân Viên & Công ty
+	 
+	+ Nhân viên	: Làm task từ khách hàng, khách hàng trả tiền về công ty 
+	 			: Nhận lương từ nhân viên
+
+	+ Công ty 	: Tìm dự án, deal thu nhập cho dự án kiếm task cho nhân viên làm
+
+				: Nhận tiền từ dự án
+
+				: Trả lương cho nhân viên
+
+NhanVien: taikhoan
+CongTy: taikhoan
+
+TH1: FOP --> taikhoan --> public --> NhanVien và CongTy đều biết số tiền trong tk của nhau
+
+TH2: OOP -->          --> private --> ko ai pk của ai cả
+						  chuyển lương: Công ty --> setter - tài khoản 
+						  				Nhân viên --> setter + tài khoản 
+
+
+
+
+
+
