@@ -27,6 +27,6 @@ public class Item {
 	// This --> đại diện cho biến hiện tại thuộc KDL đối tượng đang gọi
 	@Override
 	public String toString() {
-		return this.id + ", " + this.name + ", " + this.price;
+		return "\n" + this.id + ", " + this.name + ", " + this.price;
 	}
 }

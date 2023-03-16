@@ -1,0 +1,24 @@
+Rectangle: class
+	+ Kiểu dữ liệu đối tượng
+	+ Chứa thuộc tính bên trong
+
+Ex01RectangleDemo: class
+	+ Demo, chạy bài toán
+
+bean: package chứa các class là KDL mình tạo ra để tạo đối tượng
+	  VD: Item, Rectangle,...
+	  
+Thông thường các access modifier của thuộc tính trong class KDL đối tượng
+----> là private. Vì:
++ Hạn chế, không cho phép truy cập trực tiếp từ bên ngoài
++ Chỉ có chính class đó quản lý  thông tin thuộc tính của nó
++ Nếu cho !private thì truy cập được ở những nơi khác --> giống FOP
+
++ Nếu muốn truy cập, thay đổi giá trị sử dụng, tạo ra:
+	--> hàm getter --> lấy giá trị của thuộc tính
+	--> hàm setter --> cập nhật giá trị của thuộc tính
+	
+VD: getter, setter --> truy cập, thay đổi giá trị 
+	--> tránh việc truy cập trực tiếp vào thuộc tính --> làm sai dữ liệu
+	--> getter, setter --> kiểm tra tính hợp lệ của tham số truyền vào 
+						   trước khi gán giá trị cho thuộc tính
