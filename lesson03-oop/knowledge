@@ -1,0 +1,9 @@
+Rectangle: class
+  + Kiểu dữ liệu đối tượng 
+  + Chứa thuộc tính bên trong 
+  
+Ex01RectangleDemo: class
+  + Demo, chạy bài toán
+  
+bean: package chưa các class là KDL mình tạo ra để tạo đối tượng 
+VD: Item, Rectangle,... 

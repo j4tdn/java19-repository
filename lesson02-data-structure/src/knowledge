@@ -1,0 +1,30 @@
+KDL nguyên thủy
++ Dùng để lưu trữ dữ liệu tại vùng nhớ STACK
++ Lưu trữ dữ liệu đơn
++ KDL có sẵn của JAVA
+  VD: số nguyên, số thực,
+KDL đối tượng
++ Dùng để lưu trữ dữ liệu tại vùng nhớ HEAP
++ Lưu trữ dữ liệu đơn, đa
++ Sử dụng KDL có sẵn của JAVA hoặc tự định nghĩa   
+Biến cục bộ
+ + Khai báo trong một hàm
+ + Phạm vi sử dụng: là ở trong hàm chứa nó  
+ 
+ 
+ 
+ + FOP: Function Oriented Programing -> Lập trình hướng chức năng, hàm 
+ -> chia bài toán thành các chức năng để xử lý (chức năng = hàm )
+ Hạn chế: 
+ + Toàn bộ sử dụng chung sample data,
+   . ko có access modifer
+   . ko có phân quyền, hạn chế truy cập 
+ + Chia bài toán thành các hàm nhỏ, nhỏ hơn bên trong 
+   . Khi 1 hàm con bị lỗi có thể kéo theo lỗi cả bài toán lớn 	  
+ + OOP: Object Oriented Programing -> Lập trình hướng đối tượng
+ -> Chia bài toán thành các đối tượng 
+ 	Mỗi đối tượng sẽ chứa thông tin(thuộc tính) và chức năng(phương thức) của riêng nó
+ 	Class: KDL đối tượng
+ 		 : Ô nhớ ở HEAP được tạo ra từ Class thông qua từ khóa new
+ 		 : Ô nhớ đó, giá trị đó được gọi là đối tượng 
+ 	
