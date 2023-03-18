@@ -20,11 +20,11 @@ public class Ex04 {
 		System.out.println("tong giai thua cua cac so nguyen duong: " + sum);
 
 	}
-    private static int factorial(int N) {
+
+	private static int factorial(int N) {
     	  if(N <= 1) {
     		  return 1;
     	  }else {
     		  return N*factorial(N-1);
     	  }
       }
-	

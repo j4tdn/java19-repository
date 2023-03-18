@@ -20,9 +20,44 @@ nhập từ bàn phím : scanner
 nhập lại tối đa 5 lần: dùng vòng lặp (khai báo biến có sẵn giá trị hợp lệ)
 
 		 */
-    	  Scanner ip = new Scanner(System.in);
-    	  String N = "";
-    	  //
+		 //lũy thừa của 2 ⇒ n%2 && n = 1 (sau khi chia hết)
+
+    	  Scanner scanner = new Scanner(System.in);
+		for (int i = 0; i < 5; i++) {
+			String str = scanner.nextLine();
+			// System.out.println(str);
+			if (isNumber(str)) {
+				int num = Integer.parseInt(str);
+				if (isPowerOfTwo(num)) {
+					System.out.println("true");
+				} else {
+					System.out.println("false");
+				}
+				break;
+			}
+			System.out.println("Please input a number! ");
+		}
+		
 	}
-      
+
+	public static boolean isPowerOfTwo(int number) {
+		if(number == 0 ){
+                          return false;
+               }while(number != 1){
+                 if (number % 2 ==0){
+                   return false;         
+}        
+      }
+        return true;
+	}
+
+	public static boolean isNumber(String s) {
+		for (int i = 0; i < s.length(); i++) {
+			if (s.charAt(i) < '0' || s.charAt(i) > '9') {
+				return false;
+			}
+		}
+		return true;
+	}
 }
+
