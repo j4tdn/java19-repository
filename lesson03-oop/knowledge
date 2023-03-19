@@ -34,3 +34,21 @@ VD: getter, setter --> truy cập, thay đổi giá trị
  				: Trả lương cho nhân viên
  				
  	Nhân viên
+ 	
+ 	
++ STATIC KEYWORD
+	Đặt ở thuộc tính, hàm, (class)
+	Biến, hàm có static thuộc phạm vi class, non-static thuộc phạm vi đối tượng
+	Biến/hàm static khởi tạo trước biến/hàm non-static
+		--> khi load class ---> biến/ hàm static được khởi tạo và lưu ở HEAP
+	+ Thuộc tính:
+		static: ko phụ thuộc vào đối tượng đang gọi (class level)
+				giá trị dùng chung cho tất cả các đối tượng tạo ra từ cùng class chứa nó
+		non-static: phụ thuộc đối tượng đang gọi
+					giá trị được lưu trữ/ truy cập trên từng ô nhớ của đối tượng
+	+ Phương thức:
+		static: ko phụ thuộc đối tượng đang gọi
+				chỉ phụ thuộc vào tham số truyền vào của hàm
+		non-static:	phụ thuộc vào đối tượng đang gọi hàm
+					phụ thuộc = hàm sử dụng giá trị của thuộc tính của đối tượng đang gọi
+	
