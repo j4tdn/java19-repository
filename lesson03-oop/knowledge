@@ -111,6 +111,29 @@ TH1: FOP --> taikhoan --> public --> NhanVien và CongTy đều biết số ti�
 TH2: OOP -->          --> private --> ko ai pk của ai cả
 						  chuyển lương: Công ty --> setter - tài khoản 
 						  				Nhân viên --> setter + tài khoản 
+						  				
+						  				
+STATIC KEYWORD
++ Đặt ở thuộc tính, hàm
++ Khi nào sử dụng STATIC
++ Biến, hàm có static thuộc phạm vi class, không có static thuộc phạm vi đối tượng
++ Biến, hàm static khởi tạo trước biến, hàm non-static
+  --> Khi loading class --> những biến, hàm static được khởi tạo và lưu trữ ở HEAP
+  --> Khi nào có đối tượng tạo ra thì biến, hàm non-static mới thật sự được khởi tạo
+  
++ Thuộc tính
+  . static: không phụ thuộc vào đối tượng đang gọi
+          : giá trị dùng chung cho tất cả các đối tượng tạo ra từ class chứa nó
+  . non   : phụ thuộc vào đối tượng đang gọi
+          : giá trị sẽ được lưu trữ trên từng ô nhớ của đối tượng
+
++ Phương thức
+  . static: không phụ thuộc vào đối tượng đang gọi
+            chỉ phụ thuộc vào tham số truyền vào của hàm
+  . non   : phụ thuộc vào đối tượng đang gọi
+          : phụ thuộc = hàm sử dụng giá trị của thuộc tính của đối tượng đang gọi
+
+						  			
 
 
 
