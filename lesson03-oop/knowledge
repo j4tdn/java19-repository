@@ -19,6 +19,8 @@ Thông thường access modifier là private vì:
 .bên ngoài class không thể truy cập, lấy, cập nhật giá trị thuộc tính của object
 .nếu muốn truy cập --> hàm getter, setter
 
+★★★★GETTER,SETTER
+
 VD: getter, setter --> truy cập, thay đổi giá trị
 --> tránh truy cập trục tiếp vào thuộc tính --> làm sai dữ liệu
 --> setter, getter --> kiểm tra tính hợp lệ của tham số truyền vào 
@@ -34,8 +36,36 @@ FOP: tài khoản --> public --> nhân viên và cty đều biết số tiền t
 OOP: 			   private --> ko biết của ai cả
 		chuyển lương:   cty --> setter - tài khoản
 				 		nhân viên --> setter + tài khoản
+
+★★★★CONSTRUCTOR
+★★★★TOSTRING
+★★★★ACCESS MODIFIER (public, private, default)
+
+
 				 		
-JAVA OOP
+★★★★STATIC
++ attribute, method(function)
++ variable, method have STATIC thuoc pham vi CLASS
++ STATIC variable, method khoi tao truoc NON-STATIC variable, method
+--> KHI loading cua class --> STATIC variable, method duoc khoi tao va luu tru o HEAP
+--> khi creating object --> NON-STATIC variable, method duoc khoi tao
+
++ attribute 	
+	STATIC: khong phu thuoc vao object dang goi
+		  : gia tri dung chung cho all object
+	
+	NON   : phu thuoc vao object dang goi
+		  : gia tri luu tru tren o nho cua tung object
+
++ method  
+	STATIC: khong phu thuoc vao object dang goi
+		  : chi phu thuoc vao tham so truyen vao cua method
+	
+	NON   : phu thuoc vao object dang goi
+		  : phu thuoc = method su dung gia tri attribute cua object
+			 		
+				 		
+★★★★JAVA OOP
 + Class: trừu tượng, chỉ tập hợp các đối tượng có chung thuộc tính và hành động ( xe có màu sắc và giá bán )
 + Object: khái niệm để chỉ thực thể tồn tại trong thế giới thực, rõ ràng cụ thể phân biệt được với các đối tượng khác ( xe xanh 500tr, xe đỏ 600tr)
 --> tính chất tương đối: 1thông tin có thể là object hoặc class tùy thuộc vào ngữ cảnh đang xét
@@ -44,7 +74,7 @@ JAVA OOP
 
 
 
-FOP: FUNCTIONAL
+★★★★FOP: FUNCTIONAL
 chia bài toán thành các chức năng để xử lý
 chức năng =  hàm
 phù hợp cho bài toán logic, thuật toán
@@ -55,7 +85,7 @@ phù hợp cho bài toán logic, thuật toán
 + chia bài toán bằng các phần nhỏ, nhỏ hơn bên trong
      khi 1 hàm con bị lỗi có thể keo lỗi của cả bài toán
 
-OOP: OBJECT
+★★★★OOP: OBJECT
 chia bài toán thành các đối tượng 
 mỗi đối tượng chứa thông tin( attribute), và chức năng (method) của riêng nó
 CLASS: kiểu dữ liệu đối tượng
