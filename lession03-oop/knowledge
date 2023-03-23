@@ -1,0 +1,68 @@
+Rectangle: class
+  + Kiểu dữ liệu đối tượng
+  + Chứa thuộc tính bên trong
+
+Ex01RectangleDemo: class
+  + Demo, chạy bài toán
+  
+bean: package chứa các class là KDL mình
+      tạo ra để tạo đối tượng
+      VD: Item, Rectangle, Employee
+
+Thông thường access modifier của thuộc trong class KDL đối tượng
+--> là private. Vì
++ Hạn chế, ko cho phép truy cập trực tiếp từ bên ngoài
++ Chỉ có chính class đó quản lý thông tin thuộc tính của nó (idea of oop)
++ Nếu cho !private --> thì truy cập được ở những nơi khác --> giống FOP      
+      
+--> private
++ Bên ngoài ko thể truy cập, lấy, cập nhật giá trị cho thuộc tính của đối tượng 
++ Nếu muốn truy cập, thay đổi giá trị sử dụng, tạo ra
+  + hàm getter --> lấy giá trị của thuộc tính
+  + hàm setter --> cập nhật giá trị của thuộc tính     
+
+VD: getter, setter --> truy cập, thay đổi giá trị
+  --> tránh việc truy cập trực tiếp vào thuộc tính --> làm sai dữ liệu
+  --> getter, setter --> kiểm tra tính hợp lệ của tham số truyền vào trước khi
+                         gán giá trị cho thuộc tính
+      setter --> Bài toán Nhân Viên & Công ty
+      + Nhân viên: Làm task từ khách hàng, khách hàng trả tiền về công ty
+                 : Nhận lương từ nhân viên
+                 
+      + Công ty  : Tìm dự án, deal thu nhập cho dự án kiếm task cho nhân viên làm
+                 : Nhận tiền tự dự án
+                 : Trả lương cho nhân viên   
+        NhanVien: taikhaon
+        CongTy  : taikhoan
+        TH1: FOP --> taikhoan --> public --> NhanVien và CongTy đều biết số tiền trong tài khoản của nhau
+        TH2: OOP -->          --> private --> Ko biết của ai cả
+                                  chuyển lượng: CongTy --> setter - taikhoan
+                                                NhanVien --> setter + taikhoan
+        VD: Chuyen Tien Ngan Hang   
+      
+Interview: Vì sao các thuộc tính trong class KDL đối tượng Item, Employee
+thường phải để private ? Vì sao
++ Tránh truy cập trực tiếp và giá trị thuộc tính
++ sử dụng getter, setter
+--> Vì sao ko chấm thẳng cho khỏe mà phải private rồi getter setter
+
+
+STATIC KEYWORD
++ Đặt ở thuộc tính, hàm
++ Khi nào sử dụng STATIC
++ Biến, hàm có static thuộc phạm vi class, không có static thuộc phạm vi đối tượng
++ Biến, hàm static khởi tạo trước biến, hàm non-static
+  --> Khi loading class --> những biến, hàm static được khởi tạo và lưu trữ ở HEAP
+  --> Khi nào có đối tượng tạo ra thì biến, hàm non-static mới thật sự được khởi tạo
+  
++ Thuộc tính
+  . static: không phụ thuộc vào đối tượng đang gọi
+          : giá trị dùng chung cho tất cả các đối tượng tạo ra từ class chứa nó
+  . non   : phụ thuộc vào đối tượng đang gọi
+          : giá trị sẽ được lưu trữ trên từng ô nhớ của đối tượng
+
++ Phương thức
+  . static: không phụ thuộc vào đối tượng đang gọi
+            chỉ phụ thuộc vào tham số truyền vào của hàm
+  . non   : phụ thuộc vào đối tượng đang gọi
+          : phụ thuộc = hàm sử dụng giá trị của thuộc tính của đối tượng đang gọi
