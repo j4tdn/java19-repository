@@ -1,0 +1,33 @@
+A. Class
+Customer: id, name, phone, address
+Item: id, os, color, cost
+=> ItemDetails: item, quantity 
+=> Oder: customer, item_details[], quantity, date_time
+
+
+B1: Tạo danh sách khách hàng 
+B2: Tạo mảng mặt hàng trong cửa hàng 
+B3: Chức năng mua sắm 
++ Ai đang mua hàng 
++ Danh sách các mặt hàng 
++ Số lượng từng mặt hàng 
++ Ngày Giờ 
+=> Oder: customer, item_details[], quantity, date_time
+=> ItemDetails: item, quantity 
+
+B. Object
+c1: KH1, Adam, 123, NewYork 
+c1: KH2, Kate, 243, California 
+
+i1: SS10+, Android, Đen, 620 
+i2: SS20U, Android, Xanh lục, 840 
+i3: IP4, IOS, Trắng, 280, 30 
+i4: IP12, IOS, Đen, 880 
+i5: WP8, WindowPhone, Xanh lam, 560 
+
+o1: c1, (id1 (il, 3), id2 (14, 1), id3 (12, 1)), 10:10:10 08.0 
+o2: c2, (id1 (i3, 2), id2 (i5, 1 )), 20:10:12 07.05.2021 
+o3: c2, (id1(i4, 1)), 09:28:32 08.05.2021 
+
+C. Function 
++ xuất export (order) => TotalOfAmount: Void 
