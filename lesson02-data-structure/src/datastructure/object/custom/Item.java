@@ -26,7 +26,7 @@ public class Item {
 	//
 	@Override
 	public String toString() {
-		return this.id+", "+this.name+", "+this.price;
+		return "\n" + this.id+", "+this.name+", "+this.price;
 		
 	}
 }
