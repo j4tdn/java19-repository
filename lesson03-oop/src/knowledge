@@ -1,0 +1,47 @@
+Rectangle: class
+  + Kiểu dữ liệu đối tượng 
+  + Chứa thuộc tính bên trong 
+  
+Ex01RectangleDemo: class
+  + Demo, chạy bài toán
+  
+bean: package chưa các class là KDL mình tạo ra để tạo đối tượng 
+VD: Item, Rectangle,..
+ Thông thường access modify của thuộc tính trong class KDL đối tượng là private vì
+  + hạn chế, không cho phép truy cập trực tiếp từ bên ngoài 
+  + chỉ có chính class đó quản lý thông tin thuộc tính của nó(idea of OOP)
+  + nếu cho truy cập trực tiếp -> thì truy cập được ở những nơi khác -> giống FOP
+  
+  -> private 
+ + bên ngoài ko thể truy cập, lấy, cập nhật giá trị cho thuộc tính của đối tượng
+ + nếu muốn truy cập, thay đổi giá trị sử dụng, tạo ra
+   + hàm setter -> cập nhật giá trị cho thuộc tính 
+   + hàm getter -> lấy giá tị của thuộc tính 
+   -> tránh việc truy cập trực tiếp vào thuộc tính -> làm sai dữ liệu
+   -> getter, setter -> kiểm tra tính hợp lệ của tham số truyền vào trước khi gán giá trị cho thuộc tính 
+Vì sao các thuộc tính trong class KDL đối tượng Item, Employee thường phải để 
+private?
++ để tránh truy cập trực tiếp vào giá trị thuộc tính
++ sử dụng getter, setter
+
+
+
+STATIc KEYWORD
++ Đặt ở thuộc tính, hàm
++ Khi nào sử dụng STATIC
++ Biến, hàm có static thuộc phạm vi class, không có static thuộc phạm vi đối tượng
++ Biến, hàm static khởi tạo trước biến, hàm non-static
+  --> Khi loading class --> những biến, hàm static được khởi tạo và lưu trữ ở HEAP
+  --> Khi nào có đối tượng tạo ra thì biến, hàm non-static mới thật sự được khởi tạo
+  
++ Thuộc tính
+  . static: không phụ thuộc vào đối tượng đang gọi
+          : giá trị dùng chung cho tất cả các đối tượng tạo ra từ class chứa nó
+  . non   : phụ thuộc vào đối tượng đang gọi
+          : giá trị sẽ được lưu trữ trên từng ô nhớ của đối tượng
+
++ Phương thức
+  . static: không phụ thuộc vào đối tượng đang gọi
+            chỉ phụ thuộc vào tham số truyền vào của hàm
+  . non   : phụ thuộc vào đối tượng đang gọi
+          : phụ thuộc = hàm sử dụng giá trị của thuộc tính của đối tượng đang gọi
