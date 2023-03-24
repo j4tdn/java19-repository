@@ -1,0 +1,11 @@
+Rectangle: class
+ + Kiểu dữ liệu đối tượng
+ + Chứa những thuộc tính 
+ +  
+Ex01RectangleDemo: class
+ + Demo, chạy bài toán
+ 
+bean: package chứa class là KDL mình tạo ra để tạo đối tượng
+
+Vì sao phải dùng private trong class KDL đối tượng
++ Hạn chế, không cho 
