@@ -1,0 +1,27 @@
+package datastructure.object.available;
+
+public class Ex01BasicDemo {
+    public static void main(String[] args) {
+    	//Demo
+    	int x = 10;
+    	System.out.println("x: " +x);
+    	
+    	// Giá trị lưu trong vùng nhớ HEAP
+    	Integer iA = new Integer(22);//H66
+    	Integer iB = new Integer(44);//H44
+    	Integer iC = new Integer(44);//H44
+    	System.out.println("itA: " + iA);
+    	System.out.println("itB: " + iB);
+    	System.out.println("itC: " + iC);
+    	
+    	// Giá trị lưu trong vùng nhớ HEAP--> constant pool
+    	Integer oA = 66;//H9(66) --> oA.value=66;
+    	Integer oB = 88;
+    	Integer oC = 88;
+    	
+    	System.out.println("oA : " + oA);
+    	System.out.println("oB : " + oB);
+    	System.out.println("oC : " + oC);
+	
+}
+}

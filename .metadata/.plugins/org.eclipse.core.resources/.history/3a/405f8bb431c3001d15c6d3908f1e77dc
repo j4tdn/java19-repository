@@ -1,0 +1,30 @@
+package operetor;
+
+public class Ex01BaisicOperetor {
+public static void main(String[] args) {
+	//Toán tử gán --> convention - quy tắc
+	
+    int a = 6;
+    
+    a += 2;//a= a + 2
+    a *=2;//a= a * 2
+    
+    System.out.println("a1 ="+a);//a = 16
+    
+    // Toán tử 1 ngôi
+    a++;// a = a + 1
+    a--;// a = a - 1
+    int b = ++a;
+    
+    System.out.println("b ="+(++a);//a = 16
+    System.out.println("a2 ="+a);//a = 16
+  //  System.out.println("a2++  ="+ (a++));//a = 16
+    System.out.println("a2++  ="+ (++a));//a = 17
+    
+    // Toán tử 1 ngôi - tiền tố - Hậu tố
+    //frefix, sufix
+}
+	
+	
+
+}

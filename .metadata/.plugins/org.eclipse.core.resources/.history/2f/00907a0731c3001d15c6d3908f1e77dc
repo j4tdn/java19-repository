@@ -1,0 +1,17 @@
+package operetor;
+
+public class Ex01BaisicOperetor {
+public static void main(String[] args) {
+	//Toán tử gán
+	
+    int a = 6;
+    
+    a += 2;//a= a + 2
+    a *=2;//a= a * 2
+    
+    System.out.println("a ="+a);
+}
+	
+	
+
+}

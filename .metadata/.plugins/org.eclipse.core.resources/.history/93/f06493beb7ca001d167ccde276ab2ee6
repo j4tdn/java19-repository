@@ -1,0 +1,34 @@
+package io;
+
+import java.util.Random;
+
+public class Ex02RadomDemo {
+	public static void main(String[] args) {
+		//A Radom number
+		//Random - Tạo ra 1 số ngẫu nhiên
+		
+		Random rd = new Random();
+		//range(phạm vi): [min, max]int --> 4 byte
+		
+		int noRestriction = rd.nextInt();// từ min của int --> max của int
+		System.out.println("noRestriction: " + noRestriction );
+		
+		
+		//range: [0 -> N) - [0,10)
+		// From a(inclusie)[ to b(exclusie))
+		int upperBound = rd.nextInt(10); // --> [ 0 ,10)
+		
+		//range: [a-b) --> [ 6,21)
+		int bounder = 6 + rd.nextInt(18);// a -> b-a
+		System.out.println("upperBound: " + upperBound);
+		System.out.println("bounder: " + bounder);
+		
+		 
+		// n\ break line
+		System.out.println("\n====================");
+		
+		
+		
+	}
+
+}

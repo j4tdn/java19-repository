@@ -1,0 +1,40 @@
+package io;
+
+import java.util.Scanner;
+
+//  input , output
+public class IODemo {
+	public static void main(String[] args) {
+		// Nhập xuất --> Scanner --> Java tạo ra mình sử dụng 
+		// nhập số nguyên, số thực, kí tự, chuỗi
+		
+		
+		// Tạo ra 1 đối tượng cho phép nhập từ bàn phím
+		Scanner ip  = new Scanner(System.in);
+		 System.out.println("SBD :");
+		 int id = ip.nextInt();
+		 
+		//1. Nhập chuỗi
+		System.out.print("Nhập tài khoản : ");
+		String username = ip.nextLine();
+		
+		System.out.print("Nhập mật khẩu : ");
+		String password = ip.nextLine();
+		
+		//2. Nhập số nguyên
+	
+		//3.Nhập số thực
+		
+		System.out.println("***_____-----____***");
+		System.out.println("1.SBD : " + id);
+		System.out.println("2.Tài Khoản: " + username);
+		System.out.println("3.Mật Khẩu: " + password);
+		System.out.println("***_____-----____***");
+	
+		
+		
+		
+		
+	}
+
+}

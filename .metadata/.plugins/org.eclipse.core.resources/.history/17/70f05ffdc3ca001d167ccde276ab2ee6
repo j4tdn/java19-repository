@@ -1,0 +1,28 @@
+package controlling;
+
+import java.util.Random;
+
+public class Ex01IfIfElse {
+	public static void main(String[] args) {
+		//cho (Nhập từ bàn phím(Scanner) || tạo biến và gán sẵn giá trị không cần nhập)
+		
+		
+		//   cho  1 số nguyên dương N --> kiểm tra N chẳn hay lẻ
+		//Nếu như là số chẳn thì in ra
+		//Nếu như là số lẻ thì không làm gì cả
+		
+		Random rd = new Random();
+		int n = rd.nextInt(12);
+		boolean isEven = (n % 2 == 0);
+		System.out.println("n: " + n);
+		System.out.println("isEven: " + isEven);
+		
+		
+		//Cho 1 chuổi kí tự(mật khẩu)--> kiểm tra độ dài của mật khẩu đã thỏa mãn yêu cầu chưa
+		//Nếu độ dài mật khẩu >= 8 --> mật khẩu hợp lệ
+		//Nếu độ dài mật khẩu <8 --> mật khẩu có ít nhất 8 kí tự, vui lòng nhập lại;
+		
+		
+	}
+
+}

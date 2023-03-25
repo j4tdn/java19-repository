@@ -1,0 +1,10 @@
+package view;
+
+public class Ex02Local_Global_Variable {
+    public static void main(String[] args) {
+		// phạm vi sữ dụng của biến --> block scope {}
+    	
+    	int a = 8;
+    	String text =" hello ;
+	}
+}
