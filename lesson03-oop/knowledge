@@ -1,0 +1,44 @@
+Rectangle: class 
+	+ kiểu dữ liệu đối tượng
+	+ chứa thuộc tính bên trong
+Ex01RectangleDemo: class
+	+ demo, chạy bài toán
+	
+bean: package chứa các class là KDL mình
+	tạo ra để tạo đối tượng
+	VD: Item, Rectangle, Employee
+	
+Thông thường access modifier của thuộc tính trong class KDL đối tượng
+--> là private. Vì:
+	+ Hạn chế, không cho phép truy cập trực tiếp từ bên ngoài
+	+ Chỉ có chính class đó quản lý thông tin thuộc tính của nó (idea of OOP)
+	+ Nếu cho !private thì truy cập được ở những nơi khác --> giống FOP
+	
+--> private
+	+ bên ngoài ko thể truy cập, lấy, cập nhật giá trị cho thuộc tính của 
+đối tượng
+	+ Nếu muốn truy cập, thay đổi giá trị sử dụng, tạo ra
+		+ hàm getter --> lấy giá trị của thuộc tính
+		+ hàm setter --> cập nhật giá trị của thuộc tính
+		
+VD: getter, setter --> truy cập, thay đổi giá trị
+	--> tránh việc truycaajp trực tiếp vào thuộc tính --> làm sai dữ liệu
+	--> getter, setter --> kiểm tra tính hợp lệ của tham số truyền vào 
+							trước khi gán giá trị cho thuộc tính
+		setter --> bài toán Nhân viên & Công ty
+			+ Nhân viên: làm task từ KH, KH trả tiền về công ty
+					   : nhận lương từ nhân viên
+					   
+			+ Công ty  : tìm dự án, deal thu nhập cho dự án kiếm task cho nhân viên làm
+					   : nhận tiền từ dự án
+					   : trả lương cho nhân viên
+				NhanVien: taikhoan
+				CongTy  : taikhoan
+				TH1: FOP -> taikhoan -> public -> NV và CT đều biết số tiền trong tài khoản
+				TH2: OOP ->			 -> private -> ko biết của ai cả
+										chuyển nhượng: CongTy --> setter - taikhoan
+													   NhanVien --> setter + taikhoan
+				VD: Chuyen tien ngan hang
+	
+Vì sao các thuộc tính trong class KDL đối tượng Item, Employee
+thường phải để private? Vì sao
