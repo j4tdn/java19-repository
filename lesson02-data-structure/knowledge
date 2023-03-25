@@ -1,0 +1,51 @@
+---> chức năng ---> nhận vào tham số là 1 dãy số nguyên N
+--->testing: 100 số --  TH1: Nhập từng số
+						TH2: lấy dữ liệu ngẫu nhiên
+						     code đoạn code để tự tạo ra 100 số ngẫu nhiên
+
+---> Nhiệm vụ : tìm những số lẽ trong dãy số đó
+
+
+
+
+
+1KDL nguyên thủy
++ dùng để lưu trữ dữ liệu tại vùng nhớ STACK.
+dùng để lưu trữ dữ liệu (đơn).
++ sử dụng kdl có sẳn của java;
+   VD: số nguyên , chuổi, số thực, kí tự
+   : int : số nguyên -> 4 bytes = 32 bits --> BIT(0,1),BYTE,KB,MG,GIGA,
+                    -->MIN,MAX <=>[-2^(n-1),2^(n-1)-1]
+                    n: số bit(S)
+     long: số nguyên --> 8 bytes
+     float: số thực
+     char:kí tự
+     
+  KDL đối tượng
+  + dùng để lưu trữ dữ liệu (đơn, đa)
+  +sử dụng kdl có sẳn của java hoặc tự định nghĩa 
+    .có sẳn : Integer(value),Character , Float, String, Boolean, Date , Time
+        -->c1. Khởi tạo giá trị(đối tượng)--> dùng từ khóa new --> gọi hàm khởi tạo
+        -->c2. không cần new
+    .tự định nghĩa: Item(id , name , price)
+        --> Khởi tạo giá trị(đối tượng)--> dùng từ khóa new --> gọi hàm khởi tạo 
+  + giá trị lưu trữ ở vùng nhớ HEAP
+   VD: Khai báo KDL Mặt Hàng: mã mặt hàng , tên , mặt hàng , giá bán
+   Item: id, name, price
+   Giá trị của ô nhớ mà Item trỏ đến phải luôn
+     có 3 giá trị cho id, name, price
+     
+     ==> Phân biệt int và integer
+     giống nhau:
+     . lưu trữ
+     khác nhau:
+     . int : luôn luôn có giá trị(mặc định = 0)
+           : không hỗ trợ hàm
+     . Integer : có thể lưu giá trị hoặc không(null)
+               : hổ trợ các hàm tiện ích min, max, parse, abs
+     
+  + biến cục bộ
+  . khai báo bên trong 1 hàm
+  . phạm vi sử dụng : là ở trong hàm chứa nó block code{}  
+     
+     
