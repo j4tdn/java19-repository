@@ -7,15 +7,19 @@ public static void main(String[] args) {
 	for(int i = 0; i < numbers.length; i++) {
 		System.out.println("Value at index " +i+ ": " + numbers[i] );
 	}
-	
+	System.out.println("\n==============");
+	// foreach
 	for(int number: numbers) {
-		System.out.println("numbers: " + numbers);
+		System.out.println("number: " + number);
 	}
 	System.out.println("\n==============");
 	String[] sequences = {"hello" , "hi", "welcome"};
 	System.out.println("length: " + sequences.length);
-	for(String sequence: sequences) {
-		System.out.println(sequences);
+	
+	
+	for(String sequence: sequences)// show ra giá trị của mảng {
+		System.out.println(sequence);
+		
 	}
 }
-}
+
