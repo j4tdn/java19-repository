@@ -25,6 +25,4 @@ public class Ex04NonStaticMethodDemo {
 		System.out.println("e3 sum --> " + e3.sum());
 	}
 	
-	
-	
 }

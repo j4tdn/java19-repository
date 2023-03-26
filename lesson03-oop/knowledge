@@ -68,5 +68,14 @@ STATIC KEYWORD
           : phụ thuộc = hàm sử dụng giá trị của thuộc tính của đối tượng đang gọi
 
 
+Từ khóa
+1. FOP, OOP
+2. CLASS, OBJECT
+3. Constructor --> Destructor(Garbage Collector)
+4. Getter, Setter
+5. ToString
+6. Static, Non-Static
+7. Access Modifier
+   + public, private, __
 
 
