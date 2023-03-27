@@ -1,0 +1,16 @@
+
+
+==> Khi các methods được sử dụng ở nhiều nơi(class)
+
+==> Và các methods này chỉ phụ thuộc vào tham số truyền vào, ko phụ
+thuộc vào đối tượng đang gọi --> static
+
+-------> Tạo 1 utility(tiện ích) class chứa các static/helper methods
+để sử dụng ở bất kỳ đâu
+
+  --> Class chứa tất cả phương thức đề là static
+      --> Gọi thì lấy Class.
+      --> Cần tạo ra đối tượng ko --> KHÔNG
+      
+  --> Cấm việc tạo ra đối tượng
+      --> private default constructor
