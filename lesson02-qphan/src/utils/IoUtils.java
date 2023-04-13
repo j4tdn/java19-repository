@@ -7,6 +7,7 @@ public class IoUtils {
 	private IoUtils() {
 	}
 	
+	// truyền điều kiện --> strategy pattern
 	public static int input(String prefix) {
 		Scanner ip = new Scanner(System.in);
 		String nAsString = null;
