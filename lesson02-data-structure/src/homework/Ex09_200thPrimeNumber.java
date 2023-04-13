@@ -33,8 +33,7 @@ public class Ex09_200thPrimeNumber {
 				if (temp == 200) {
 					System.out.println(i);
 				}
-				i++;
-			} else
+			}
 				i++;
 		}
 	}
