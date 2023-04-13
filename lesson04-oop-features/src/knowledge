@@ -1,0 +1,34 @@
+Encapsulation(カプセル化)
++ private  : class scope
++ public   : every where
++ _______  : package scope
++ protected: package scope, ouside package by sub classes
+
+
+Polymorphism
+
++ da hinh trong phuong thuc:
+	***2 hay nhieu method la overloading neu:
+	. cung 1 class
+	. cung ten
+	. khac data type cua tham so truyen vao 
+	or khac so luong cua tham so
+	
+			//  sum 2 so nguyen
+				private static int sum(int a, int b) {
+					return a + b;
+				}
+				
+			//  sum 3 so nguyen
+				private static int sum(int a, int b, int c) {
+					return a + b + c;
+				}
+				
+			//	sum 2 so thuc
+				private static double sum(double a, double b) {
+					return a + b;
+				}
+
+	***2 hay nhieu method la overriding neu:
+	method trong lop cha duoc override lai trong 1 or nhieu lop con
+

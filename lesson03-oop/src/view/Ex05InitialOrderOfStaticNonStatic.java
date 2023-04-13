@@ -21,7 +21,7 @@ public class Ex05InitialOrderOfStaticNonStatic {
 	
 	static void staticMethod2() {
 		staticMethod1();
-		nonStaticMethod3();
+//		nonStaticMethod3();
 		//classname.staticMethod2()
 		//thi ko biet object nao dang goi nonStaticMethod3()
 	}

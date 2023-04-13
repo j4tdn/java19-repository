@@ -67,7 +67,8 @@ OOP: 			   private --> ko biết của ai cả
 				 		
 ★★★★JAVA OOP
 + Class: trừu tượng, chỉ tập hợp các đối tượng có chung thuộc tính và hành động ( xe có màu sắc và giá bán )
-+ Object: khái niệm để chỉ thực thể tồn tại trong thế giới thực, rõ ràng cụ thể phân biệt được với các đối tượng khác ( xe xanh 500tr, xe đỏ 600tr)
++ Object: khái niệm để chỉ thực thể tồn tại trong thế giới thực, 
+          rõ ràng cụ thể phân biệt được với các đối tượng khác ( xe xanh 500tr, xe đỏ 600tr)
 --> tính chất tương đối: 1thông tin có thể là object hoặc class tùy thuộc vào ngữ cảnh đang xét
 
 
@@ -84,6 +85,8 @@ phù hợp cho bài toán logic, thuật toán
       không có phân quyền, hạn chế truy cập
 + chia bài toán bằng các phần nhỏ, nhỏ hơn bên trong
      khi 1 hàm con bị lỗi có thể keo lỗi của cả bài toán
+     
+     
 
 ★★★★OOP: OBJECT
 chia bài toán thành các đối tượng 
