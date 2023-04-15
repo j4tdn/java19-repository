@@ -1,0 +1,50 @@
+KDL nguyên thủy
++ dùng để lưu trữ dữ liệu (đơn) tại vùng nhớ STACK
++ lưu trữ dữ liệu đơn
+  VD: số nguyên, số thực, kí tự
+     int: số nguyên --> 4 bytes =32 Bits --> BIT(0,1), BYTE,KB, MG, GIGA,TERA 
+                    --> MIN, MAX <=>[-2^(n-1), 2^(n-1)-1]
+                    n: số bits
+     long: số nguyên --> 8 bytes
+     float: số thực
+     char: kí tự
+     
+KDL đối tượng
++ dùng để lưu trữ dữ liệu (đơn, đa)
++ sử dụng KDL có sẵn của JAVA hoặc tự định nghĩa
+- có sẵn: Integer(value), Character, Float, String, Boolean, Date, 	Time
+  -->C1. khởi tạo giá trị (đối tượng) --> dùng từ khóa new --> gọi hàm khởi tạo
+  -->C2. không cần new
+  
+  
+  
+  + if iff else else if
+  + tenary operator --> toasn tuwf 3 ngoi
+  + switch case --> if else ==
+   + break: switch case có break, thoát khỏi
+   
+   
++ duyệt:
+ . for ---> duyệt mảng, danh sách
+ . while --> code logic
+ . do while --> code logic, tối thiểu thực hiện do 1 lần
+ 
+ 
+- tự định nghĩa: Item(id, name, price)
+  --> khởi tạo giá trị (đối tượng) --> dùng từ khóa new --> gọi hàm khởi tạo
++ giá trị lưu trữ ở vùng nhớ HEAP
+  VD: Khai báo KDL Mặt Hàng: mã mặt hàng, tên mặt hàng, giá bán
+   Item:id, name, price
+   Giá trị của ô nhớ mà Item trở đến phải luôn có 3 giá trị cho id, name và price
+   
+==> phân biệt int, integer?
+ Giống nhau:
+  - Lưu trữ
+ Khác nhau:
+  - int: luôn luôn có giá trị(mặc định = 0)
+       :không hỗ trợ hàm
+  - integer:có thể lưu giá trị hoặc không (null)
+       : hỗ trợ các hàm tiện ích min, max, parse. abs
++ biến cục bộ
+ - khai báo bên trong 1 hàm
+ - Phạm vi sử dụng ở trong hàm chứa nó (block code)

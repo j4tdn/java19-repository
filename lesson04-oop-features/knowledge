@@ -1,0 +1,7 @@
+Encapsulation
++ private   : class scope
++ public    : everywhere
++______     : package
++ protected : package & outside package by sub class
+
+Polymorphism

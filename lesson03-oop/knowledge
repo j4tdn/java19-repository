@@ -1,0 +1,66 @@
+Rectangle: class
++ Kiểu dữ liệu đối tượng
++ Chứa thuộc tính bên trong
+
+
+Ex01RectangleDemo: class
++ Demo, chạy bài toán
+
+
+bean: package chứa các class là KDL, tạo ra để tạo đối tượng
+VD: Item, Rectangle, Employee
+
+Vì sao các thuộc tính trong class KDL đối tượng Item, Employee thường phải để private? vì sao?
+
+Thông thường access modifier của thuộc tính trong class KDL đối tượng
+là private. Vì
++ Hạn chế, ko cho phép truy cập trực tiếp từ bên ngoài
++ Chỉ có chính class đó quản lý thông tin thuộc tính của nó (idea of oop)
++ Nếu cho !private --> thì truy cập được ở những nơi khác --> giống fop
+
+
+--> private
++ Bên ngoài không thể truy cập, lấy, cập nhật giá trị cho thuộc tính của đối tượng
++ Nếu muốn truy cập, thay đổi giá trị sử dụng, tạo ra
+  + Hàm getter --> lấy giá trị của thuộc tính
+  + Hàm setter --> cập nhật giá trị của thuộc tính
+  
+  
+  VD: getter, setter --> truy cập, thay đổi giá trị
+  --> tránh việc truy cập trực tiếp vào thuộc tính --> làm sai dữ liệu
+  --> getter, setter --> kiểm tra tính hợp lệ của tham số truyền vào trước khi gán giá trị cho thuộc tính
+  setter --> bài toán Nhân viên & Công ty
+  + Nhân viên: Làm task từ khách hàng, khách hfang trả tiền về công ty
+             : Nhận lương từ công ty
+  + Công ty  : Tìm dự án, deal thu nhập cho dự án, kiếm task cho nhân viên làm
+             : Nhận tiền từ dự án
+             : Trả lương cho nhân viên
+     NhanVien: taikhoan
+     CongTy  : taikhoan
+     TH1: FOP --> taikhoan --> public --> NhanVien & CongTy biet số tiền trong taikhoan của nhau
+     TH2: OOP -->          --> private--> không ai biết cuẩ i cả
+                               chuyển lương: CongTy --> setter - taikhoan
+                                             NhanVien --> setter + taikhoN
+       VD: chuyển tiền ngân hàng
+       
+  STATIC KEYWORD
++ Đặt ở thuộc tính, hàm
++ Khi nào sử dụng STATIC
++ Biến, hàm có static thuộc phạm vi class, không có static thuộc phạm vi đối tượng
++ Biến, hàm static khởi tạo trước biến, hàm non-static
+  --> Khi loading class --> những biến, hàm static được khởi tạo và lưu trữ ở HEAP
+  --> Khi nào có đối tượng tạo ra thì biến, hàm non-static mới thật sự được khởi tạo
+  
++ Thuộc tính
+  . static: không phụ thuộc vào đối tượng đang gọi
+          : giá trị dùng chung cho tất cả các đối tượng tạo ra từ class chứa nó
+  . non   : phụ thuộc vào đối tượng đang gọi
+          : giá trị sẽ được lưu trữ trên từng ô nhớ của đối tượng
+
++ Phương thức
+  . static: không phụ thuộc vào đối tượng đang gọi
+            chỉ phụ thuộc vào tham số truyền vào của hàm
+  . non   : phụ thuộc vào đối tượng đang gọi
+          : phụ thuộc = hàm sử dụng giá trị của thuộc tính của đối tượng đang gọi
+
+  
