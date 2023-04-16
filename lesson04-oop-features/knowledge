@@ -1,0 +1,15 @@
+Encapsulation
++ private  : class scope
++ public   : everywhere
++ ______   : package
++ protected: package & outside package by sub classes
+
+------------
+Polymorphism
+------------
++ Method
+  -> Overloading
+  -> Overriding
+  
++ Object
+
