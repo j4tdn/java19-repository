@@ -31,4 +31,21 @@ Polymorphism
 
 	***2 hay nhieu method la overriding neu:
 	method trong lop cha duoc override lai trong 1 or nhieu lop con
+	
++ da hinh trong doi tuong
+	cha c = new con;
+	luc la the hien nay, luc la the hien khac
+	la 1 bien KDL doi tuong, luc runtime co the hien la chinh no hoac
+	la the hien cua KDL lop con
+
+**why khong: con c = new con ???
+// Person --> baby, student, employee, member
+	Person p = new Student();
+	Person p = new Employee();
+	
+1. de dang ep KDL cha --> con
+2. factory pattern
+3. co the tao ra array co KDL cha, element co the la cha or con
+ Square[] squares = { square, rectangle};
+ 
 
