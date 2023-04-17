@@ -1,0 +1,20 @@
+Encapsulation
++ private  : class scope
++ public   : everywhere
++ ______   : package
++ protected: package & outside package by sub classes
+
+Polymorphism
+
+Khi override chỉ override nội dung (body) chứ không override giá trị --> attibutes cannot override
+-> Chỉ có override methods not override attributes
+
++ Method
+	-> Overloading: 
+	-> Overriding : 
+
++ Object 
+
+Dễ dàng ép kiểu qua về giữa các KDL cha con (compile tất cả đều là kiểu cha).
+Tham số KDL cha có thể nhận giá trị của KDL con khi truyền tham số qua hàm. 
+Tạo ra 1 mảng KDL cha và các phần tử trong mảng có thể KDL cha, con.
