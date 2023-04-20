@@ -12,4 +12,7 @@ Polymorphism
   -> Overriding
   
 + Object
+  --> Shape p = new Shape();
+  --> Shape p = new Rectangle();
+  --> Shape p = new Square();
 
