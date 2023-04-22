@@ -1,4 +1,4 @@
-package Inheritance.basic;
+package inheritance.basics;
 
 public class Book {
 	private int id;

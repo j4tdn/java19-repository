@@ -1,4 +1,4 @@
-package Inheritance.basic;
+package inheritance.basics;
 
 public class ClassicalBook extends Book{
 	private boolean isNew;
@@ -14,7 +14,7 @@ public class ClassicalBook extends Book{
 	
 	@Override
 	public String toString() {
-		return super.toString() + ", isNew= " + isNew ;
+		return super.toString() + ", isNew= " + isNew + "\n" ;
 	}
 	
 }
