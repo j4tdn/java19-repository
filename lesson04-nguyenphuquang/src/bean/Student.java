@@ -53,8 +53,8 @@ public class Student {
 	@Override
 	public String toString() {
 		return "Student [id=" + id + ", name=" + name + ", theoreticalScore=" + theoreticalScore + ", practiceScore="
-				+ practiceScore + "]";
+				+ practiceScore + "]\n";
 	}
 	
-	
+
 }

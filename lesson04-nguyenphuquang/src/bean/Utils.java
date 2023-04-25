@@ -9,7 +9,19 @@ public static boolean isInteger(String input) {
 		Integer.parseInt(input); 
 		return true; 
 	}  
-	catch (NumberFormatException ee)  
+	catch (NumberFormatException e)  
+	{ 
+		System.out.println("Sai định dạng, xin nhập lại!");
+		return false;
+	} 
+}
+public static boolean isFloat(String input) {
+	try 
+	{ 	
+		Float.parseFloat(input); 
+		return true; 
+	}  
+	catch (NumberFormatException e)  
 	{ 
 		System.out.println("Sai định dạng, xin nhập lại!");
 		return false;
