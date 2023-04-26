@@ -2,8 +2,6 @@ package excercise;
 
 import java.util.Arrays;
 
-import bean.Ex3ArrayElement;
-
 public class Ex3 {
 
 	public static void main(String[] args) {
