@@ -6,7 +6,7 @@ import bean.Ex2Utils;
 
 public class Ex2 {
 	public static void main(String[] args) {
-		Integer[] list = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
+		Integer[] list = { 70, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 105, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 35 };
 		System.out.println("Sorted list: " + Arrays.toString(sortList(list)));
 	}
 
