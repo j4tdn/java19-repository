@@ -20,14 +20,13 @@ public class Ex04Validation {
 		String text = "";
 		
 		//kiểm tra hợp lệ , có phải chuỗi nhập vào có phải chuỗi số hay ko
-		
 		do {
-			System.out.print("Nhập số nguyên n:");
+			System.out.println("Nhập vào số nguyên n: ");
 			text = sc.nextLine();
-		}
-		while(!isValidNumber(text));
+		} while(!isValidNumber(text));
 		
 		int n = Integer.parseInt(text);
+		
 		
 		//Enter --> ,muoilam[ip.nextLine()] --> Integer.parseInt("muoilam")
 		// ==> exception(ngoại lệ) là những lỗi không mong muốn khi thực thi chương trình

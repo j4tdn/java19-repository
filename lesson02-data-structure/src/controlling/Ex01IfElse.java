@@ -15,9 +15,6 @@ public class Ex01IfElse {
 		Random rd = new Random();
 		Scanner sc = new Scanner(System.in);
 		int n = rd.nextInt(12);
-		System.out.println("giá trị n là :" + n);
-
-		boolean isEven = (n % 2 == 0);
 
 		// isEven == true --> if(isEven)
 		// isEven == false --> if(!isEven)
@@ -26,8 +23,10 @@ public class Ex01IfElse {
 		// if(isEven) --> nhận biến
 		// if(n % 2 == 0) --> nhận biểu thức
 		// if(isEvent(n)) --> nhận hàm
-		if (isEvent(n)) {
-			System.out.println("Biến n là số chẵn");
+		if(isEvent(n)) {
+			System.out.println(+ n + " :là số chẵn");
+		} else {
+			System.out.println(+ n + " :là số lẻ");
 		}
 
 		System.out.println("\n===========================\n");

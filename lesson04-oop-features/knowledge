@@ -1,0 +1,14 @@
+Đóng gói Encapsulation
++ private : class scope
++ public : every one
++_______: package
++protected: package & outside package by sub classes
+
+---------------------------
+Đa hình Polymorphism
+------------
++ Method
+  -> Overloading
+  -> Overriding
+  
++ Object
