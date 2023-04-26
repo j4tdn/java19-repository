@@ -1,3 +1,26 @@
+Inheritance
+---
+Class: contains methods which required body --> normal method
+Interface: contains methods without body --> abstract method --> ham tru tuong
+
+Class extends Class
+Class implements Interface
+Class implements Interface extends Interface
+
+
+?Phan biet abstract class va interface
++ interface
+--> Ho tro multiple implements
+--> Ho tro khai bao abstract method
+--> Mac dinh phuong thuc da co tu khoa abstract
+
++Abstract class
+--> Ho tro single extends
+--> Ho tro khai bao abstract & normal method
+--> Phai them tu khoa abstract vao neu muon ham tro thanh abstract
+
+
+---> Tu 
 Encapsulation
 + private   : class scope
 + public    : everywhere
@@ -5,3 +28,12 @@ Encapsulation
 + protected : package & outside package by sub class
 
 Polymorphism
++ Method
+-> Overloading
+-> Overriding
+
+Object
+
+
+final --> 
+

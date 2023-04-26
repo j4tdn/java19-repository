@@ -6,7 +6,7 @@ public class Ex02OverridingDemo {
 	
 	
     public static void main(String[] args) {
-		Ex01OverloadingDemo demo = new Ex01OverloadingDemo();
+		Ex02OverridingDemo demo = new Ex02OverridingDemo();
 		System.out.println("demo --> " + demo);
 	}
     @Override
