@@ -1,0 +1,5 @@
+Encapsulation
++ private: class scope
++ public: everywhere
++       : packege
++ protected: packege & 
