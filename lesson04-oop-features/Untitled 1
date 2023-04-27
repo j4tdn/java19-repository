@@ -1,0 +1,17 @@
+Encapsulation
++ private  : class scope
++ public   : everywhere
++ ______   : package
++ protected: package & outside package by sub classes
+
+------------
+Polymorphism
+------------
++ Method
+  -> Overloading
+  -> Overriding
+  
++ Object
+  --> Shape p = new Shape();
+  --> Shape p = new Rectangle();
+  --> Shape p = new Square();
