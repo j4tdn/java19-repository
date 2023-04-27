@@ -1,5 +1,6 @@
 package ex05;
 
+<<<<<<< HEAD
 public class Customer {
 	private String mkh;
 	private String hoten;
@@ -56,3 +57,22 @@ public class Customer {
 	
 	
 }
+=======
+class Customer {
+    String id;
+    String name;
+    String phone;
+    String address;
+
+    public Customer(String id, String name, String phone, String address) {
+        this.id = id;
+        this.name = name;
+        this.phone = phone;
+        this.address = address;
+    }
+
+    public String getId() {
+        return id;
+    }
+}
+>>>>>>> f17414c (lesson05-exam-leductuan27/04/2023)
