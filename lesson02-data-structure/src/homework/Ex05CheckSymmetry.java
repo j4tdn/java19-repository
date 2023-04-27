@@ -6,7 +6,6 @@ public class Ex05CheckSymmetry {
 	public static boolean check(String a) {
 		int left = 0;
 		int right = a.length() - 1;
-		a.
 		while (left < right) {
 			if (a.charAt(left) == a.charAt(right)) {
 				left++;
