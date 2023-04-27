@@ -21,7 +21,7 @@ public void setTax(double tax) {
 
 @Override
 public String toString() {
-	return "ReferenceBook [tax=" + tax + "]";
+	return super.toString() + "ReferenceBook [tax=" + tax + "]";
 }
 
 

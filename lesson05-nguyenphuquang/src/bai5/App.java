@@ -3,7 +3,8 @@ package bai5;
 public class App {
 
 	public static void main(String[] args) {
-
+		Book[] books = initBook();
+		findPublisher("Nhi Dong",books );
 	}
 
 	public static Book[] initBook() {
@@ -14,5 +15,13 @@ public class App {
 		books[3] = new ReferenceBook("STK1", 120, "Nhi Dong", 2.3);
 		books[4] = new ReferenceBook("STK2", 30, "Nhi Dong", 5.3);
 		return books;
+	}
+	
+	public static void findPublisher(String string, Book[] books) {
+		for (Book book:books) {
+			if (book.getPublisher()==string) {
+				System.out.println(book);
+			}
+		}
 	}
 }

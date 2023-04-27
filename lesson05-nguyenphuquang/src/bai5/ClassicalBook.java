@@ -21,7 +21,7 @@ public class ClassicalBook extends Book {
 
 	@Override
 	public String toString() {
-		return "ClassicalBook [statusIsNew=" + statusIsNew + "]";
+		return super.toString() + "ClassicalBook [statusIsNew=" + statusIsNew + "]";
 	}
 
 }
