@@ -1,0 +1,51 @@
+1----------------
+Inheritance
+
+class: contains mothods which required body ---------> normal method
+interface: contains method without body   ---------> abstract method
+
+
+
+
+?Phân biệt abstract class và interface
++Interface
+	--> Hỗ trợ mutiple implements
+	--> Hỗ trợ khai báo abstract method
+	--> Mặc định phương thức đã có từ khóa abstract
+	--> Thuộc tính trong interface ngầm định là final vì lớp con k thể override lại lớp cha)
+	
+	
++Abstract class
+	--> Hỗ trợ single extends
+	--> Hỗ trợ khai báo abstract & normal method
+	-->	Phải thêm từ khóa abstract vào nếu muốn làm trở thành abstract
+	--> Thuộc tính bình thường
+	
+class extends class
+class extends abstract class
+[abstract] class implements interface
+[abstract] class implements interface extend interface
+
+class extends class implements interface1, interface2
+
+
+
+
+
+
+--------------------
+ Encapsulation
++ private : class scope
++ public  : 
++protected:	
++default  :
+
+2 Polymorphism
+-------------
++Method
+ ->Overloading
+ ->Overriding
+ 
+ +Object
+  --> Shape p = new Shape();
+  --> Shape 
