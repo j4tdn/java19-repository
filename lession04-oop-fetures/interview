@@ -1,0 +1,8 @@
+6. Mục đích khai báo final cho biến trong java
+	video 24.4.2023 - 1h23'
+	
+8 : 
+	 + Từ khóa static được dùng để khai báo cho 1 tt hoặc 1 method
+	 	 khi nào tt không phụ thuộc vào đối tượng đang gọi
+	 	 thì ta dùng static, hoặc tt thuộc phạm vi 1 đối tượng thì dùng non static
+	 	 
