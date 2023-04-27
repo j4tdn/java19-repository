@@ -1,0 +1,25 @@
+package inheritance.basic;
+
+public class ClassicalBook extends Book{
+private boolean isNew;
+	public ClassicalBook() {
+	}
+	// new ClassicalBook(1, "B1", "ND", true);
+	public ClassicalBook(int id, String name, String publisher, boolean isNew ) {
+		super(id, name, publisher); // hàm khởi tạo của lớp cha
+		this.isNew = isNew;
+	}
+	public boolean isNew() {
+		return isNew;
+	}
+	public void setNew(boolean isNew) {
+		this.isNew = isNew;
+	}
+
+	@Override
+	public String toString() {
+		return super.toString() + ", isNew = " + isNew;
+	}
+	
+
+}
