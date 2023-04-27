@@ -1,11 +1,13 @@
 package inheritance.basic;
 
 public class Book {
+	
 	private int id;
 	private String name;
 	private String publisher;
 	
-	public Book() {}
+	public Book() {
+	}
 
 	public Book(int id, String name, String publisher) {
 		this.id = id;

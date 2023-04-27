@@ -18,3 +18,16 @@ Khi override chỉ override nội dung (body) chứ không override giá trị -
 Dễ dàng ép kiểu qua về giữa các KDL cha con (compile tất cả đều là kiểu cha).
 Tham số KDL cha có thể nhận giá trị của KDL con khi truyền tham số qua hàm. 
 Tạo ra 1 mảng KDL cha và các phần tử trong mảng có thể KDL cha, con.
+
+* Multiple Extends
+->  * Lưu ý:
+	 *  + Khi con inherit cha
+	 + Mặc định đã thừa kế và sử dụng hàm bên class cha
+	 + Không bắt buộc phải override method in super class
+	 
+  Muốn hỗ trợ đa kế thừa
+  Khi class con kế thừa phương thức xuất hiện ở nhiều class cha
+  --> Phương thức đó cần bắt buộc phải override lại ở lớp con
+  
+  ? Phân biệt abstract class vs interface.
+  
