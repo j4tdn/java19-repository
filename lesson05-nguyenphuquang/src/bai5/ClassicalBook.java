@@ -6,7 +6,7 @@ public class ClassicalBook extends Book {
 	public ClassicalBook() {
 	}
 
-	public ClassicalBook(int id, double price, String publisher, boolean statusIsNew) {
+	public ClassicalBook(String id, double price, String publisher, boolean statusIsNew) {
 		super(id, price, publisher);
 		this.statusIsNew = statusIsNew;
 	}

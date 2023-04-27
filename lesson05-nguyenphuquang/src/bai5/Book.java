@@ -1,7 +1,7 @@
 package bai5;
 
 public class Book {
-	private int id;
+	private String id;
 	private double price;
 	private String publisher;
 
@@ -9,17 +9,17 @@ public class Book {
 
 	}
 
-	public Book(int id, double price, String publisher) {
+	public Book(String id, double price, String publisher) {
 		this.id = id;
 		this.price = price;
 		this.publisher = publisher;
 	}
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

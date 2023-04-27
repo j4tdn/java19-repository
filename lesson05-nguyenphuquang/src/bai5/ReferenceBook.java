@@ -6,7 +6,7 @@ private double tax;
 public ReferenceBook() {
 }
 
-public ReferenceBook(int id, double price, String publisher, double tax) {
+public ReferenceBook(String id, double price, String publisher, double tax) {
 	super(id, price, publisher);
 	this.tax = tax;
 }
