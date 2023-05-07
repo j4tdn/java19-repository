@@ -1,0 +1,27 @@
+--- LỖI ---
++ Lỗi biên dịch (compile time error)
+	. Nguyên nhân: chưa nắm vững cú pháp
+	. Xử lý: học cú pháp
+	
+
++ Lỗi thực thi (runtime error)
+	. Nguyên nhân: chưa đọc rõ mô tả yêu cầu
+	. Xử lý: clarify rõ yêu cầu với khách hàng trước khi làm.
+	
+
++ Lỗi ngoại lệ (exception)
+
+	. Khái niệm: exception là 1 đối tượng thuộc quản lý bởi java, khi compile/runtime 
+	đang thực thi code, nếu bị lỗi liên quan đến exception thì JVM sẽ ném ra exception 
+	và dừng toàn bộ chương trình.
+	--> Lỗi như thế nào là exception --> do JAVA quản lý
+	
+	Ví dụ: lỗi chia 0, tràn mảng, truy cập ô nhớ null ở heap.
+	
+	.Xử lý: Bắt lỗi, ném lỗi đi chổ khác xử lý.
+	--> Đảm bảo khi exception, in - mô tả thông tin lỗi ra.
+	--> và tiếp tục chạy chương trình.  
+	
+  C1 --> pretest/ validation
+  C2 --> A --> lỗi --> JVM ném ngoại lệ(throw[s]) --> try/catch 
+  C3 --> A --> lỗi --> JVM ném ngoại lệ(throw[s]) --> throw/throws
