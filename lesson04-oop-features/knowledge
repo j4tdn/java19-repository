@@ -1,0 +1,7 @@
+Ecapsulation
++ private  : class scope
++ public   : everywhere
++ _______  : package
++ protected:package & outside package by sub classes
+
+Poly 
