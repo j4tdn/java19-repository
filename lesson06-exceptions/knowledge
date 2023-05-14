@@ -1,0 +1,54 @@
+---error---
++ compile time error
+	.syntax-->confirm syntax
+
++ runtime error
+	.requirement or description 
+	--> clarify with customer
+
++ exception
+	.exception la doi tuong duoc quan ly boi java,
+	khi compile/runtime neu bi loi lien quan den exception 
+	thi JVM se nem ra exception va dung lai toan bo chuong trinh
+	-->loi nhu the nao la exception --> java quan ly
+	
+	ex: loi chia 0, tran mang, truy cap o nho null o HEAP
+	
+	.xu ly: bat loi, nem loi di cho khac xu ly
+	--> dam bao khi bi exception, in - mo ta thong tin loi ra
+	--> va tiep tuc chay chuong trinh 
+	
+C1 --> pretest validation
+C2 --> try/catch : luon luon thu va xu ly loi
+C3 --> throw/throws 
+
+JAVA có 2 loại exception
+	+ Checked(Compile) Exception: 
+		--> Là những exception bắt buộc phải xử lý tại thời điểm compile
+		--> ...Exception con của class Exception
+		
+	+ Unchecked(Runtime) Exception:
+		--> Là những exception không bắt buộc phải xử lý tại thời điểm compile
+		--> Có thể gây ra / bị lỗi tại thời điểm runtime
+		--> ...Exception con của class RuntimeException
+	 
+	
+	public static void test() {
+	   ....
+	   throw new ArithmeticException(...);
+	   // không bắt buộc phải throws Runtime Exception tại phần khai báo hàm
+	   // vì có throws hay không Runtime Exception thì
+	   // vị trí gọi hàm này cũng ko bắt buộc xử lý
+	}
+	
+	public static void test() throws IOException {
+	   ....
+	   throw new IOException(...); // compile exception
+	   // thân hàm throw new compile exception
+	   // phần khai báo hàm phải throws compile exception đó
+	   // để thông báo cho vị trí gọi hàm này --> phải bắt buộc xử lý lỗi
+	}
+	
+	
+	
+	*/
