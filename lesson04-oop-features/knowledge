@@ -1,4 +1,44 @@
+------------
+Inheritance
+------------
+
+--> JAVA1 --> JAVA7
+
+Class    : contains methods which required body --> normal method
+Interface: contains method without body         --> abstract method
+
+Class extends Class
+Class extends Abstract Class
+[Abstract] Class implements Interface
+[Abstract] Class implements Interface extends Interface
+
+Class extends Class implements Interface1, Interface2
+
+
+? Phân biệt abstract class và interface
++ Interface
+  --> Hỗ trợ mutiple implements
+  --> Hỗ trợ khai báo abstract method
+  --> Mặc định phương thức đã có từ khóa abstract
+  --> Thuộc tính trong interface ngầm định final(vì lớp con k thể override tt từ interface)
+
++ Abstract class
+  --> Hỗ trợ single extends
+  --> Hỗ trợ khai báo abstract & normal method
+  --> Phải thêm từ khóa abstract vào nếu muốn hàm trở thành abstract
+  --> Thuộc tính bình thường
+
+--> Từ JAVA8 trở đi
++ Interface
+  --> Hỗ trợ khai báo abstract và normal method
+  --> Để khai báo 1 phương thức với body trong interface từ JAVA08
+      + default
+      + static
+      + private(JAVA09)
+
+-------------
 Encapsulation
+-------------
 + private  : class scope
 + public   : everywhere
 + ______   : package
