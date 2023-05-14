@@ -17,6 +17,8 @@ public class Ex01Divide {
 			System.out.println("AmE --> " + e.getMessage());
 		}
 		System.out.println("K, T -->" + divide(10, 2));
+		// ở function --> ném ra ngoãi lệ
+		//chỗ gọi function đó ko bắt buộc phải xử lí(try/catch) lỗi đó
 
 	}
 
