@@ -1,4 +1,4 @@
-package view;
+package bean;
 /**
  * 
  * @author Admin

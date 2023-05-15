@@ -2,6 +2,8 @@ package view;
 
 import java.util.Scanner;
 
+import bean.Equation1st;
+
 /**
  * Bài 1: Giải phương trình bậc nhất ax + b = 0 . Các hệ số nhập vào từ bàn
  * phím. Sử dụng try - catch để bẫy các lỗi khi nhập sai kiểu dữ liệu, ví dụ
