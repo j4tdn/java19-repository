@@ -1,0 +1,7 @@
+encapsulation
++ private: class
++ public: everywhere
++ ______: inside package
++ protected: inside and outside package based on inheritance
+
+*** In java just have overriding method, no have overriding variable
