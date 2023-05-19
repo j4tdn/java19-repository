@@ -18,6 +18,10 @@ public class Ex01Divisor {
 		} catch (ArithmeticException e) {
 			System.out.println( "AEM --> " + e.getMessage());
 		}
+		
+		
+		
+		
 	}
 
 	// --> utility method
