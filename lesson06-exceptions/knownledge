@@ -1,0 +1,14 @@
+---LỖI----
++Lỗi biên dịch(compile time error)
+	-Nguyên nhân: chưa nắm vững cú pháp
+	-Xử lý: học cú pháp
++Lỗi thực thi(runtime error)
+	-Nguyên nhân: Chưa đọc rõ mô tả yêu cầu
+	-Xử lí: clarify rõ yêu cầu với khách hàng
++Lỗi ngoại lệ(exceptions)
+	-Khái niệm: exception là đối tượng được quản lí bởi java, khi compile/ runtime
+	đang thực thi code nếu bị lỗi liên quan đến exception thì JVM sẽ ném ra  exception và dừng toàn bộ chương trình 
+	 --> Lỗi như thế nào là exception --> do Java quản lí
+	 -Xử lý: Bắt lỗi, ném lỗi đi chỗ khác xử lý
+	 --> Đảm bảo khi bị exception, in -mô tả thông tin lỗi ra và tiếp tục chạy chương trình
+	 
