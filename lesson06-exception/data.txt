@@ -1,0 +1,5 @@
+1, Le Na, 16
+2, Le Teo, 2
+3, Le Ngoc, 52
+4, Le Hiem, 74
+5, Le Nam, 50
