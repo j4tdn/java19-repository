@@ -8,14 +8,30 @@ public class Ex02 {
 		String s = "";
 		System.out.println("Nhập s");
 		s = ip.nextLine();
-		isValid(s);
+		System.out.println(isValid(s));
 	}
 
 	public static boolean isValid(String s) {
-		if (s == "()" || s == "{}" || s == "[]") {
-			return true;
-		} else {
+		if(s.length() % 2 == 1) {
 			return false;
+		}else {
+			for(int i = 0; i < s.length(); i+= 2) {
+				if(couple(s.charAt(i), s.charAt(i + 1)) == false) {
+					return false;
+				}
+			}
+			
 		}
+		return true;
+	}
+	private static boolean couple(char a, char b) {
+		if(a == '(' && b == ')') {
+			return true;
+		}else if(a == '[' && b == ']') {
+			return true;
+		}else if(a == '{' && b == '}') {
+			return true;
+		}
+		return false;
 	}
 }
