@@ -1,4 +1,4 @@
-package exception.custom;
+package exception_custom;
 
 public class NonZeroValidator {
 
