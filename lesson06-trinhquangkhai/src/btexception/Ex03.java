@@ -9,8 +9,8 @@ public static void main(String[] args) {
 	try {
 	System.out.println("Enter the email");
 	String st = ip.nextLine();
-}catch() {
-	
+}catch(IllegalArgumentException e) {
+	System.out.println(e.getMessage());
 }
 }
 private static boolean validMail(String mail) {
