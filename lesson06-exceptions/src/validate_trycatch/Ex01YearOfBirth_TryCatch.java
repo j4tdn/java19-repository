@@ -2,7 +2,8 @@ package validate_trycatch;
 
 import java.time.Year;
 import java.util.Scanner;
-public class Ex01YearOfBirth {
+
+public class Ex01YearOfBirth_TryCatch {
 	
 	public static void main(String[] args) {
 		Scanner ip = new Scanner(System.in);
@@ -12,8 +13,32 @@ public class Ex01YearOfBirth {
 		int currentYear = Year.now().getValue();
 		System.out.println("Current year: " + currentYear);
 		
+		
+		
+		// đoạn code Integer.parseInt(ip.nextLine()) có khả năng
+		// xảy ra ngoại lệ
+		// đặt đoạn mã vào khối try
+		int yob = 0;
 		System.out.print("\nEnter year of birth: ");
-		int yob = Integer.parseInt(ip.nextLine());
+		
+		do {
+			try {
+				yob = Integer.parseInt(ip.nextLine());
+				break;
+			} catch (NumberFormatException nfe) {
+				// default generated code --> Exception
+				// --> bắt được mọi lỗi ở trong Java Exception
+				// --> convention: khuyến khích catch đúng exception
+				// để biết lỗi, nguyên nhân lỗi nào vì sao phải catch
+				// Exception cha có thể bắt Exception con
+				
+				// Nếu khi mình ko bắt lỗi --> JVM ném ra đoạn mã đỏ đỏ
+				// Mặc định JVM sẽ gọi hàm e.printStackTrace để in lỗi
+				// nfe.printStackTrace();
+				System.out.print("Please enter valid number: ");
+			}
+		} while(true);
+		
 		
 		System.out.println("\n----- Result -----");
 		
