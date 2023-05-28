@@ -10,10 +10,10 @@ public static void main(String[] args) {
 	try {
 	System.out.println("Enter the email");
 	String st = ip.nextLine();
-<<<<<<< HEAD
+
 }catch(IllegalArgumentException e) {
 	System.out.println(e.getMessage());
-=======
+
 	validMail(st);
 }catch(IllegalArgumentException i) {
 	System.out.println(i.getMessage());
@@ -23,7 +23,7 @@ public static void main(String[] args) {
 	break;
 	}
 	
->>>>>>> d2aca09 (update lesson 06)
+
 }
 private static boolean validMail(String mail) {
 	boolean letter = mail.matches(".*[A-Za-z0-9].*");
