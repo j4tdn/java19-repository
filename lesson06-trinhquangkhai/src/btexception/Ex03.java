@@ -10,18 +10,13 @@ public static void main(String[] args) {
 	try {
 	System.out.println("Enter the email");
 	String st = ip.nextLine();
+	validMail(st);
 
 }catch(IllegalArgumentException e) {
 	System.out.println(e.getMessage());
+}}
 
-	validMail(st);
-}catch(IllegalArgumentException i) {
-	System.out.println(i.getMessage());
-	break;
-}
-	System.out.println("Your email is valid");
-	break;
-	}
+
 	
 
 }
