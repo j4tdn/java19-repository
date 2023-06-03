@@ -6,19 +6,31 @@ import java.util.Scanner;
 public class Ex03 {
 public static void main(String[] args) {
 	Scanner ip = new Scanner(System.in); 
+	while(true) {
 	try {
 	System.out.println("Enter the email");
 	String st = ip.nextLine();
+<<<<<<< HEAD
 }catch(IllegalArgumentException e) {
 	System.out.println(e.getMessage());
+=======
+	validMail(st);
+}catch(IllegalArgumentException i) {
+	System.out.println(i.getMessage());
+	break;
 }
+	System.out.println("Your email is valid");
+	break;
+	}
+	
+>>>>>>> d2aca09 (update lesson 06)
 }
 private static boolean validMail(String mail) {
-	boolean letter = mail.matches("[A-Za-z0-9");
+	boolean letter = mail.matches(".*[A-Za-z0-9].*");
 		if(!letter) {
 			return false;
 	}
-	boolean character = mail.matches("[_.-]");
+	boolean character = mail.matches(".*[_.-].*");
 	if(!character) {
 		return false;
 	}
