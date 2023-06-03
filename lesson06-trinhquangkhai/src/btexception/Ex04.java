@@ -22,9 +22,6 @@ public class Ex04 {
 	}
 
 	private static String ReadNumber(int num) {
-		if (num < 0 || num > 999) {
-			throw new IllegalArgumentException("Number must be between 0 to 999");
-		}
 		String st = "";
 		String[] one = { "Không", "Một", "Hai", "Ba", "Bốn", "Năm", "Sáu", "Bảy", "Tám", "Chín" };
 		String[] ten = { "Mười", "Hai Mươi", "Ba Mươi", "Bốn Mươi", "Năm Mươi", "Sáu Mươi", "Bảy Mươi", "Tám Mươi",
@@ -38,7 +35,7 @@ public class Ex04 {
 				st = "Mười Lăm";
 			} else if (num == 10) {
 				st = "Mười";
-			} else {
+			} else if(num > 10){
 				st = "Mười" + one[num];
 			}
 
