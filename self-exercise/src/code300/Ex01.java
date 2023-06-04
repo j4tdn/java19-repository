@@ -7,7 +7,7 @@ public class Ex01 {
 	public static void main(String[] args) {
 		Scanner ip = new Scanner(System.in);
 		int n;
-//		int target = 9;
+		//int target = 9;
 		System.out.println("Nhập số bạn muốn: ");
 		int target = ip.nextInt();
 		do {
@@ -15,7 +15,7 @@ public class Ex01 {
 		 n = ip.nextInt();
 		}while(n < 0);
 		int num[] =new int[n];
-//		int[] num = {2,7,15,17};
+		//int[] num = {2,7,15,17};
 		for(int i = 0; i < n; i++) {
 			System.out.println("Nhập phần tử thứ " + i + " là: ");
 			num[i] = ip.nextInt();
