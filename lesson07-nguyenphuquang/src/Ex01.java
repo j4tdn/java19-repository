@@ -39,6 +39,7 @@ public class Ex01 {
 				e.printStackTrace();
 			}
 		}
+		ip.close();
 		System.out.println("Dating from " + df.format(startDate) + " to " + df.format(endDate));
 		System.out.println("1st dating day is " + weekDay.format(startDate));
 		System.out.println("time in love (s): " + (endDate.getTime()-startDate.getTime())/1000);
