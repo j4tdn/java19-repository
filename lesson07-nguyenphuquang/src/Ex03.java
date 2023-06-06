@@ -22,6 +22,7 @@ public class Ex03 {
 	private static DateFormat ddMMyyyy = new SimpleDateFormat("dd/MM/yyyy");
 	private static DateFormat ddMMyyyyEEEE = new SimpleDateFormat("dd/MM/yyyy EEEE");
 	private static Date birthdate = null;
+
 	public static void main(String[] args) {
 		Scanner ip = new Scanner(System.in);
 		System.out.println("input timezone");
@@ -31,10 +32,9 @@ public class Ex03 {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		while (true) {
-		System.out.println("Enter your Birthday dd/MM/yyyy");
-			
+			System.out.println("Enter your Birthday dd/MM/yyyy");
 
 			try {
 				birthdate = ddMMyyyy.parse(ip.nextLine());
@@ -44,7 +44,7 @@ public class Ex03 {
 				continue;
 			}
 		}
-		
+
 		ip.close();
 		System.out.println("1. Current time: " + time(timezone));
 		System.out.println("2. Last day of this month: " + endDayOfMonth());
@@ -94,9 +94,8 @@ public class Ex03 {
 
 	public static double liveFor() {
 		Calendar c = Calendar.getInstance();
-		
-		Date todate = c.getTime();
 
+		Date todate = c.getTime();
 
 		double livingTime = (todate.getTime() - birthdate.getTime()) / 1000 / 60 / 60 / 24;
 		return livingTime;

@@ -42,11 +42,14 @@ public class Ex01 {
 		ip.close();
 		System.out.println("Dating from " + df.format(startDate) + " to " + df.format(endDate));
 		System.out.println("1st dating day is " + weekDay.format(startDate));
-		System.out.println("time in love (s): " + (endDate.getTime()-startDate.getTime())/1000);
-		System.out.println("time in love (min): " + (endDate.getTime()-startDate.getTime())/1000/60);
-		System.out.println("time in love (h): " + (endDate.getTime()-startDate.getTime())/1000/60/60);
-		System.out.println("time in love (days): " + (double)(endDate.getTime()-startDate.getTime())/1000/60/60/24);
-		System.out.println("time in love (months): " + (double)(endDate.getTime()-startDate.getTime())/1000/60/60/24/30);
-		System.out.println("time in love (years): " + (double)(endDate.getTime()-startDate.getTime())/1000/60/60/24/365);
+		System.out.println("time in love (s): " + (endDate.getTime() - startDate.getTime()) / 1000);
+		System.out.println("time in love (min): " + (endDate.getTime() - startDate.getTime()) / 1000 / 60);
+		System.out.println("time in love (h): " + (endDate.getTime() - startDate.getTime()) / 1000 / 60 / 60);
+		System.out.println(
+				"time in love (days): " + (double) (endDate.getTime() - startDate.getTime()) / 1000 / 60 / 60 / 24);
+		System.out.println("time in love (months): "
+				+ (double) (endDate.getTime() - startDate.getTime()) / 1000 / 60 / 60 / 24 / 30);
+		System.out.println("time in love (years): "
+				+ (double) (endDate.getTime() - startDate.getTime()) / 1000 / 60 / 60 / 24 / 365);
 	}
 }
