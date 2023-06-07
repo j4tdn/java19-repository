@@ -1,0 +1,15 @@
+Ex01: Lấy thông tin thời gian hiện tại với [timezone]
+	+ 1. Ngày, Tháng, Năm
+	+ 2. Giờ 12-24, Phút, Giây
+	+ 3. Thứ ngày, tuần/ngày trong tháng, năm
+        + 4. Đếm số ngày tháng, năm hiện tại >> Calendar
+	+ 5. Kiểm tra năm hiện tại có phải năm nhuận không
+	+ 6. Ngày đầu tiên trong tuần là thứ mấy với locale
+        + 7. Ngày đầu tiên trong tuần hiện tại là ngày mấy
+        ==> In ra danh sách các ngày trong tuần hiện tại   
+=>>> Epoch time
+
+GMT+7, UTC+7, UTC-x
+Greenwich Mean Time : london
+
+EpochTime: 1-1-1970 0:0:0
