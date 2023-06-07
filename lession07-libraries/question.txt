@@ -1,0 +1,33 @@
+Package: datetime
+Ex01: Lấy thông tin thời gian hiện tại với [timezone]
+	+ 1. Ngày, Tháng, Năm
+	+ 2. Giờ 12-24, Phút, Giây
+	+ 3. Thứ ngày, tuần/ngày trong tháng, năm
+    + 4. Đếm số ngày tháng, năm hiện tại >> Calendar
+	+ 5. Kiểm tra năm hiện tại có phải năm nhuận không
+	+ 6. Ngày đầu tiên trong tuần là thứ mấy với locale
+    + 7. Ngày đầu tiên trong tuần hiện tại là ngày mấy
+        ==> In ra danh sách các ngày trong tuần hiện tại   
+=>>> Epoch time
+
+1. Khái niệm timezone, múi giờ là gì ?
+	+ Múi giờ là khoảng thời gian, số tiếng từ vị trí của múi giờ đó so với vị trí của GMT-0 
+	(kinh độ, vĩ độ = 0 )
+	Vị trí: GMT = Greenwich Mean Time --> London
+	
+	VD: GMT + 7 : hơn 7 tiếng so với gốc thời gian ở LonDon
+	
+	Thời gian: 2 mùa
+	Từ tháng 10 năm trước đến tháng 10 năm sau
+
+
+2. GMT+7, UTC+7, UTC + x ?
+
+	GMT : Có thể ảnh hưởng bởi vấn đề thiên nhiên
+	Coding --> cần thười gian chính xác ms, s
+	UTC  : chuẩn múi giwof được quy ước trong www
+			Coordinated universal time
+	ITC/HSK... -> chia múi giờ theo khu vực
+
+	Epoch Time : 1-1-1970 0:0:0
+	
