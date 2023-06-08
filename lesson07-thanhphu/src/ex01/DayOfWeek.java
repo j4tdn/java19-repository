@@ -1,0 +1,5 @@
+package ex01;
+
+public enum DayOfWeek {
+	SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURDAY, FRIDAY, SATURDAY
+}
