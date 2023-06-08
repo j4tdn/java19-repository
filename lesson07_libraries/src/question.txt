@@ -1,0 +1,16 @@
+Ex01: Lấy thông tin thời gian hiện tại với [timezone]
+	
+=>>> Epoch time
+
+1.Khai niem timezone, mui gio la gi
+--> Mui gio la khoang thoi gian, so tieng tu vi tri cua mui gio do so voi vi tri cua GMT-0
+--> Vi tri: GMT = Greenwich mean time --> london
+
+2. GMT+7, UTC+7
+GMT: co the nah huong boi van de thien nhien
+   : coding --> can thoi gian chinh xac ms, s, m
+UTC: chuan mui gio duoc quy uoc trong www
+   : cordinated universal time
+   
+Time zone: mui gio chia theo khu vuc, ICT, HSK
+Epoch Time: 1-1-1970 00:00:00
