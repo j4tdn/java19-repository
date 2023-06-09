@@ -21,3 +21,20 @@ GMT: Có thể ảnh hưởng đến vấn đề thiên nhiên
 UTC: Chuẩn múi giờ được quy ước trong www
    : Coordinated Universal Time
 Epoach Time: 1-1-1970 0:0:0
+
+3. Thư viện ngày tháng năm qua các phiên bản
++ <= JDK 1.7
+	+ Date, Calendar, SimpleDateForm
+	+ Luôn lưu trữ ngày tháng năm giờ phút giây...
+	 . Không thể lưu trữ riêng Ngày Tháng Năm / Giờ Phút Giây
+	 . Không tương thích với KDL date, time trong database
+	 	Java.sql.Date: ngày tháng năm 
+	 	Java.sql.Time: giờ phút giây 
+	 	-> phải convert qua về khi tương tác Java và database	
+	 	
+	 	
++ >= JDK 8 -> design pattern: builder pattern
+	+ LocalDate
+	+ LocalTime
+	+ LocalDateTime
+	+ DateTimeFormatter
