@@ -1,0 +1,10 @@
+package localdatetime;
+
+import java.time.LocalDate;
+
+public class Ex01BasicDemo {
+	public static void main(String[] args) {
+		LocalDate ldate = LocalDate.now();
+		
+	}
+}
