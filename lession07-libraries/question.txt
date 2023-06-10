@@ -31,3 +31,38 @@ Ex01: Lấy thông tin thời gian hiện tại với [timezone]
 
 	Epoch Time : 1-1-1970 0:0:0
 	
+	
+3. Thư viện ngày/tháng/năm qua các version :
++ <=  JDK 1.7
+		+ Date, Calendar, SimpleDateFormat
+		+ -- > Luôn lưu trữ ngày, tháng, năm...
+		+ Hạn chế : 
+			. Không thể lưu trữ riêng Ngày Tháng Năm / Giowf Phút giây
+			. Khong tương thích với KDL Date, Time trong csdl
+				java.sql.Date : ngày tháng năm
+				java.sql.Time : giờ phút giây
+				--> phải convert qua về khi tương tác Java với CSDL
++ >= JDK 8 --> design pattern : builder pattern
+		+ LocalDate
+		+ LocalTime
+		+ LocalDateTime
+		+ DateTimeFortmatter
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
