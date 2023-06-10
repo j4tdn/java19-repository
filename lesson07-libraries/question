@@ -1,0 +1,49 @@
+Package: datetime
+  
+=>>> Epoch time
+
+
+1. Khái niệm timezone, múi giờ là gì?
+
+	--> Múi giờ là khoảng thời gian, số giờ từ vị trí của múi giờ đó
+		so với cái vị trí của GMT+0 (kinh độ, vĩ độ = 0) 
+		
+	--> Vị trí: GMT (Greenwich Mean Time)
+	
+	VD: GTM+7 --> Hơn 7 tiếng so với gốc thời gian ở London
+			  --> Phụ thuộc vào DST(+-1h)
+	
+	Thời gian: 2 mùa  
+
+
+2. GMT+7, UTC+7, UTC+x ?
+
+	GMT: Có thể ảnh hưởng bởi vấn đề thiên nhiên
+	   : Coding  --> cần thời gian chính xác ms, s, m
+	   
+	UTC (Cordinated Universal Time): Chuẩn múi giờ được quy ước trong www
+								   : 
+								 
+								 
+	ICT / HSK ...  --> chia múi giờ theo khu vực
+	
+	Epoch Time: 01.01.1970 00:00:00
+
+
+3. Thư viện ngày tháng năm qua các phiên bản
+	+ <= JDK 1.7 
+		-> Date, Calendar, SimpleDateFormat
+		--> Luôn lưu trữ ngày tháng năm giờ phút giây ...
+		* Hạn chế:
+			. Không thể lưu trữ riêng Ngày tháng năm/ Giờ phút giây
+			. Không tương thích với KDL Date, Time trong DB (java.sql.Time <Giờ phút giây>
+															 java.sql.Date <Ngày tháng năm>)
+															 
+				--> Phỉa convert qua về khi tương tác JAVA và DB
+				
+	+ >= JDK 8  --> design pattern: builder parttern
+	+ LocalDate
+	+ LocalTime
+	+ LocalDateTime
+	+ DateTimeFormatter
+
