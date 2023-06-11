@@ -1,0 +1,51 @@
+Ex01: Lấy thông tin thời gian hiện tại với [timezone]
+	+ 1. Ngày, Tháng, Năm
+	+ 2. Giờ 12-24, Phút, Giây
+	+ 3. Thứ ngày, tuần/ngày trong tháng, năm
+    + 4. Đếm số ngày tháng, năm hiện tại >> Calendar
+	+ 5. Kiểm tra năm hiện tại có phải năm nhuận không
+	+ 6. Ngày đầu tiên trong tuần là thứ mấy với locale
+    + 7. Ngày đầu tiên trong tuần hiện tại là ngày mấy
+        ==> In ra danh sách các ngày trong tuần hiện tại   
+=>>> Epoch time
+
+1. Khái niệm timezone, múi giờ là gì ?
+--> Múi giờ là khoảng thời gian, số tiếng từ vị trí của múi giờ
+đó so với vị trí của GMT-0(kinh độ, vĩ độ = 0)
+--> Vị trí: GMT = Greenwich Mean Time --> London
+
+VD: GMT+7 --> Hơn 7 tiếng so với góc thời gian ở London
+	      --> Phụ thuộc DST(+-1h)
+
+Thời gian: 2 mùa
+Từ tháng 10 NT - 4 NS: 
+
+
+2. GMT+7, UTC+7, UTC+x ?
+GMT: Có thể ảnh hưởng bởi vấn đề thiên nhiên
+   : Coding --> cần thời gian chính xác ms, s, m
+
+UTC: Chuẩn múi giờ được quy ước trong www
+   : Cordinated universal time
+   
+ICT/HSK.... --> chia múi giờ theo khu vực   
+
+Epoch Time: 1-1-1970 0:0:0
+3. Thư viện ngày tháng năm qua các phiên bản
+- <= Java 07
+	+ java.util.Date, Calendar, SimpleDateFormat
+	+ -> luôn lưu trữ ngày tháng năm giờ phút giây ...
+	+ Hạn chế:
+		. Không thể lưu trữ riêng Ngày tháng năm/ Giờ phút giây
+		. Không tương thích với KDL Date, Time trong CSDL
+		  java.sql.Date: ngày tháng năm
+		  java.sql.Time: giờ phút giây
+		  --> phải convert qua về khi tương tác giữa JAVA và CSDL
+- >= Java 8 || JDK 8 --> design pattern: builder pattern
+	+ LocalDate
+	+ LocalTime
+	+ LocalDateTime
+	+ DateTimeFormatter
+
+
+
