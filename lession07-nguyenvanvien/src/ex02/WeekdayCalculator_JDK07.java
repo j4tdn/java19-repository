@@ -12,7 +12,7 @@ import enu.custom.DayOfWeek;
 import exception.custom.DateValidator;
 import exception.custom.NumberValidator;
 
-public class WeekdayCalculator {
+public class WeekdayCalculator_JDK07 {
 	static DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
 	static Scanner scanner = new Scanner(System.in);
 	static Calendar c = null;

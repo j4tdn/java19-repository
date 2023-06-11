@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class DueDate {
+public class DueDate_JDK07 {
 	public static DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
 	public static void main(String[] args) {
 		findDue();

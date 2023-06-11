@@ -1,4 +1,4 @@
-package ex01lationship_calculator;
+package ex01;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -11,7 +11,7 @@ import enu.custom.DayOfWeek;
 import exception.custom.DateValidator;
 import exception.custom.NumberValidator;
 
-public class LationshipCalculator {
+public class LationshipCalculator_JDK07 {
 	public static DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
 	public static Scanner sc = new Scanner(System.in);
 	public static void main(String[] args) {

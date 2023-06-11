@@ -1,16 +1,11 @@
 package exception.custom;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
-import java.util.Calendar;
-import java.util.Date;
 
 public class DateValidator {
-	DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
 	public DateValidator() {
 		
 	}
@@ -20,7 +15,17 @@ public class DateValidator {
 	        LocalDate.parse(date, formatter);
 	        return true;
 	    } catch (DateTimeParseException e) {
-	        throw new ThrowsException("Invalid Date !");
+	        throw new ThrowsException("\nInvalid Date (dd/MM/yyyy)!");
+	    }
+	}
+	
+	public boolean isValidTime(String time) throws ThrowsException {
+	    try {
+	    	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+	        LocalTime.parse(time, formatter);
+	        return true;
+	    } catch (DateTimeParseException e) {
+	        throw new ThrowsException("\nInvalid Time (HH:mm:ss)!");
 	    }
 	}
 }

@@ -12,7 +12,7 @@ import java.util.TimeZone;
 import enu.custom.DayOfWeek;
 import exception.custom.DateValidator;
 
-public class PracticeDay {
+public class PracticeDay_JDK07 {
 	public static DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
 	public static Calendar calendar = Calendar.getInstance();
 	public static Scanner sc = new Scanner(System.in);
@@ -42,11 +42,11 @@ public class PracticeDay {
 		Calendar c = (Calendar)calendar.clone();
 		c.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
 		System.out.println("The start day in this week : " + c.get(Calendar.DAY_OF_MONTH));
-		System.out.println("The end day in this week : " + (c.get(Calendar.DAY_OF_MONTH)+7));
+		System.out.println("The end day in this week : " + (c.get(Calendar.DAY_OF_MONTH)+6));
 	}
 	public static void getDayInWeekInYear() {
 		Calendar c = (Calendar)calendar.clone();
-		System.out.println("The end day in this week : " + c.get(Calendar.WEEK_OF_YEAR));
+		System.out.println("The week in year : " + c.get(Calendar.WEEK_OF_YEAR));
 	}
 	public static void getDayAfter20Day() {
 		Calendar c = (Calendar)calendar.clone();
