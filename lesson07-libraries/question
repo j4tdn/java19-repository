@@ -14,3 +14,6 @@ UTC: chuan mui gio duoc quy uoc trong www
    
 Time zone: mui gio chia theo khu vuc, ICT, HSK
 Epoch Time: 1-1-1970 00:00:00
+
+3. Thu vien ngay thang nam qua cac phien ban
++ <= jdk 1.7
