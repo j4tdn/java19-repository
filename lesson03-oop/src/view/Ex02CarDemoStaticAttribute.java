@@ -5,8 +5,6 @@ import bean.Car;
 public class Ex02CarDemoStaticAttribute {
 	public static void main(String[] args) {
 		
-		int a = 5;
-		
 		// Tạo N đối tượng Car chứa giá trị bất kỳ(đầy đủ thông tin)
 		// Yêu cầu: tất cả đều thuộc model --> Audi
 		Car.model = "Audi";

@@ -31,3 +31,21 @@ UTC: Chuẩn múi giờ được quy ước trong www
 ICT/HSK.... --> chia múi giờ theo khu vực   
 
 Epoch Time: 1-1-1970 0:0:0
+
+3. Thư viện ngày tháng năm qua các phiên bản
+- <= JDK 1.7
+  + java.util.Date, Calendar, SimpleDateForm
+  + Luôn lưu trữ ngày tháng năm giờ phút giây ...
+  + Hạn chế
+    . Không thể lưu trữ riêng Ngày Tháng Năm / Giờ Phút Giây
+    . Không tương thích với KDL Date, Time trong cơ sở dữ liệu
+      java.sql.Date: ngày tháng năm
+      java.sql.Time: giờ phút giây
+      --> phải convert qua về khi tương tác JAVA và CSDL   
+
+- >= JDK 8 --> design pattern: builder pattern
+  + LocalDate
+  + LocalTime
+  + LocalDateTime
+  + DateTimeFormatter
+
