@@ -1,4 +1,4 @@
-Ex01: Lấy thông tin thời gian hiện tại với [timezone]
+1. Ex01: Lấy thông tin thời gian hiện tại với [timezone]
 	+ 1. Ngày, Tháng, Năm
 	+ 2. Giờ 12-24, Phút, Giây
 	+ 3. Thứ ngày, tuần/ngày trong tháng, năm
@@ -9,7 +9,18 @@ Ex01: Lấy thông tin thời gian hiện tại với [timezone]
         ==> In ra danh sách các ngày trong tuần hiện tại   
 =>>> Epoch time
 
-GMT+7, UTC+7, UTC-x
+2. GMT+7, UTC+7, UTC-x
 Greenwich Mean Time : london
 
 EpochTime: 1-1-1970 0:0:0
+
+3.Thu vien ngay thang nam qua cac phien ban:
+	JDK 1.7
+	+ Date, Calendar, SimpleDateFormat
+	+ Han che
+		Khong the luu tru rieng ngay thang nam / gio phut giay
+		Khong tuong thich voi KDL Date,Time trong CSDL
+		--> phai convert qua lai khi tuong tac JAVA voi CSDL
+		
+	JDK 8 --> design pattern: builder pattern
+	+ Local
