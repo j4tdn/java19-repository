@@ -1,4 +1,4 @@
-package homework;
+package java7;
 
 
 import java.text.SimpleDateFormat;
