@@ -1,4 +1,4 @@
-package Bai2;
+package JDKLessThan8.bai2;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -8,7 +8,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
 
-import bai1.DateOfWeek;
+import JDKLessThan8.bai1.DateOfWeek;
 
 public class WeekDayCalculator {
 	static Scanner ip = new Scanner(System.in);

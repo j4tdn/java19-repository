@@ -1,4 +1,4 @@
-package bai1;
+package JDKLessThan8.bai1;
 
 public enum DateOfWeek {
 		

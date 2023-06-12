@@ -1,4 +1,4 @@
-package Bai2;
+package JDKLessThan8.bai2;
 
 public enum Month {
 	January,
