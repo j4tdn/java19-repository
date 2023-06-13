@@ -13,14 +13,14 @@ public class TheUltimateRelationshipCalculator {
 
 	public static void main(String[] args) {
 
-		Date startDate = parseDateFormat("Start Dating Date", "dd/MM/yyyy HH:mm:ss");
+		Date startDate = parseDateFormat("Start Dating Date", "dd/MM/yyyy HH:mm:ss",1);
 
 		Date endDate;
 		while (true) {
 			System.out.println("Are you break up? (y/n): ");
 			String confirm = sc.nextLine();
 			if (confirm.equalsIgnoreCase("y") || confirm.equalsIgnoreCase("Y")) {
-				endDate = parseDateFormat("Break-up Date", "dd/MM/yyyy HH:mm:ss");
+				endDate = parseDateFormat("Break-up Date", "dd/MM/yyyy HH:mm:ss",1);
 				if (endDate.before(startDate)) {
 					System.out.println("Your Break-up Date Should Exceed Your Start Dating Date!");
 					continue;

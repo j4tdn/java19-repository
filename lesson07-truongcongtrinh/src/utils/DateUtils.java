@@ -7,14 +7,20 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
 
-import common.DayOfWeek;
+import common.DayOfWeekAsText;
+import common.DayOfWeekAsVnese;
 
 public class DateUtils {
-	private static final DayOfWeek[] dows = DayOfWeek.values();
+	private static final DayOfWeekAsVnese[] dowVnese = DayOfWeekAsVnese.values();
 	private static final Scanner sc = new Scanner(System.in);
 	private static final Calendar currentDate = Calendar.getInstance();
-
-	private DateUtils() {
+	private static final DayOfWeekAsText[]  dows = DayOfWeekAsText.values();
+	
+ 	private DateUtils() {
+	}
+	
+	public static String getDayOfWeekAsText(Calendar c) {
+		return dows[c.get(Calendar.DAY_OF_WEEK)-1].toString();
 	}
 
 	public static int[] getActualMaximumCurrentDayOfWeekInMonth(Calendar c) {
@@ -54,7 +60,11 @@ public class DateUtils {
 		return resCount;
 	}
 
-	public static Date parseDateFormat(String content, String format) {
+	/*
+	 * Because ex01 enter start dating date so i need to check whether it exceed current day or not
+	 * but in the next, i dont need so i put parameter ex to check and make sure it works properly =))
+	 */
+	public static Date parseDateFormat(String content, String format,int ex) {
 		Date inputDate;
 		do {
 			System.out.print("Enter " + content + " (" + format + ")" + ": ");
@@ -62,13 +72,15 @@ public class DateUtils {
 			DateFormat df = new SimpleDateFormat(format);
 			try {
 				inputDate = df.parse(inputDayAsString);
-				if (inputDate.after(currentDate.getTime())) {
-					throw new IllegalArgumentException(
-							content + " Should Not Exceed Current Time --> " + df.format(currentDate.getTime()));
+				if(ex == 1) {
+					if (inputDate.after(currentDate.getTime())) {
+						throw new IllegalArgumentException(
+								content + " Should Not Exceed Current Time --> " + df.format(currentDate.getTime()));
+					}
 				}
 				break;
 			} catch (ParseException e) {
-				System.out.println("Invalid Format Date " + format);
+				System.out.println("Invalid Format Date " + "(" + format + ")!");
 			} catch (IllegalArgumentException e) {
 				System.out.println(e.getMessage());
 			}
@@ -76,8 +88,8 @@ public class DateUtils {
 		return inputDate;
 	}
 
-	public static DayOfWeek getDayOfWeek(Date date) {
-		return dows[createCalendarAsDate(date).get(Calendar.DAY_OF_WEEK) - 1];
+	public static DayOfWeekAsVnese getDayOfWeek(Date date) {
+		return dowVnese[createCalendarAsDate(date).get(Calendar.DAY_OF_WEEK) - 1];
 	}
 
 	public static Calendar createCalendarAsDate(Date date) {

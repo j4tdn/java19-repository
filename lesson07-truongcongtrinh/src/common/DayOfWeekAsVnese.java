@@ -1,6 +1,6 @@
 package common;
 
-public enum DayOfWeek {
+public enum DayOfWeekAsVnese {
 	SUNDAY("Chủ Nhật"),
 	MONDAY("Thứ Hai"),
 	TUESDAY("Thứ Ba"),
@@ -11,7 +11,7 @@ public enum DayOfWeek {
 	
 	private String text;
 	
-	DayOfWeek(String text) {
+	DayOfWeekAsVnese(String text) {
 		this.text = text;
 	}
 	
