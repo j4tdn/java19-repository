@@ -22,6 +22,34 @@ public class DateUtils {
 	public static String getDayOfWeekAsText(Calendar c) {
 		return dows[c.get(Calendar.DAY_OF_WEEK)-1].toString();
 	}
+	
+	public static String format(String pattern, Calendar calendar) {
+		return new SimpleDateFormat(pattern).format(calendar.getTime());
+	}
+	
+	public static Calendar getInstance(int date, int month, int year) {
+		Calendar calendar = Calendar.getInstance();
+		calendar.set(year, month, date);
+		return calendar;
+	}
+	
+	public static boolean isHoliday(Calendar checkedCal, Calendar[] holidays) {
+		int dayOfMonth = checkedCal.get(Calendar.DAY_OF_MONTH);
+		int month = checkedCal.get(Calendar.MONTH);
+		for (Calendar holiday : holidays) {
+			if (dayOfMonth == holiday.get(Calendar.DAY_OF_MONTH) && month == holiday.get(Calendar.MONTH)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public static Calendar getTime(int date, int month) {
+		Calendar calendar = Calendar.getInstance();
+		calendar.set(Calendar.DAY_OF_MONTH, date);
+		calendar.set(Calendar.MONTH, month);
+		return calendar;
+	}
 
 	public static int[] getActualMaximumCurrentDayOfWeekInMonth(Calendar c) {
 		int resCount[] = new int[2]; // index 0 for current index 1 for max
