@@ -10,6 +10,20 @@ Ex01: Lấy thông tin thời gian hiện tại với [timezone]
         ==> In ra danh sách các ngày trong tuần hiện tại   
 =>>> Epoch time
 
+Thư viện ngày tháng năm qua các phiên bản:
+<= JDK 1.7
+	+java.util.Date, Calendar, SimpleDateForm
+	+Luôn lưu trữ ngày tháng năm giờ phút giây
+	+Hạn chế
+		.Không thể lưu trữ riêng ngày tháng năm/ giờ phút giây
+		.Không tương thích với kiểu dữ liệu Date, Time trong CSDL
+		.java.sql.Date: ngày tháng năm
+		.java.sql.Time: giờ phút giây
+		--> phải convert qua về khi tương tác JAVA và CSDL
+		
+ >= JDK 8 --> design patten builer patten
+
+
 1.Khái niệm timezone, múi giờ là gì?
 múi giờ là khoảng tg, số tiếng từ ví trí của múi giờ đó so với vị trí của GMT-0(kinh độ, vĩ độ = 0)
 
