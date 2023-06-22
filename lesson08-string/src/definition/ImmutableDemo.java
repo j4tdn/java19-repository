@@ -1,0 +1,13 @@
+package definition;
+
+public class ImmutableDemo {
+    public static void main(String[] args) {
+		ImmutableTest t1 = new ImmutableTest(17, "hello");
+		System.out.println("t1 --> " + t1);
+		
+		//JAVA --> available immutable class: Integer, Float,...
+		//immutable --> unable to modify value at HEAP
+		//final --> unable to modify value at STACK
+		
+	}
+}
