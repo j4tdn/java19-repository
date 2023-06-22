@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.TreeMap;
 
-public class LevelOfNumber {
+public class Ex03LevelOfNumber {
 	private static final Scanner sc = new Scanner(System.in);
 	private static TreeMap<Integer, Integer> map = new TreeMap<>();
 

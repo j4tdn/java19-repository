@@ -4,7 +4,7 @@ package view;
 import java.util.HashMap;
 import java.util.HashSet;
 
-public class CommonElementCounter {
+public class Ex01CommonElementCounter {
 	private static HashMap<Integer, Integer> hashMap = new HashMap<>();
 
 	public static void main(String[] args) {

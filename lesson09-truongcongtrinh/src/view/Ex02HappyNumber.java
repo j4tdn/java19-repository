@@ -1,6 +1,6 @@
 package view;
 
-public class HappyNumber {
+public class Ex02HappyNumber {
 	public static void main(String[] args) {
 		System.out.println(isHappyNumber(32));
 	}

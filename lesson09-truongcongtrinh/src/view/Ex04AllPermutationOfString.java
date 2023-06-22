@@ -3,7 +3,7 @@ package view;
 import java.util.HashSet;
 import java.util.Set;
 
-public class AllPermutationOfString {
+public class Ex04AllPermutationOfString {
     private static Set<String> permutations = new HashSet<>();
 
     public static void main(String[] args) {
