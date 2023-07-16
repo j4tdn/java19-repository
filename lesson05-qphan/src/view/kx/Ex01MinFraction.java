@@ -39,6 +39,7 @@ import java.util.Arrays;
                  -->           : 5(phần thập phân)
                  -->           : 10(10^1[số chữ số thập phân])
                  --> 15/10     : (phần nguyên * 10^[số chữ số thập phân] + phần thập phân)] / 10^[số chữ số thập phân
+    						   
     						   : tử số = phần nguyên * 10^[số chữ số thập phân] + phần thập phân)
     						   : mẫu số: 10^[số chữ số thập phân]
     332.00342    --> (332 * 10^5 + 00342) / 10^5
