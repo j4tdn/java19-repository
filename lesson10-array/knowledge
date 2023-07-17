@@ -1,0 +1,69 @@
+Stratege Pattern 
+====================
+Khi nào sử dụng
+
+==> Khi các phương thức trùng lặp code, khác nhau chức năng, 
+điều kiện mà các điều kiện cùng input, output khác implementation 
+--> tạo ra 1 hàm chung với tham số là 1 strategy
+
+B1: Tìm công thức chung 
++ input: những tham số nào, kiểu dữ liệu gì
+
++ output: kiểu dữ liệu trả về là gì 
+VD: boolean test (int number)
+    int process (int a , int b)
+    
+B2: Tạo ra [funtional] interface chứa strategy
++ Strategy: abstract method
++ interface , method name tuỳ ý
+VD: Condition --> boolean test(int number)
+@FunctionalInterface
+public interface Condition {
+	boolean test(int number);
+}
+Processor --> process(int a, int b)
+
+B3: Trở về code logic tạo ra hàm với tham số truyền vào
+lè biến kiểu interface chứa strategy
+Thân hàm --> interface gọi strategy đó
+private static int[] getNumbers(int[] numbers, Condition condition) {
+		int[] result = new int[numbers.length];
+		int count = 0;
+		for (int number : numbers) {
+			if (condition.test(number)) {
+				result[count++] = number;
+			}
+		}
+		return Arrays.copyOfRange(result, 0, count);
+	}
+	
+B4: Lúc gọi hàm --> truyền thực thi cho strategy method
+-->anonymous class --> anonymous funtion(lambda) --> method reference
+Condition c2 = new Condition() {
+
+			@Override
+			public boolean test(int number) {
+				return number % 2 == 0;
+			}
+		};
+========================================
+Condition c1 = (int number) -> {
+return number % 2 != 0;
+========================================
+printf("oodNumber", getNumbers(numbers, nb -> nb % 2 != 0));
+
+========================================
+    System.out.println("add --> " + process(x, y, Ex02Numerator::sum));
+    
+    
+	public static int sum(int a, int b) {
+		return a + b;
+	}
+	
+	private static int process(int a, int b, Operator operator) {
+		return operator.operate(a, b);
+	}
+
+
+
+
