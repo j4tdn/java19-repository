@@ -1,0 +1,15 @@
+package kt;
+
+public class PublisherCondition implements Condition{
+
+	private String name;
+	public PublisherCondition(String name) {
+		this.name = name;
+	}
+	
+	@Override
+	public boolean check(Book book) {
+		return name.equals(book.getPublisher());
+	}
+
+}
