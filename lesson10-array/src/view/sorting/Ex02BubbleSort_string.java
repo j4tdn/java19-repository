@@ -28,7 +28,7 @@ public static void main(String[] args) {
 			return true;
 		}
 		if(s2 == null) {
-			return false;
+			return false;g
 		}
 		return s1.compareTo(s2) < 0;
 	});
