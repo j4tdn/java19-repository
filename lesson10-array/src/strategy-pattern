@@ -1,0 +1,16 @@
+Khi nào sử dụng 
+-> khi có các phương thúc lặp code, khác nhau chức năng, điều kiện mà các điều kiện cùng input, output khác implementation
+-> tạo ra 1 hàm chung với tham số là 1 strategy
+
+B1: Tìm công thức chung 
++ input: những tham số nào, kiểu dữ liệu gì 
++ output: kiểu dữ liệu trả về là gì 
+
+B2: Tạo ra [function] interface chứa strategy 
++ strategy: abstract method 
++ interface, method name tùy ý 
+
+B3: Trở về code logic tạo ra hàm với tham số truyền vào là biến kiểu interface chứa strategy 
+Thân hàm -> interface gọi strategy đó
+
+B4: Lúc gọi hàm -> truyền thực thi cho strategy method -> anonymous class -> anonymous function(lambda) -> method reference
