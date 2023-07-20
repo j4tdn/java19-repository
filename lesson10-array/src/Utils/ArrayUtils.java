@@ -1,8 +1,12 @@
 package Utils;
 
+import bean.Item;
+
 public class ArrayUtils {
-public static void swap(String[] array, int i, int j) {
-	String temp = array[i];
+	
+	
+public static void swap(Item[] array, int i, int j) {
+	Item temp = array[i];
 	array[i] = array[j];
 	array[j] = temp;
 }
