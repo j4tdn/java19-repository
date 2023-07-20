@@ -1,7 +1,0 @@
-KDL nguyên thuỷ
-+ Dùng để lưu trữ dữ liệu
-+ lưu trũ dữ liệu đơn
-VD: số nguyên, số thực, kí tự
-	int: -> 4 bytes
-	long: -> 8 bytes
-	float:
