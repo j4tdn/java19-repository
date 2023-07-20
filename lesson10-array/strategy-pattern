@@ -10,7 +10,7 @@ B1: Tìm công thức chung
 + input: những tham số nào, kiểu dữ liệu gì
 + output: kiểu dữ liệu trả về là gì
 VD: boolean test(int number)
-  : int process(int a, int b) 
+  : int process(int a, int b)
 
 B2: Tạo ra [funtional] interface chứa strategy
 + strategy: abstract method
