@@ -1,6 +1,7 @@
 package view.sorting;
 
 import bean.Item;
+import functional.ItemComparator;
 import utils.ArrayUtils;
 
 public class Ex03BubbleSort_Item {
@@ -18,28 +19,99 @@ public class Ex03BubbleSort_Item {
 		// sorting by which properties, order(asc/desc) ?
 
 		// e.g 1: salesPrice(asc)
-		bubbleSortBySalesPriceAsc(items);
+		// bubbleSortBySalesPriceAsc(items);
+		bubbleSort(items, (i1, i2) -> {
+			if (i1.getSalesPrice() > i2.getSalesPrice()) {
+				return true;
+			}
+			return false;
+		});
 		ArrayUtils.printf("eg1 --> item sorted by salesPrice(ASC)", items);
 
 		// e.g 2: salesPrice(desc)
-		bubbleSortBySalesPriceDesc(items);
+		// bubbleSortBySalesPriceDesc(items);
+		bubbleSort(items, (i1, i2) -> {
+			return i1.getSalesPrice() < i2.getSalesPrice();
+		});
 		ArrayUtils.printf("eg2 --> item sorted by salesPrice(DESC)", items);
 		
 		// e.g 3: itemName(desc)
-		bubbleSortByItemNameDesc(items);
+		// bubbleSortByItemNameDesc(items);
+		bubbleSort(items, (i1, i2) -> {
+			if (i1.getName().compareTo(i2.getName()) < 0) {
+				return true;
+			}
+			return false;
+		});
 		ArrayUtils.printf("eg3 --> item sorted by itemName(DESC)", items);
 		
 		// e.g 4: storeId(asc)
-		bubbleSortByStoreIdAsc(items);
+		// bubbleSortByStoreIdAsc(items);
+		bubbleSort(items, (i1, i2) -> {
+			return i1.getStoreId() > i2.getStoreId();
+		});
 		ArrayUtils.printf("eg4 --> item sorted by storeId(ASC)", items);
 		
-		// e.g 4: storeId(asc), salesPrice(desc)
-		bubbleSortByStoreIdAscSalesPriceDesc(items);
-		ArrayUtils.printf("eg5 --> item sorted by storeId(ASC), salesPrice(DESC)", items);
+		// e.g 5: storeId(asc), salesPrice(desc)
+		// bubbleSortByStoreIdAscSalesPriceDesc(items);
 		
-		// e.g 5: storeId(asc), salesPrice(desc), itemId(asc)
-		bubbleSortByStoreIdAscSalesPriceDescItemIdAsc(items);
-		ArrayUtils.printf("eg5 --> item sorted by storeId(ASC), salesPrice(DESC), itemId(ASC)", items);
+		// e.g 5: storeId(desc), salesPrice(asc)
+		bubbleSort(items, (i1, i2) -> {
+			if (i1.getStoreId() != i2.getStoreId()) {
+				return i1.getStoreId() < i2.getStoreId();
+			}
+			return i1.getSalesPrice() > i2.getSalesPrice();
+		});
+		ArrayUtils.printf("eg5 --> item sorted by storeId(DESC), salesPrice(ASC)", items);
+		
+		// e.g 6: storeId(asc), salesPrice(desc), itemId(asc)
+		// bubbleSortByStoreIdAscSalesPriceDescItemIdAsc(items);
+		bubbleSort(items, (i1, i2) -> {
+			if (i1.getStoreId() != i2.getStoreId()) {
+				return i1.getStoreId() > i2.getStoreId();
+			}
+			if (i1.getSalesPrice() != i2.getSalesPrice()) {
+				return i1.getSalesPrice() < i2.getSalesPrice();
+			}
+			return i1.getItemId() > i2.getItemId();
+		});
+		ArrayUtils.printf("eg6 --> item sorted by storeId(ASC), salesPrice(DESC), itemId(ASC)", items);
+	}
+	
+	// boolean strategy(Item i1, Item i2)
+	/*
+	 
+	 if (items[j].getSalesPrice() > items[j + 1].getSalesPrice())
+	 
+	 if (items[j].getSalesPrice() < items[j + 1].getSalesPrice())
+	 
+	 if (items[j].getName().compareTo(items[j + 1].getName()) < 0)
+	 
+	 if (items[j].getStoreId() > items[j+1].getStoreId()) {
+		} else if (items[j].getStoreId() == items[j+1].getStoreId()) {
+			if (items[j].getSalesPrice() < items[j+1].getSalesPrice()) {
+			}
+		}
+	 
+	 if (items[j].getStoreId() > items[j+1].getStoreId()) {
+	 } else if (items[j].getStoreId() == items[j+1].getStoreId()) {
+	 	if (items[j].getSalesPrice() < items[j+1].getSalesPrice()) {
+	 	} else if (items[j].getSalesPrice() == items[j+1].getSalesPrice()) {
+			if (items[j].getItemId() > items[j+1].getItemId()) {
+			}
+		}
+	}
+	*/
+	
+	public static void bubbleSort(Item[] items, ItemComparator comparator) {
+		for (int i = 0; i < items.length; i++) {
+			for (int j = 0; j < items.length - i - 1; j++) {
+				// nếu kết quả so sánh của item j, j+1 trả về true ==> hoán vị
+				if (comparator.compare(items[j], items[j+1])) {
+					ArrayUtils.swap(items, j, j + 1);
+				}
+			}
+		}
 	}
 
 	public static void bubbleSortBySalesPriceAsc(Item[] items) {
@@ -101,10 +173,6 @@ public class Ex03BubbleSort_Item {
 		for (int i = 0; i < items.length; i++) {
 			for (int j = 0; j < items.length - i - 1; j++) {
 				boolean condition = false;
-				if (items[j].getStoreId() > items[j+1].getStoreId()) {
-					condition = true;
-				}
-				
 				if (items[j].getStoreId() > items[j+1].getStoreId()) {
 					condition = true;
 				} else if (items[j].getStoreId() == items[j+1].getStoreId()) {
