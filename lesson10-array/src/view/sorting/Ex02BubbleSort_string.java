@@ -14,6 +14,7 @@ public static void main(String[] args) {
 	System.out.println("\n=========================\n");
 	bubbleSort(sequences, (s1, s2) -> {
 		if(s1 == null) {
+			// no swap
 			return false;
 		}
 		if(s2 == null) {
@@ -22,13 +23,15 @@ public static void main(String[] args) {
 		return s1.compareTo(s2) > 0;
 		
 	});
-	System.out.println("bubble sort string ASC -> " + Arrays.toString(sequences));
+	System.out.println("bubble sort st	ring ASC -> " + Arrays.toString(sequences));
+	
+	
 	bubbleSort(sequences, (s1, s2) -> {
 		if(s1 == null && s2 != null) {
 			return true;
 		}
 		if(s2 == null) {
-			return false;g
+			return false;
 		}
 		return s1.compareTo(s2) < 0;
 	});
@@ -37,7 +40,7 @@ public static void main(String[] args) {
 private static void bubbleSort(String[] sequences, StringComparator comparator) {
 	for(int i = 0; i< sequences.length; i++) {
 		for(int j = 0; j < sequences.length - i - 1; j++ ) {
-			if(sequences[j].compareTo(sequences[j], sequences[j + 1])) {
+			if(comparator.compare(sequences[j], sequences[j + 1])) {
 				ArrayUtils.swap(sequences, j, j + 1);
 			}
 		}

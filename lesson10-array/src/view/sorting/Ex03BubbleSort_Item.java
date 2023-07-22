@@ -1,22 +1,25 @@
 package view.sorting;
 
+import java.util.Arrays;
+
 import Utils.ArrayUtils;
 import bean.Item;
 
 public class Ex03BubbleSort_Item {
 public static void main(String[] args) {
 	Item[] items = mockData();
-	
-	
+	bubbleSortBySalePriceAsc(items);
+
 }
-private static void bubbleSortBySalePriceAsc(Item[] item) {
-	for(int i = 0; i < item.length; i++) {
-		for(int j = 0; j < item.length - i -1; j++) {
-			if(item[j].getSalesPrice() > item[j + 1].getSalesPrice()) {
-				ArrayUtils.swap(item, j, j + 1);
+private static void bubbleSortBySalePriceAsc(Item[] items) {
+	for(int i = 0; i < items.length; i++) {
+		for(int j = 0; j < items.length - i -1; j++) {
+			if(items[j].getSalesPrice() > items[j + 1].getSalesPrice()) {
+				ArrayUtils.swap(items, j, j + 1);
 			}
 		}
 	}
+	ArrayUtils.printf("item sorted by salesPrice(ASC)", items);
 }
 
 private static Item[] mockData() {
