@@ -1,0 +1,73 @@
+--> khai báo biến, hàm(cơ bản)
+--> Nhập dữ liệu, random
+
+--> Xử lí chức năng
+	-Cấu trúc điều kiện ,vòng lặp
+	
+	
+
+
+
+--> Chức năng --> nhận vào tham số là 1 dãy các số nguyên N
+--> teesting: 100 số --TH1: nhập từng số
+					   TH2: Lấy dữ liệu ngẫu nhiên
+					   		--> Code đoạn code để tự tạo ra 100 số ngẫu nhiên 
+
+--> Nhiệm vụ : Tìm những số lẽ trong dãy số
+
++if if else else if
++ tenary operator --> toán tử 3 ngôi
++ swith case --> if else ==
+  + break: swicth case có break, thoát khỏi swicth case khi gặp break
+  + non-break: sau khi đúng case đầu tiên nhảy vào body của các case tiếp
+  				theo bên dưới mà ko cần kiểm tra điều kiện
+  				--> kết thúc khi gặp break hoặc xong phần default
+
++ duyệt:
+	.for       -> duyệt mảng, danh sách
+	.while     ->code logic
+	.do while  --> code logic, tối thiểu thực hiện 1 lần
+
+
+KDL nguyên thủy
++ dùng để lưu trữ dữ liệu(đơn) tại vùng nhớ STACK
++ sử dụng kdl có sẳn của JAVA
+
+  VD: số nguyên, số thực, kí tự
+    : int: số nguyên  -> 4 bytes = 32 bits -> BIT(0,1),BYTE,KB,MB,GIGA,
+      				  --> MIN,MAX <=> [-2^(n-1), 2^(n-1) - 1]
+      				  n: số bit(s)
+      long: số nguyên -> 8 bytes
+      float: số thực
+      char: kí tự
+      
+KDL đối tượng
++ dùng để lưu trữ dữ liệu (đơn,đa)
++ sử dụng KDL có sẳn của JAVA hoặc tự định nghĩa
+	.có sẵn :Integer(value), Character, Float, String, Boolean. Date, time,..
+	
+	.tự định nghĩa: Item(id, name, price)
+	-->c1. khởi tạo giá trị (Đối tượng) --> dùng từ khóa new --> gọi hàm khởi tạo
+	-->c2. Không cần new mà có thể gán trực tiếp --> heap --> constant pool
++ giá trị lưu trữ ở vùng nhớ HEAP
+  VD: Khai báo KDL Mặt Hàng: mã mặt hàng, tên mặt hàng, giá bán
+    Item: id,name, price 
+    Giá trị của ô nhớ mà Item trỏ đến phải luôn 
+    có 3 giá trị cho id , name, price
+    MatHang mh =....     
+    ====> Phân biệt int, Integer ?
+    Giống nhau:
+    	.Lưu trữ
+    Khác nhau:
+    	.int : luôn luôn có giá trị(mặc định = 0)
+    		: ko hỗ trợ hàm
+    		
+    	.Integer: có thể lưu giá trị hoặc không(null)
+    			: hỗ trợ các hàm tiện ích min, max,	..
+    			
+       
+    
++ Biến cục bộ 
+ 	.Khai báo bên trong 1 hàm
+ 	.Phạm vi sử dụng: là ở trong hàm chứa nó block code{}
+ 	    
