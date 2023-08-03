@@ -63,24 +63,24 @@ public class Ex02BubbleSort_String {
 		}
 	}
 
-	private static void bubbleSortDESC(String[] sequences) {
-		for (int i = 0; i < sequences.length; i++) {
-			for (int j = 0; j < sequences.length - 1 - i; j++) {
-				if (sequences[j].compareTo(sequences[j + 1]) < 0) {
-					ArrayUtils.swap(sequences, j, j + 1);
-				}
-			}
-		}
-	}
-
-	private static void bubbleSortASC(String[] sequences) {
-		for (int i = 0; i < sequences.length; i++) {
-			for (int j = 0; j < sequences.length - 1 - i; j++) {
-				if (sequences[j].compareTo(sequences[j + 1]) > 0) {
-					ArrayUtils.swap(sequences, j, j + 1);
-				}
-			}
-		}
-	}
+//	private static void bubbleSortDESC(String[] sequences) {
+//		for (int i = 0; i < sequences.length; i++) {
+//			for (int j = 0; j < sequences.length - 1 - i; j++) {
+//				if (sequences[j].compareTo(sequences[j + 1]) < 0) {
+//					ArrayUtils.swap(sequences, j, j + 1);
+//				}
+//			}
+//		}
+//	}
+//
+//	private static void bubbleSortASC(String[] sequences) {
+//		for (int i = 0; i < sequences.length; i++) {
+//			for (int j = 0; j < sequences.length - 1 - i; j++) {
+//				if (sequences[j].compareTo(sequences[j + 1]) > 0) {
+//					ArrayUtils.swap(sequences, j, j + 1);
+//				}
+//			}
+//		}
+//	}
 
 }

@@ -1,8 +1,44 @@
 package utils;
 
+import java.util.Arrays;
+
+import bean.Item;
+
 public class ArrayUtils {
 
 	private ArrayUtils() {
+	}
+	
+	public static void sort(int[] elements, boolean isAsc) {
+		Arrays.sort(elements);
+		if(!isAsc) {
+			reverse(elements);
+		}
+	}
+	
+	public static void printf(String prefix, Item[] items) {
+		System.out.println(prefix + ":");
+		for(Item item:items) {
+			System.out.println(item);
+		}
+	}
+	
+	public static void swap(int[] numbers, int i, int j) {
+		int temp = numbers[i];
+		numbers[i] = numbers[j];
+		numbers[j] = temp;
+	}
+
+	public static void swap(String[] sequences, int i, int j) {
+		String temp = sequences[i];
+		sequences[i] = sequences[j];
+		sequences[j] = temp;
+	}
+	
+	public static void swap(Item[] item, int i, int j) {
+		Item temp = item[i];
+		item[i] = item[j];
+		item[j] = temp;
 	}
 
 	public static int[] copyOf(int[] origin, int newLength) {
@@ -25,15 +61,11 @@ public class ArrayUtils {
 		}
 	}
 	
-	public static void swap(int[] numbers, int i, int j) {
-		int temp = numbers[i];
-		numbers[i] = numbers[j];
-		numbers[j] = temp;
-	}
-
-	public static void swap(String[] sequences, int i, int j) {
-		String temp = sequences[i];
-		sequences[i] = sequences[j];
-		sequences[j] = temp;
+	public static void reverse(int[] numbers) {
+		for (int i = 0; i < numbers.length / 2; i++) {
+			int temp = numbers[i];
+			numbers[i] = numbers[numbers.length - 1 - i];
+			numbers[numbers.length - 1 - i] = temp;
+		}
 	}
 }
