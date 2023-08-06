@@ -7,9 +7,8 @@ public class Ex03 {
 	public static void main(String[] args) {
 		String[] songs = mockSongList();
 		String mp3Songs[] = filterSongs(songs, "mov");
-		System.out.println("mp3Song: " + Arrays.toString(mp3Songs));4
+		System.out.println("mp3Song: " + Arrays.toString(mp3Songs));
 		File file = new File(songs[0]);
-		file.is
 	}
 	private static String[] filterSongs(String[] songs, String ext) {
 		String result[] = new String[songs.length];
