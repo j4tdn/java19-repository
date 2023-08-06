@@ -1,11 +1,22 @@
 package utils;
 
+import java.util.Arrays;
+
 import bean.Item;
 
 public class ArrayUtils {
 
 	private ArrayUtils() {
 
+	}
+	
+	public static void sort(int[] elements, boolean isAsc) {
+		// sort primitive type, support ASC(default) only
+		Arrays.sort(elements);
+		
+		if (!isAsc) {
+			reverse(elements);
+		}
 	}
 	
 	public static void swap(int[] array, int i, int j) {
@@ -52,6 +63,15 @@ public class ArrayUtils {
 	public static void shiftRight(int[] origin, int pos) {
 		for (int i = origin.length-1; i > pos; i--) {
 			origin[i] = origin[i-1];
+		}
+	}
+	
+	public static void reverse(int[] origin) {
+		// i và length - i - 1 là 2 vị trí đối xứng trong mảng
+		for (int i = 0 ; i < origin.length/2; i++) {
+			int tmp = origin[i];
+			origin[i] = origin[origin.length - i - 1];
+			origin[origin.length - i - 1] = tmp;
 		}
 	}
 }

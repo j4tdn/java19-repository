@@ -6,7 +6,9 @@ public class Ex01Math {
 		
 		float fVal = 10f/3;
 		
-		// Rounding --> DecimalFormat, BigDecimal
+		
+		// not support much for rounding, scaling
+		// --> should use DecimalFormat, BigDecimal
 		
 		System.out.println("fVal: " + fVal);
 		System.out.println("round: " + Math.round(fVal));

@@ -1,4 +1,4 @@
-package view.sorting;
+package view.sorting.theory;
 
 import java.util.Comparator;
 
@@ -51,12 +51,12 @@ public class Ex04BubbleSort_Item_TryWithJavaComparator {
 	
 	/*
 	 Integer(int) --> boxing, unboxing, autobox --> JDK 1.5
-	 Ý tường: 
-	 Sắp xếp là tìm cách để hoán vị lại vị trí của các phần tử tăng/giảm dần theo 1 điều kiện(yêu cầu)
-	 Thực tế KDL dùng trong dự án thường sẽ làm KDL đối tượng
+	 �? tư�?ng: 
+	 Sắp xếp là tìm cách để hoán vị lại vị trí của các phần tử tăng/giảm dần theo 1 đi�?u kiện(yêu cầu)
+	 Thực tế KDL dùng trong dự án thư�?ng sẽ làm KDL đối tượng
 	 + Integer, Double, String
 	 + Item, Employee, Store
-	 --> So sánh các đối tượng thường sẽ dùng hàm compareTo có trong interface Comparable<T>
+	 --> So sánh các đối tượng thư�?ng sẽ dùng hàm compareTo có trong interface Comparable<T>
 	     để so sánh 2 đối tượng nếu (true, false)boolean --> isEquals
 	     muốn so sánh 2 đối tượng > < --> (negative, zero, postive)int --> is less, equal, greater
 	 

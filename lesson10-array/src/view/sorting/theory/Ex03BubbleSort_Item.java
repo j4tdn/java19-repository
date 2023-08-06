@@ -1,4 +1,4 @@
-package view.sorting;
+package view.sorting.theory;
 
 import bean.Item;
 import functional.ItemComparator;
@@ -106,7 +106,7 @@ public class Ex03BubbleSort_Item {
 	public static void bubbleSort(Item[] items, ItemComparator comparator) {
 		for (int i = 0; i < items.length; i++) {
 			for (int j = 0; j < items.length - i - 1; j++) {
-				// nếu kết quả so sánh của item j, j+1 trả về true ==> hoán vị
+				// nếu kết quả so sánh của item j, j+1 trả v�? true ==> hoán vị
 				if (comparator.compare(items[j], items[j+1])) {
 					ArrayUtils.swap(items, j, j + 1);
 				}
@@ -168,7 +168,7 @@ public class Ex03BubbleSort_Item {
 		}
 	}
 	
-	// Tìm điều kiện(thuộc tính sắp xếp và tăng/giảm dần) để hoán vị 2 phần tử kề nhau
+	// Tìm đi�?u kiện(thuộc tính sắp xếp và tăng/giảm dần) để hoán vị 2 phần tử k�? nhau
 	public static void bubbleSortByStoreIdAscSalesPriceDescItemIdAsc(Item[] items) {
 		for (int i = 0; i < items.length; i++) {
 			for (int j = 0; j < items.length - i - 1; j++) {

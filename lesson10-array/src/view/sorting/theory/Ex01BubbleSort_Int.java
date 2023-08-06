@@ -1,4 +1,4 @@
-package view.sorting;
+package view.sorting.theory;
 
 import java.util.Arrays;
 
@@ -9,7 +9,7 @@ public class Ex01BubbleSort_Int {
 
 	/**
 	 * Sắp xếp là cơ chế duyệt qua các phần tử trong 'mảng' Sau đó hoán vị, sắp xếp
-	 * đưa các phần tử về đúng theo vị trí tăng/giảm dần
+	 * đưa các phần tử v�? đúng theo vị trí tăng/giảm dần
 	 * 
 	 * ASC: ascending --> tăng DESC: descending --> giảm
 	 */
@@ -55,7 +55,7 @@ public class Ex01BubbleSort_Int {
 	
 
 	/**
-	 * Tăng dần Sau mỗi round(i) --> tìm được phần tử lớn nhất Lần kế tiếp sẽ bỏ qua
+	 * Tăng dần Sau mỗi round(i) --> tìm được phần tử lớn nhất Lần kế tiếp sẽ b�? qua
 	 * việc xử lý với phần tử lớn nhất đó
 	 */
 	private static void bubbleSortAsc(int[] numbers) {

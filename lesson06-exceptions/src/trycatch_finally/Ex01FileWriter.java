@@ -5,19 +5,11 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import javax.management.Descriptor;
-
-// finally
-// thread
-
-// Thực hiện việc ghi, lưu nội dung vào file
 public class Ex01FileWriter {
 	
 	public static void main(String[] args) {
-		// id, name, age
-		// id, name, factor([age - initialAge(18)] * 2) 
-		
-		File file = new File("data.txt");
+		// input       : id, name, age
+		// file content: id, name, factor([age - initialAge(18)] * 2) 
 		String[] employees = {
 			"1, Le Na, 26", // 1, Le Na, (26-18) * 2
 			"2, Le Teo, 19",
@@ -28,10 +20,10 @@ public class Ex01FileWriter {
 			"7, Le Chu, 23",
 			"8, Le Lai, 19"
 		};
-		
+		System.out.println("*** ___ started ___ ***");
+		File file = new File("data.txt");
 		write(file, employees);
-		open(file); // using default os editor
-		
+		open(file);
 		System.out.println("*** ___ finished ___ ***");
 	}
 	
@@ -46,23 +38,22 @@ public class Ex01FileWriter {
 			// open/connect file
 			fw = new FileWriter(file);
 			for (String employee: employees) {
-				//a, b, c".split(", ") --> new String[]{"a", "b", "c"}
 				String[] tokens = employee.split(", ");
+				
+				// format
 				String id = tokens[0];
 				String name = tokens[1];
 				int age = Integer.parseInt(tokens[2]); // NFE
 				int factor = (age - 18) * 2;
 				
-				// write file
+				// write file with format
 				String newLine = id + ", " + name + ", " + factor;
 				fw.write(newLine + "\n");
 			}
-			
 		} catch (NumberFormatException | IOException e) {
 			e.printStackTrace();
 		} finally {
-			// always be called
-			// save & close file
+			// save & close file --> should be called as always
 			if (fw != null) {
 				try {
 					fw.close();
@@ -71,7 +62,6 @@ public class Ex01FileWriter {
 				}
 			}
 		}
-		
 	}
 	
 	private static void open(File file) {
