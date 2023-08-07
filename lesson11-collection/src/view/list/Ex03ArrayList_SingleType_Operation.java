@@ -3,7 +3,6 @@ package view.list;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.function.Predicate;
 
 public class Ex03ArrayList_SingleType_Operation {
 	
@@ -34,23 +33,34 @@ public class Ex03ArrayList_SingleType_Operation {
             
             why collection using 'iterator to loop' when code removeIf function 
             why not for index, each
+            
+            let's try --> lock
+			2 operations(loop, remove) access bookId concurrent
+			  throw concurrent modification exception
+			có thể phần tử chưa duyệt đến đã bị remove rồi
+			for (String bookId: bookIds) {
+				if (bookId.startsWith("STK")) {
+					bookIds.remove(bookId);
+				}
+			}
 		 */
 		
-		// let's try --> lock
-		// 2 operations(loop, remove) access bookId concurrent
-		// --> throw concurrent modification excetpion
-		// có thể phần tử chưa duyệt đến đã bị remove rồi
-		for (String bookId: bookIds) {
-			if (bookId.startsWith("STK")) {
-				bookIds.remove(bookId);
-			}
-		}
-		
-		// duyệt tuần tự
+		// remove if with iterator
 		bookIds.removeIf(bookId -> bookId.startsWith("STK"));
 		
 		printWithIterator(bookIds);
 		
+		// contains --> true/false
+		System.out.println("tets contains(SGK-2) --> " + bookIds.contains("SGK-2"));
+		
+		// indexOf --> val/-1
+		System.out.println("test indexOf(SGK-4) --> " + bookIds.indexOf("SGK-4"));
+		
+		// forEach
+		// bookId -> System.out.println(bookId) (lambda)
+		// System.out::println
+		System.out.println("test forEach with Consumer");
+		bookIds.forEach(System.out::println);
 	}
 	
 	private static List<String> mockData() {
