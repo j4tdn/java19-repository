@@ -1,15 +1,12 @@
 package view;
 
-import java.util.Random;
-//TODO: fix if 2 0's in the same col or row
 public class Ex02MatrixHandlingWithZero {
-	private static Random rd = new Random();
 
 	public static void main(String[] args) {
 		Integer[][] matrix = new Integer[][] {
 			{ 1, 2, 3, 4 },
 			{ 5, 6, 8, 7 },
-			{ 1, 2, 0, 9 },
+			{ 1, 2, 0, 0 },
 			{ 2, 0, 6, 5 },
 			{ 1, 2, 4, 5 } 
 		};
@@ -24,19 +21,24 @@ public class Ex02MatrixHandlingWithZero {
 		boolean[][] isChange = new boolean[row][col];
 		for (int i = 0; i < row; i++) {
 			for (int j = 0; j < col; j++) {
-				if (matrix[i][j] == 0 && isChange[i][j]==false)  {
+				if (matrix[i][j] == 0 && isChange[i][j] == false) {
 					for (int k = 0; k < row; k++) {
 						for (int l = 0; l < col; l++) {
-							matrix[i][l] = 0;
-							matrix[k][j] = 0;
-							isChange[i][l] = true;
-							isChange[k][j] = true;
+							if (matrix[i][l] != 0) {
+								matrix[i][l] = 0;
+								isChange[i][l] = true;
+							}
+
+							if (matrix[k][j] != 0) {
+								matrix[k][j] = 0;
+								isChange[k][j] = true;
+							}
 						}
 					}
 				}
 			}
 		}
-		return matrix;
+	return matrix;
 	}
 
 	public static void printMatrix(Integer[][] matrix, int row, int col) {
