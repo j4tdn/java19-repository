@@ -1,4 +1,4 @@
-package view.list;
+package view.a.list;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -63,7 +63,7 @@ public class Ex06ArrayList_Principle {
 		 	 + mặc định, khi khởi tạo arraylist, arraylist tự động
 		 	 tạo 1 mảng rỗng và sẽ mở rộng thành mảng 10 phần tử trong lần add đầu tiên
 		 	 
-		 	 + gọi hàm khởi tạo với initial capacity --> tạo 1 elementData có length = initial capacity
+		 	 + g�?i hàm khởi tạo với initial capacity --> tạo 1 elementData có length = initial capacity
 		 	 new ArrayList<>(initialCapacity)
 		 	 public ArrayList(int initialCapacity) {
 			        if (initialCapacity > 0) {
@@ -77,7 +77,7 @@ public class Ex06ArrayList_Principle {
 		     }
 		     
 		     * nếu như mình biết được số lượng phần tử tối đa sẽ lưu trong ArrayList
-		     * sẽ dùng new ArrayList với initial capacity --> tránh khởi tạo elementData cũng như copyOf elementData nhiều lần
+		     * sẽ dùng new ArrayList với initial capacity --> tránh khởi tạo elementData cũng như copyOf elementData nhi�?u lần
 		 	 * improve performance
 		 */
 		

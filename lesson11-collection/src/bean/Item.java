@@ -65,7 +65,7 @@ public class Item {
 		Item that = (Item)o;
 		return getId().equals(that.getId());
 	}
-
+	
 	@Override
 	public String toString() {
 		return "Item [id=" + id + ", name=" + name + ", salesPrice=" + salesPrice + ", storeId=" + storeId + "]";

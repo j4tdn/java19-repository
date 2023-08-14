@@ -1,4 +1,4 @@
-package view.list;
+package view.a.list;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -10,7 +10,7 @@ public class Ex01RawType {
 	 
 	 List: tên của interface
 	 <E> : tham số của interface list
-	       --> sử dụng, gọi interface list --> truyền giá trị cho tham số E
+	       --> sử dụng, g�?i interface list --> truy�?n giá trị cho tham số E
 	       tham số E nhận vào là 1 kiểu dữ liệu đối tượng
 	 
 	 VD: Lưu danh sách các số nguyên --> List<Integer>
