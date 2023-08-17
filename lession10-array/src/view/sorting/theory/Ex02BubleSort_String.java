@@ -1,4 +1,4 @@
-package functional;
+package view.sorting.theory;
 
 import java.util.Arrays;
 

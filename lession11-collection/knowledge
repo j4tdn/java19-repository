@@ -1,0 +1,9 @@
+
+* ADD-REMOVE * phụ thuộc vào vị trí
+Bên ArrayList tốn thời gian để shift left - shift right
+Bên LinkList tốn thời gian để interate phần tử gần nhất
+---> 2 cái có thể bằng nhau
+
+Get,set --> ArrayList nhanh hơn LinkList
+Remove càng về đầu, LinkList càng nhanh còn ArrayList càng chậm vì shift left nhiều
+Càng về giữa thì linkList càng chậm, ArrayList càng nha hơn
