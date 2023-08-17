@@ -4,11 +4,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.Map.Entry;
 
 import bean.Employee;
 
-public class Ex02MapCustomTypeKeyDemo {
+public class Ex02MapCustomTypeKey_HashCodeEquals {
 	
 	public static void main(String[] args) {
 

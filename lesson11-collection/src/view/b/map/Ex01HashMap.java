@@ -5,9 +5,42 @@ import java.util.Map;
 import java.util.Set;
 import java.util.Map.Entry;
 
-public class Ex01MapBasicDemo {
+public class Ex01HashMap {
 	
 	public static void main(String[] args) {
+		
+		/*
+		 
+		 Map
+		   + không trùng key
+		   + hashcode/equals
+		 
+		 HashMap
+		   + key cho phép giá trị null
+		   + ko duy trì đúng thứ tự các phần tử đưa vào
+		     put(x, y, z) có thể thực tế là z x y
+		     
+		 TreeMap(sorted map by key)
+		   + tự động sắp xếp các phần tử trong map theo key tăng dần
+		     --> key không cho phép giá trị null
+		     --> key phải implements Comparable<?>
+		     
+		   + nếu muốn sắp xếp theo key, giảm dần hoặc sắp xếp theo value
+		     --> custom(tự sắp xếp lại, có thể dùng lớp thực thi khác của map)
+		     
+		 LinkedHashMap
+		   + key cho phép giá trị null
+		   + duy trì đúng thứ tự các phần tử đưa vào
+		     put(x, y, z) sẽ được kq là x, y, z
+		     
+		 ---> Thường sẽ sử dụng HashMap
+		 
+		 ---> Muốn sắp xếp đảm bảo đúng thứ tự LinkedHashMap
+		 
+		 ---> Những trường hợp đơn giản muốn sắp xếp theo key TreeMap
+		 
+		 */
+		
 		
 		// List: contains, remove --> override equals
 		// Map
