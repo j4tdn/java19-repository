@@ -4,5 +4,5 @@ import bean.ItemDetail;
 
 @FunctionalInterface
 public interface CompareObjectHelper {
-int compare(ItemDetail i1, ItemDetail i2);
+	int compare(ItemDetail i1, ItemDetail i2);
 }

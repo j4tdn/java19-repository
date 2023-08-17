@@ -1,0 +1,69 @@
+Mảng
+
++ 1 chiều
++ n chiều
+
+
+
+
+--> get --> 0(1)
+
+	set -->0(1)
+
+add --> o(k)
++ phụ thuộc vào vị trí(mất thời gian để dịch phải)
++ vị trí thêm, càng về gần đầu thì càng chậm(dịch phải nhiều phần tử) 
++ vị trí thêm, càng về gần cuối thì càng nhanh(dịch phải ít phần tử)
+
+
+remove --> o(k)
++ phụ thuộc vào vị trí(mất thời gian để dịch trái)
++ vị trí thêm, càng về gần đầu thì càng chậm(dịch trái nhiều phần tử) 
++ vị trí thêm, càng về gần cuối thì càng nhanh(dịch phải ít phần tử)
+
+Danh sách liên kết: HEAD -> TAIL
++ đơn
++ đôi
++ vòng(da)
+
+--> get --> 0(k)
+			+ để lấy được giá trị phần tử thứ k,
+			cần phải truy cập phần tử từ 0 đến k - 1 để lấy được con trỏ mang giá trị k
+
+	set --> 0(k)
+			+ để lấy được giá trị phần tử thứ k,
+			cần phải truy cập phần tử từ 0 đến k - 1 để lấy được con trỏ mang giá trị k
+			
+	add --> O(k)
+			+ b1: tìm, truy cập phần tử thứ k - 1 (duyệt từ phần tử 0 đến k - 1)
+			+ b2: xoá liên kết giữ k với k - 1
+			+ b3: thêm liên kết k -> new -> k - 1
+			
+			+ add, phụ thuộc vào vị trí cần add 
+			+ càng về gần đầu càng nhanh ( duyệt từ đầu , ít duyệt để tìm phần tử)
+			+ càng về gần cuối càng chậm ( duyệt từ đầu , duyệt nhiều để tìm phần tử)
+			
+	remove --> O(k)
+			+ b1: tìm, truy cập phần tử thứ k - 1 (duyệt từ phần tử 0 đến k - 1)
+			+ b2: xoá liên kết giữ k với k - 1
+			+ b3: thêm liên kết k - 1 với k + 1
+			
+			+ add, phụ thuộc vào vị trí cần remove 
+			+ càng về gần đầu càng nhanh ( duyệt từ đầu , ít duyệt để tìm phần tử)
+			+ càng về gần cuối càng chậm ( duyệt từ đầu , duyệt nhiều để tìm phần tử)
+Add, Remove --> Tuỳ vị trí mà ArrayList, LinkedList sẽ nhanh/chậm
+Get/Set --> ArrayList --> LinkList
+
+--> Thông thường
+Add, Remove:
++ Add vào cuối: ngang nhau
+
++ Remove vào vị trí bất kì : chưa biết ai tốt hơn		
+ArrayList
+1. Access closest element with newNode: O(1)
+2. TAKE TIME for shifting right one unit
+LinkedList
+1. TAKE TIME to iterate to closest element with newNode
+2. Modify preRef, nextRef of related nodes O(1)
+
+Generic Type ???

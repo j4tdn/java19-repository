@@ -5,7 +5,7 @@ import java.util.Arrays;
 import functional.CompareIntHelper;
 import utils.SortUntils;
 
-public class Ex02DubbeSortWithInt {
+public class Ex02DubbleSortWithInt {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

@@ -6,7 +6,7 @@ import functional.CompareIntHelper;
 import functional.CompareStringHelper;
 import utils.SortUntils;
 
-public class Ex03BubbeSortWithString {
+public class Ex03BubbleSortWithString {
 	public static void main(String[] args) {
 		String[] sequences = { null, null, "Alex", "Terry", null, "Rivaldo", "Blue", "Zill" };
 		sortHandleNullLastValues(sequences);

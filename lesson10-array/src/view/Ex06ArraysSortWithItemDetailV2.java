@@ -6,7 +6,7 @@ import static java.util.Comparator.*;
 import bean.ItemDetail;
 import model.DataModel;
 
-public class Ex05ArraysSortWithItemDetailV2 {
+public class Ex06ArraysSortWithItemDetailV2 {
 
 	public static void main(String[] args) {
 		ItemDetail[] items = DataModel.getItemDetails();

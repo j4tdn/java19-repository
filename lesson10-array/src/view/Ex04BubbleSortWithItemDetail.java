@@ -49,4 +49,14 @@ public class Ex04BubbleSortWithItemDetail {
 			}
 		}
 	}
+	private static void sort1(ItemDetail[] elements, CompareObjectHelper helper) {
+		for (int round = 0; round < elements.length; round++) {
+			for (int i = 0; i < elements.length - round - 1; i++) {
+				if (elements[i].getItemId() > elements[i +1].getItemId()) {
+					SortUntils.swap(elements, i, i + 1);
+				}
+			}
+		}
+	}
+
 }
