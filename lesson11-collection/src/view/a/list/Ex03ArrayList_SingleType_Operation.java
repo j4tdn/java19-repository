@@ -1,4 +1,4 @@
-package view.list;
+package view.a.list;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -88,7 +88,7 @@ public class Ex03ArrayList_SingleType_Operation {
 	
 	private static void printWithIterator(List<String> elements) {
 		// iterator --> duyệt tuần tự(lưu trữ collection)
-		// 1 thời điểm chỉ truy cập được 1 phần tử
+		// 1 th�?i điểm chỉ truy cập được 1 phần tử
 		
 		// chỉ cho phép truy cập phần tử thứ k khi iterator duyệt đến phần tử k
 		// nếu iterator đang ở phần tử k - x thì ko thể truy cập phần tử k được

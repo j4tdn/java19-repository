@@ -1,4 +1,4 @@
-package view.list;
+package view.a.list;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -21,10 +21,10 @@ public class Ex05ArrayList_CustomType {
 		*/
 		
 		// Duyệt từng phần tử trong items, xem có phần tử ‘equals' với itemToBeRemoved
-		// nếu có phần tử 'equals' --> remove phần tử đó khỏi items
+		// nếu có phần tử 'equals' --> remove phần tử đó kh�?i items
 
 		// Duyệt từng phần tử trong items, xem có phần tử có 'id' trùng với id của itemToBeRemoved
-		// nếu có phần tử 'equals' --> remove phần tử đó khỏi items
+		// nếu có phần tử 'equals' --> remove phần tử đó kh�?i items
 		
 		items.remove(itemToBeRemove);
 		items. forEach(System.out::println) ;
