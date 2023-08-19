@@ -3,7 +3,7 @@ package view.exercises;
 public class Trader {
 	private String fullname;
 	private String livingCity;
-	
+
 	public Trader() {
 	}
 
@@ -29,7 +29,19 @@ public class Trader {
 	}
 
 	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (!(obj instanceof Trader)) {
+			return false;
+		}
+		Trader trader = (Trader) obj;
+		return trader.getFullname().equals(this.getFullname());
+	}
+
+	@Override
 	public String toString() {
-		return "Trader [fullname=" + fullname + ", livingCity=" + livingCity + "]";
+		return "Trader [fullname=" + fullname + ", livingCity=" + livingCity + "]\n";
 	}
 }

@@ -1,53 +1,49 @@
 package view.exercises;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
 public class TransactionApp {
 	public static void main(String[] args) {
 		List<Transaction> transactions = mockData();
-
 		// 1. Find all transactions in the year 2011 and sort them by value (small to
 		// high).
-		List<Transaction> result1 = ex01(transactions, 2011);
-		System.out.println(result1);
+		print(findTransactionsInYearAndSort(transactions, 2011));
 
 		// 2. Find all transactions have value greater than 300 and sort them by
 		// trader’s city
-		List<Transaction> result2 = ex02(transactions, 300);
-		System.out.println(result2);
+		print(findTransactionsWithValueGreaterThanAndSort(transactions, 300L));
 
 		// 3. What are all the unique cities where the traders work?
-		List<String> result3 = ex03(transactions);
-		System.out.println(result3);
+		print(findUniqueCities(transactions));
 
 		// 4. Find all traders from Cambridge and sort them by name desc.
-		List<Trader> result4 = ex04(transactions, "Cambridge");
-		System.out.println(result4);
+		print(ex04(transactions, "Cambridge"));
 
 		// 5. Return a string of all traders’ names sorted alphabetically.
-		String result5 = ex05(transactions);
-		System.out.println(result5);
+		print(getNameTraderSortedAlphabetically(transactions));
 
 		// 6. Are any traders based in Milan?
-		boolean result6 = ex06(transactions, "Milan");
-		System.out.println(result6);
+		System.out.println(isMilan(transactions, "Milan"));
+
 		// 7. Count the number of traders in Milan.
+		System.out.println(getCountNumberOfTradersInMilan(transactions, "Milan"));
 
 		// 8. Print all transactions’ values from the traders living in Cambridge.
-
+		print(getAllTransactionsValueFromCambridge(transactions, "Cambridge"));
 		// 9. What’s the highest value of all the transactions?
+		System.out.println(getHighestValue(transactions));
 
 		// 10. Find the transaction with the smallest value
+		System.out.println(getSmallestValue(transactions));
 
 	}
 
-	private static List<Transaction> ex01(List<Transaction> transactions, int year) {
+	private static List<Transaction> findTransactionsInYearAndSort(List<Transaction> transactions, Integer value) {
 		List<Transaction> result = new ArrayList<>();
 		for (Transaction transaction : transactions) {
-			if (transaction.getYear() == year) {
+			if (transaction.getYear().equals(value)) {
 				result.add(transaction);
 			}
 		}
@@ -55,7 +51,8 @@ public class TransactionApp {
 		return result;
 	}
 
-	private static List<Transaction> ex02(List<Transaction> transactions, long value) {
+	private static List<Transaction> findTransactionsWithValueGreaterThanAndSort(List<Transaction> transactions,
+			Long value) {
 		List<Transaction> result = new ArrayList<>();
 		for (Transaction transaction : transactions) {
 			if (transaction.getValue() > value) {
@@ -66,48 +63,87 @@ public class TransactionApp {
 		return result;
 	}
 
-	private static List<String> ex03(List<Transaction> transactions) {
-		List<String> uniqueCities = new ArrayList<>();
+	private static List<String> findUniqueCities(List<Transaction> transactions) {
+		List<String> result = new ArrayList<>();
 		for (Transaction transaction : transactions) {
-			String city = transaction.getTrader().getLivingCity();
-			if (!uniqueCities.contains(city)) {
-				uniqueCities.add(city);
+			if (!result.contains(transaction.getTrader().getLivingCity())) {
+				result.add(transaction.getTrader().getLivingCity());
 			}
 		}
-		return uniqueCities;
+		return result;
 	}
 
-	private static List<Trader> ex04(List<Transaction> transactions, String city) {
-		List<Trader> tradersFromCity = new ArrayList<>();
+	private static List<Trader> ex04(List<Transaction> transactions, String name) {
+		List<Trader> result = new ArrayList<>();
 		for (Transaction transaction : transactions) {
-			Trader trader = transaction.getTrader();
-			if (trader.getLivingCity().equals(city)) {
-				tradersFromCity.add(trader);
+			if (transaction.getTrader().getLivingCity().equals(name)) {
+				result.add(transaction.getTrader());
 			}
 		}
-		tradersFromCity.sort(Collections.reverseOrder(Comparator.comparing(Trader::getFullname)));
-		return tradersFromCity;
+		result.sort(Comparator.comparing(Trader::getLivingCity).reversed());
+		return result;
 	}
 
-	private static String ex05(List<Transaction> transactions) {
-		List<String> traderNames = new ArrayList<>();
+	private static List<String> getNameTraderSortedAlphabetically(List<Transaction> transactions) {
+		List<String> result = new ArrayList<>();
 		for (Transaction transaction : transactions) {
-			String name = transaction.getTrader().getFullname();
-			if (!traderNames.contains(name)) {
-				traderNames.add(name);
-			}
+			result.add(transaction.getTrader().getFullname());
 		}
-		Collections.sort(traderNames);
-		return String.join(", ", traderNames);
+		result.sort(Comparator.naturalOrder());
+		return result;
 	}
 
-	private static boolean ex06(List<Transaction> transactions, String city) {
+	private static boolean isMilan(List<Transaction> transactions, String living) {
 		for (Transaction transaction : transactions) {
-			if (transaction.getTrader().getLivingCity().equals(city)) {
+			if (transaction.getTrader().getLivingCity().equals(living))
 				return true;
-			}
 		}
 		return false;
+	}
+
+	private static int getCountNumberOfTradersInMilan(List<Transaction> transactions, String living) {
+		List<Trader> result = new ArrayList<>();
+		for (Transaction transaction : transactions) {
+			if (!result.contains(transaction.getTrader()) && transaction.getTrader().getLivingCity().equals(living)) {
+				result.add(transaction.getTrader());
+			}
+		}
+		return result.size();
+	}
+
+	private static List<Long> getAllTransactionsValueFromCambridge(List<Transaction> transactions, String living) {
+		List<Long> result = new ArrayList<>();
+		for (Transaction transaction : transactions) {
+			if (transaction.getTrader().getLivingCity().equals(living)) {
+				result.add(transaction.getValue());
+			}
+		}
+		return result;
+	}
+
+	private static Long getHighestValue(List<Transaction> transactions) {
+		Long maxValue = Long.MIN_VALUE;
+		for (Transaction transaction : transactions) {
+			Long valueTrader = transaction.getValue();
+			if (valueTrader > maxValue)
+				maxValue = valueTrader;
+		}
+		return maxValue;
+	}
+
+	private static Long getSmallestValue(List<Transaction> transactions) {
+		Long minValue = Long.MAX_VALUE;
+		for (Transaction transaction : transactions) {
+			Long valueTrader = transaction.getValue();
+			if (valueTrader < minValue)
+				minValue = valueTrader;
+		}
+		return minValue;
+	}
+
+	private static <Element> void print(List<Element> result) {
+		System.out.println(result);
+		System.out.println("===========================================");
 	}
 
 	private static List<Transaction> mockData() {
