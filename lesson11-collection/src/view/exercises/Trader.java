@@ -3,14 +3,14 @@ package view.exercises;
 public class Trader {
 	
 	private String fullname;
-	private String livingCity;
+	private String city;
 	
 	public Trader() {
 	}
 
-	public Trader(String fullname, String livingCity) {
+	public Trader(String fullname, String city) {
 		this.fullname = fullname;
-		this.livingCity = livingCity;
+		this.city = city;
 	}
 
 	public String getFullname() {
@@ -21,16 +21,16 @@ public class Trader {
 		this.fullname = fullname;
 	}
 
-	public String getLivingCity() {
-		return livingCity;
+	public String getCity() {
+		return city;
 	}
 
-	public void setLivingCity(String livingCity) {
-		this.livingCity = livingCity;
+	public void setCity(String city) {
+		this.city = city;
 	}
 
 	@Override
 	public String toString() {
-		return "Trader [fullname=" + fullname + ", livingCity=" + livingCity + "]";
+		return "Trader [fullname=" + fullname + ", city=" + city + "]";
 	}
 }
