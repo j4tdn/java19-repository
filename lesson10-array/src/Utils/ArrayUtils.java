@@ -1,9 +1,24 @@
 package Utils;
 
+import java.util.Arrays;
+
 import bean.Item;
 
 public class ArrayUtils {
 	
+public static void sort(int[] elements, boolean isAsc) {
+	Arrays.sort(elements);
+	if(!isAsc) {
+		reverse(elements);
+	}
+}
+public static void reverse(int[] numbers) {
+		for(int i = 0; i < numbers.length/2; i++) {
+			int temp = numbers[i];
+			numbers[i] = numbers[numbers.length - i -1];
+			numbers[numbers.length - i - 1 ] = temp;
+		}
+		}
 	
 public static void swap(int[] numbers, int i, int j) {
 	int temp = numbers[i];
