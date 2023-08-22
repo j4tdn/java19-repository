@@ -8,10 +8,12 @@ import java.util.Set;
 import java.util.TreeSet;
 import java.util.function.Function;
 import java.util.function.Predicate;
+
 import static java.util.Comparator.*;
+
 public class TransactionApp {
 	public static void main(String[] args) {
-
+		
 		List<Transaction> transactions = mockData();
 		
 		System.out.println("1. Find all transactions in the year 2011 and sort them by value (small to high)."); 
@@ -88,7 +90,7 @@ public class TransactionApp {
 				filterAndSort(
 					transactions,
 					  t -> t.getTrader().getWoringCity(),
-					  city -> city.equals("Milan"), 
+					  city -> city.equals("Cambridge"), 
 					  comparing((Function<Transaction, String>) t -> t.getTrader().getName())
 					).forEach(t -> {
 							ex08List.add(t.getValue());
@@ -119,8 +121,8 @@ public class TransactionApp {
 			}
 		}
 		print("ex10List",ex10List);
+		
 	}
-	
 	
 	private static List<String> getSortedTraderName(List<Transaction> transactions){
 		Set<String> names = new TreeSet<>();
@@ -137,9 +139,8 @@ public class TransactionApp {
 		return new ArrayList<>(uniqueCity);
 	}
 
-	
 // idea: write a function to filter and sort by any attribute of any list
-	public static <T, R extends Comparable<R>> List<T> filterAndSort(
+	public static <T, R> List<T> filterAndSort(
 			  List<T> items,
 			  Function<T, R> accessor, 
 			  Predicate<R> filterPredicate,
@@ -172,40 +173,10 @@ public class TransactionApp {
 		Trader mario = new Trader("Mario", "Milan");
 		Trader alan = new Trader("Alan", "Cambridge");
 		Trader brian = new Trader("Brian", "Cambridge");
+		
+		// immutable list
 		return List.of(new Transaction(brian, 2011, 300L), new Transaction(raoul, 2012, 1000L),
 				new Transaction(raoul, 2011, 400L), new Transaction(mario, 2012, 1710L),
 				new Transaction(mario, 2012, 400L), new Transaction(alan, 2012, 1710L));
 	}
 }
-
-
-// idea: write a function to filter depend on value of any attribute ,sort By Any Trader Attribute of any Transaction List. 
-//private static <T extends Comparable<T>> List<Trader> filterAndSort1(List<Transaction> transactions,
-//		Function<Trader, T> accessor, Predicate<T> filterPredicate,
-//		Comparator<? super Trader> comparator) {
-//	List<Trader> results = new ArrayList<>();
-//	for (Transaction t : transactions) {
-//		T value = (T) accessor.apply(t.getTrader());
-//		if (filterPredicate.test(value)) {
-//			results.add(t.getTrader());
-//		}
-//	}
-//	results.sort(comparator);
-//	return results;
-//}
-//
-//// idea: write a function to filter depend on value of any attribute ,sort By Any Transaction Attribute of any Transaction List. 
-//private static <T extends Comparable<T>> List<Transaction> filterAndSort
-//			(List<Transaction> transactions, Function<Transaction, T> accessor, 
-//					Predicate<T> filterPredicate, Comparator<? super Transaction> comparator) {
-//	List<Transaction> results = new ArrayList<>();
-//	for (Transaction t : transactions) {
-//		T value = (T) accessor.apply(t);
-//		if (filterPredicate.test(value)) {
-//			results.add(t);
-//		}
-//	}
-//	results.sort(comparator);
-//	return results;
-//}
-
