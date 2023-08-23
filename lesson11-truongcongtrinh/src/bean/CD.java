@@ -62,6 +62,6 @@ public class CD {
 
 	@Override
 	public String toString() {
-		return "CD [id=" + id + ", type=" + type + ", author=" + author + ", songs=" + songs + ", price=" + price + "]";
+		return "CD [id=" + id + ", type=" + type + ", author=" + author + ", songs=" + songs + ", price=" + price + "]\n";
 	}
 }
