@@ -33,7 +33,7 @@ public class Ex01GenericMethod_BasicDemo {
 	}
 	
 	private static void sort(Object[] objects) {
-		// có thể bị lỗi tại runtime nếu Object lúc runtiem ko phải là Comparable
+		// có thể bị lỗi tại runtime nếu Object lúc runtime ko phải là Comparable
 		Arrays.sort(objects);
 	}
 	
