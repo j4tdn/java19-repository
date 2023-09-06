@@ -24,7 +24,21 @@ public class TransactionApp {
 		
 		// 1. Find all transactions in the year 2012 and sort them by value (small to high).
 		List<Transaction> result = filter(transactions, t -> t.getYear() == 2012);
-		result.sort(comparing(t -> t.getValue()));
+		// result.sort(comparing(t -> t.getValue()));
+		
+		/*
+		 
+		 Class T {
+		    R method() {
+		    	....
+		    }
+		 } 
+		  
+		 Function<T, R> function = (T t) -> t.method();
+		 Function<T, R> function = T::method;
+		 */
+		
+		result.sort(comparing(Transaction::getValue));
 		generate("1. Find all transactions in the year 2012 and sort them by value (small to high)", result);
 		
 		reset(result);
@@ -32,6 +46,8 @@ public class TransactionApp {
 		// 2. Find all transactions have value greater than 300 and sort them by trader’s city
 		result = filter(transactions, t -> t.getValue() > 300);
 		result.sort(comparing(t -> t.getTrader().getCity()));
+		// result.sort(comparing(Transaction::getTrader::getCity));
+		
 		generate("2. Find all transactions have value greater than 300 and sort them by trader’s city", result);
 		
 		// 3. What are all the unique cities where the traders work?
