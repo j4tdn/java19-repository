@@ -46,7 +46,7 @@ public class Ex04GenericWildCard_ListDemo {
 	 * + Super : Giới hạn dưới
 	 */
 
-	private static <Element> void g_printf(String prefix, List<?> elements) {
+	private static void g_printf(String prefix, List<?> elements) {
 		System.out.println(prefix + " -->");
 		for (Object element : elements) {
 			System.out.println(element);

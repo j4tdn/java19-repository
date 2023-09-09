@@ -34,7 +34,8 @@ public class Ex02MapCustomTypeKeyDemo {
 
 		// tồn tại: hashcode & equals
 
-		// quyết định: hashcode và equals theo thuộc tính nào
+		// quyết định: hashcode và equals
+
 
 
 		map.put(m4, list4);
