@@ -1,6 +1,7 @@
 package view;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -8,6 +9,7 @@ import bean.Trader;
 import bean.Transaction;
 
 import static java.util.Comparator.*;
+
 public class TraderExecutingTransactionApp {
 	public static void main(String[] args) {
 		List<Transaction> transactions = mockData();
@@ -18,30 +20,32 @@ public class TraderExecutingTransactionApp {
 					.sorted(comparing(Transaction::getValue))
 					.forEach(System.out::println);
 		
-		System.out.println("\n2. Find all transactions have value greater than 300 and sort them by trader’s city");
+		System.out.println("\n2. Find all transactions have value greater than 300 and sort them by traderï¿½s city");
 		transactions.stream()
 					.filter(t -> t.getValue() > 300)
-					.sorted(comparing(t -> t.getTrader().getCity()))
+					.sorted(comparing(TraderExecutingTransactionApp::mapCity))
 					.forEach(System.out::println);
 		
 		
 		System.out.println("\n3. What are all the unique cities where the traders work?");
+
 		transactions.stream()
-					.map(t -> t.getTrader().getCity())
-					.distinct()
-					.forEach(System.out::println);
+				.filter(c -> Collections.frequency(transactions, c) == 1)
+				.map(TraderExecutingTransactionApp::mapCity)
+				.forEach(System.out::println);
+
 					
 		
 		System.out.println("\n4. Find all traders from Cambridge and sort them by name desc.");
 		transactions.stream()
 					.filter(t -> "Cambridge".equals(t.getTrader().getCity()))
-					.sorted(comparing(t -> t.getTrader().getName(), reverseOrder()))
+					.sorted(comparing(TraderExecutingTransactionApp::mapName, reverseOrder()))
 					.forEach(System.out::println);
 		
-		System.out.println("\n5. Return a string of all traders’ names sorted alphabetically.");
+		System.out.println("\n5. Return a string of all tradersï¿½ names sorted alphabetically.");
 		String s = 	transactions.stream()
-								.sorted(comparing(t -> t.getTrader().getName()))
-								.map(t -> t.getTrader().getName())
+								.sorted(comparing(TraderExecutingTransactionApp::mapName))
+								.map(TraderExecutingTransactionApp::mapName)
 								.collect(Collectors.joining());
 		System.out.println(s);
 		
@@ -56,15 +60,15 @@ public class TraderExecutingTransactionApp {
 					.count();
 		System.out.println(milanCount);
 		
-		System.out.println("\n8. Print all transactions’ values from the traders living in Cambridge.");
+		System.out.println("\n8. Print all transactionsï¿½ values from the traders living in Cambridge.");
 		transactions.stream()
 					.filter(t -> "Cambridge".equals(t.getTrader().getCity()))
 					.map(Transaction::getValue)
 					.forEach(System.out::println);
 		
-		System.out.println("\n9. What’s the highest value of all the transactions?");
+		System.out.println("\n9. Whatï¿½s the highest value of all the transactions?");
 		transactions.stream()
-					.sorted(comparing(t -> t.getValue(), reverseOrder()))
+					.sorted(comparing(Transaction::getValue, reverseOrder()))
 					.mapToInt(Transaction::getValue)
 					.limit(1)
 					.forEach(System.out::println);
@@ -74,6 +78,15 @@ public class TraderExecutingTransactionApp {
 		.sorted(comparing(Transaction::getValue))
 		.limit(1)
 		.forEach(System.out::println);
+	}
+	
+	
+	private static String mapName(Transaction t) {
+		return t.getTrader().getName();
+	}
+	
+	private static String mapCity(Transaction t) {
+		return t.getTrader().getCity();
 	}
 
 	private static List<Transaction> mockData() {
@@ -86,7 +99,7 @@ public class TraderExecutingTransactionApp {
 						new Transaction(brian, 2011, 300),
 						new Transaction(raoul, 2012, 1000), 
 						new Transaction(raoul, 2011, 400),
-						new Transaction(mario, 2012, 710), 
+//						new Transaction(mario, 2012, 710), 
 						new Transaction(mario, 2012, 700), 
 						new Transaction(alan, 2012, 950));
 		return transactions;

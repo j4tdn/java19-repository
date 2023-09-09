@@ -37,6 +37,17 @@ public class Transaction {
 	public void setValue(Integer value) {
 		this.value = value;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (!(obj instanceof Transaction)) {
+			return false;
+		}
+		return getTrader().getCity().equals(((Transaction) obj).getTrader().getCity());
+	}
 
 	@Override
 	public String toString() {
