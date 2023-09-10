@@ -1,11 +1,16 @@
 package utils;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 
 public class CollectionUtils {
 	
 	private CollectionUtils() {
+	}
+	
+	public static <E> void reset(List<E> elemenets) {
+		elemenets.removeAll(elemenets);
 	}
 	
 	public static <E> void generate(String prefix, Collection<E> collection) {
