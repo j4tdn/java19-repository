@@ -33,7 +33,7 @@ public class Main {
                 .filter(t -> t.getTrader().getCity().equals("Cambridge"))
                 .map(t -> t.getTrader())
                 .distinct()
-                .sorted(Comparator.comparing(t -> t.getName()))
+                .sorted(Comparator.comparing(Trader::getName).reversed())
                 .collect(Collectors.toList());
         Ex04.forEach(System.out::println);
         System.out.println("==============================");
