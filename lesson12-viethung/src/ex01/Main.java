@@ -57,6 +57,22 @@ public class Main {
         System.out.println(Ex07);
         System.out.println("==============================");
         // 8.
+        List<Integer> Ex08 = input.stream()
+                .filter(t -> t.getTrader().getCity().equals("Cambridge"))
+                .map(Transaction::getValue)
+                .collect(Collectors.toList());
+        Ex08.forEach(System.out::println);
+        System.out.println("==============================");
+        // 9.
+        OptionalInt Ex09 = input.stream()
+                .mapToInt(Transaction::getValue)
+                .max();
+        System.out.println(Ex09.orElse(1));
+        System.out.println("==============================");
+        // 10.
+        Optional<Transaction> Ex10 = input.stream()
+                .min(Comparator.comparing(Transaction::getValue));
+        System.out.println(Ex10.orElse(null));
     }
 
     public static List<Transaction> mock() {
