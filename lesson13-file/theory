@@ -1,0 +1,10 @@
+ddl: data definition language
+   + crete
+   + delete
+   + rename
+   + copy
+
+dml: data manipulation language
+   + read
+   + write
+   + text/serial
