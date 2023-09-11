@@ -1,6 +1,6 @@
 package view;
 
-import funtional.Operator;
+import functional.Operator;
 
 public class Ex02Numerator {
 	

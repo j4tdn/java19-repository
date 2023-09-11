@@ -2,7 +2,7 @@ package view;
 
 import java.util.Arrays;
 
-import funtional.Condition;
+import functional.Condition;
 import utils.NumberUtils;
 
 import static utils.NumberUtils.*;
