@@ -3,16 +3,16 @@ package bean;
 import java.math.BigDecimal;
 
 public class Store {
-	private String storeId;
-	private String referenceStoreId;
-	private Integer stockPreviousDay;
+	private Long storeId;
+	private Long referenceStoreId;
+	private BigDecimal stockPreviousDay;
 	private BigDecimal expectedSales;
 	private boolean isSelected;
 
 	public Store() {
 	}
 
-	public Store(String storeId, String referenceStoreId, Integer stockPreviousDay, BigDecimal expectedSales,
+	public Store(Long storeId, Long referenceStoreId, BigDecimal stockPreviousDay, BigDecimal expectedSales,
 			boolean isSelected) {
 		this.storeId = storeId;
 		this.referenceStoreId = referenceStoreId;
@@ -21,27 +21,27 @@ public class Store {
 		this.isSelected = isSelected;
 	}
 
-	public String getStoreId() {
+	public Long getStoreId() {
 		return storeId;
 	}
 
-	public void setStoreId(String storeId) {
+	public void setStoreId(Long storeId) {
 		this.storeId = storeId;
 	}
 
-	public String getReferenceStoreId() {
+	public Long getReferenceStoreId() {
 		return referenceStoreId;
 	}
 
-	public void setReferenceStoreId(String referenceStoreId) {
+	public void setReferenceStoreId(Long referenceStoreId) {
 		this.referenceStoreId = referenceStoreId;
 	}
 
-	public Integer getStockPreviousDay() {
+	public BigDecimal getStockPreviousDay() {
 		return stockPreviousDay;
 	}
 
-	public void setStockPreviousDay(Integer stockPreviousDay) {
+	public void setStockPreviousDay(BigDecimal stockPreviousDay) {
 		this.stockPreviousDay = stockPreviousDay;
 	}
 
