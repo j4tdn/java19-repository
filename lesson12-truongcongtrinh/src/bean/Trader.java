@@ -1,7 +1,5 @@
 package bean;
 
-import java.util.Objects;
-
 public class Trader {
 	private String name;
 	private String city;

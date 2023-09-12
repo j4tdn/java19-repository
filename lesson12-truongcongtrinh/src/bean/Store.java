@@ -1,8 +1,9 @@
 package bean;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
-public class Store {
+public class Store implements Comparable<Store>{
 	private Long storeId;
 	private Long referenceStoreId;
 	private BigDecimal stockPreviousDay;
@@ -60,11 +61,36 @@ public class Store {
 	public void setSelected(boolean isSelected) {
 		this.isSelected = isSelected;
 	}
+	
+	@Override
+    public boolean equals(final Object o) {
+        if (this == o) {
+            return true;
+        }
 
+        if (!(o instanceof Store)) {
+            return false;
+        }
+
+        final Store that = (Store) o;
+
+        return getStoreId().equals(that.getStoreId());
+
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getStoreId());
+    }
 	@Override
 	public String toString() {
 		return "Store [storeId=" + storeId + ", referenceStoreId=" + referenceStoreId + ", stockPreviousDay="
 				+ stockPreviousDay + ", expectedSales=" + expectedSales + ", isSelected=" + isSelected + "]";
+	}
+
+	@Override
+	public int compareTo(Store o) {
+		return getStoreId().compareTo(o.getStoreId());
 	}
 
 }
