@@ -6,15 +6,16 @@ import java.util.Objects;
 public class Store {
 	private Integer storeId;
 	private Integer referenceStoreId;
-	private Integer stockPreviousDay;
+	private BigDecimal stockPreviousDay;
 	private BigDecimal expectedSales;
 	private Boolean isSelected;
-	
+
 	public Store() {
 	}
 
-	public Store(Integer storeId, Integer referenceStoreId, Integer stockPreviousDay, BigDecimal expectedSales,
+	public Store(Integer storeId, Integer referenceStoreId, BigDecimal stockPreviousDay, BigDecimal expectedSales,
 			Boolean isSelected) {
+		super();
 		this.storeId = storeId;
 		this.referenceStoreId = referenceStoreId;
 		this.stockPreviousDay = stockPreviousDay;
@@ -38,11 +39,11 @@ public class Store {
 		this.referenceStoreId = referenceStoreId;
 	}
 
-	public Integer getStockPreviousDay() {
+	public BigDecimal getStockPreviousDay() {
 		return stockPreviousDay;
 	}
 
-	public void setStockPreviousDay(Integer stockPreviousDay) {
+	public void setStockPreviousDay(BigDecimal stockPreviousDay) {
 		this.stockPreviousDay = stockPreviousDay;
 	}
 
@@ -86,6 +87,5 @@ public class Store {
 				&& Objects.equals(referenceStoreId, other.referenceStoreId)
 				&& Objects.equals(stockPreviousDay, other.stockPreviousDay) && Objects.equals(storeId, other.storeId);
 	}
-	
-	
+
 }
