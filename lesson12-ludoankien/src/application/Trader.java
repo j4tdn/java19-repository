@@ -1,9 +1,9 @@
-package bean;
+package application;
 
 public class Trader {
-	private String name;
+	private String name; 
 	private String city;
-
+	
 	public Trader() {
 	}
 
@@ -28,27 +28,9 @@ public class Trader {
 		this.city = city;
 	}
 
-//	@Override
-//	public boolean equals(Object obj) {
-//		if (this == obj) {
-//			return true;
-//		}
-//		if (!(obj instanceof Trader)) {
-//			return false;
-//		}
-//
-//		Trader that = (Trader) obj;
-//		return getCity().equals(that.getCity());
-//	}
-//	
-//	@Override
-//	public int hashCode() {
-//		return Objects.hash(getCity());
-//	}
-
 	@Override
 	public String toString() {
 		return "Trader [name=" + name + ", city=" + city + "]";
 	}
-
+	
 }
