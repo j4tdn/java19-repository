@@ -9,15 +9,17 @@ public class Store {
 	private Integer storeId;
 	private String storeDesc;
 	private BigDecimal storePotential;
+	private Integer whId;
 
 	public Store() {
 	}
 
-	public Store(Item item, Integer storeId, String storeDesc, BigDecimal storePotential) {
+	public Store(Item item, Integer storeId, String storeDesc, BigDecimal storePotential, Integer whId) {
 		this.item = item;
 		this.storeId = storeId;
 		this.storeDesc = storeDesc;
 		this.storePotential = storePotential;
+		this.whId = whId;
 	}
 
 	public Item getItem() {
@@ -52,6 +54,14 @@ public class Store {
 		this.storePotential = storePotential;
 	}
 
+	public Integer getWhId() {
+		return whId;
+	}
+	
+	public void setWhId(Integer whId) {
+		this.whId = whId;
+	}
+	
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) {
@@ -75,7 +85,7 @@ public class Store {
 	@Override
 	public String toString() {
 		return "Store [itemId = " + item.getItemId() + ", storeId=" + storeId + ", storeDesc=" + storeDesc
-				+ ", storePotential=" + storePotential + "]";
+				+ ", storePotential=" + storePotential + ", whId " + whId + "]";
 	}
 
 }
