@@ -3,16 +3,18 @@ package view;
 import bean.Store;
 
 import static model.DataModel.*;
+
 import java.math.BigDecimal;
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class DeliveryApp {
     static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
         // Step 1
         int planningAmountCountry = sc.nextInt();
-        if(planningAmountCountry <= 0) return;
+        if (planningAmountCountry <= 0) return;
         // Step 2
         Map<Integer, BigDecimal> fillingGapsStore55 = fillingGaps(mockRefStores(), mockRefStore55());
         Map<Integer, BigDecimal> fillingGapsStore77 = fillingGaps(mockRefStores(), mockRefStore77());
@@ -23,6 +25,8 @@ public class DeliveryApp {
         // Step 5
         Map<Integer, BigDecimal> calculateShares = calculateShares(sumUpDemmand);
         // Step 6
+        Map<Integer, BigDecimal> allocateByShare = allocateByShare(calculateShares, planningAmountCountry);
+        // Step 7
 
 
     }
@@ -73,18 +77,20 @@ public class DeliveryApp {
         }
         return res;
     }
-    public static Map<Integer, BigDecimal> sumUpDemmand(Map<Integer, BigDecimal> demmandStore, List<Store> storesOfRefItem){
+
+    public static Map<Integer, BigDecimal> sumUpDemmand(Map<Integer, BigDecimal> demmandStore, List<Store> storesOfRefItem) {
         Map<Integer, BigDecimal> res = new HashMap<>();
         storesOfRefItem.forEach(store -> {
             res.put(store.getWhId(), res.getOrDefault(store.getWhId(), BigDecimal.ZERO).add(demmandStore.get(store.getStoreId())));
         });
         return res;
     }
-    public static Map<Integer, BigDecimal> calculateShares(Map<Integer, BigDecimal> sumUpDemmand){
+
+    public static Map<Integer, BigDecimal> calculateShares(Map<Integer, BigDecimal> sumUpDemmand) {
         Map<Integer, BigDecimal> result = new HashMap<>();
         List<BigDecimal> list = sumUpDemmand.values()
-                                            .stream()
-                                            .collect(Collectors.toList());
+                .stream()
+                .collect(Collectors.toList());
         BigDecimal cal = BigDecimal.ZERO;
         for (BigDecimal bd : list) {
             cal = cal.add(bd);
@@ -94,4 +100,11 @@ public class DeliveryApp {
         return result;
     }
 
+    public static Map<Integer, BigDecimal> allocateByShare(Map<Integer, BigDecimal> shareWH, int planningAmountCountry) {
+        Map<Integer, BigDecimal> result = new HashMap<>();
+
+        shareWH.entrySet().forEach(WH -> result.put(WH.getKey(), (WH.getValue().divide(new BigDecimal(100))
+                                                                    .multiply(new BigDecimal(planningAmountCountry)))));
+        return result;
+    }
 }
