@@ -14,12 +14,12 @@ public class Child extends Granfa implements Father, Mother{
 	public void coffee() {
 
 	}
-	
+
 	@Override
 	public void coding() {
 		Father.super.coding();
 		Mother.super.coding();
-		System.out.println("database");
 	}
+	
 	
 }

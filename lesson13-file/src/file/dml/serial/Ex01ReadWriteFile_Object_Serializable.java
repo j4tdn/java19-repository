@@ -1,6 +1,7 @@
 package file.dml.serial;
 
 import java.io.File;
+import java.util.List;
 
 import model.DataModel;
 import utils.CollectionUtils;
@@ -22,20 +23,12 @@ public class Ex01ReadWriteFile_Object_Serializable {
 		var serializedMenu = FileUtils.readObjects(file);
 		CollectionUtils.generate("serializedMenu", serializedMenu);
 		
-		// BT --> 12
 		
-		// BT --> 13
-		
-		// Review Java
-		
-		// --> Ôn tập về Java + Interview
-		
-		// --> Java Test
-		
-		
-		// Failed: Học lại lớp khác
-		
-		// Passed: Database
-		
+	}
+	
+	// gene
+	
+	private static <E> void test(List<?> e) {
+		System.out.println(e);
 	}
 }
