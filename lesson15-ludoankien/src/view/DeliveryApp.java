@@ -22,6 +22,7 @@ public class DeliveryApp {
 		List<Store> storesOfRefItemA55 = DataModel.mockStoresOfRefItemA55();
 		List<Store> storesOfRefItemA77 = DataModel.mockStoresOfRefItemA77();
 
+		// step 2
 		System.out.println("Reference Item after Gaps of A55");
 		fillingGaps(storesOfRefItemA55);
 		printStore(storesOfRefItemA55);
@@ -30,9 +31,12 @@ public class DeliveryApp {
 		fillingGaps(storesOfRefItemA77);
 		printStore(storesOfRefItemA77);
 
+		// Step 3 ok
 		List<BigDecimal> storeDemand = new ArrayList<>();
 		Map<Integer, BigDecimal> storeTrendFactors = DataModel.mockStoreTrendFactors();
 		for (int i = 0; i < storesOfRefItemA55.size(); i++) {
+			// không đúng, code hơi bậy
+			// lỡ key nó là 1 dãy số như là 122, 125, 321 thì code thế này sai e nha
 			Integer key = i + 1;
 			BigDecimal trendFactor = storeTrendFactors.get(key);
 			storeDemand.add(calculateStoreDemand(storesOfRefItemA55.get(i).getStorePotential(),
@@ -42,11 +46,17 @@ public class DeliveryApp {
 		System.out.println("\nCalculate store demand of curent Item");
 		printStore(storeDemand);
 		System.out.println("\nShare percent : ");
-
+		
+		// step 4: ok
+		// Số lượng wh, e phải lấy từ data của store, group by hay distinct sao đó để tìm ra chứ sao cho như này được
 		List<String> nameWhs = List.of("WH 1", "WH 2", "WH 3");
 		Map<String, BigDecimal> demandNewCampainInWHLevel = getDemandNewCampainInWHLevel(storesOfRefItemA55,
 				storeDemand, nameWhs);
-
+		
+		demandNewCampainInWHLevel.forEach((k, v) -> {
+			System.out.println(k + ", " + v);
+		});
+		
 		List<BigDecimal> sharePercent = new ArrayList<>();
 		BigDecimal sum = demandNewCampainInWHLevel.values().stream().reduce(BigDecimal.ZERO, BigDecimal::add);
 
@@ -81,7 +91,7 @@ public class DeliveryApp {
 			System.out.println("\nRound up : ");
 			printStore(roundedAllocate);
 		} else {
-
+			// Chưa code step 7 8 9
 		}
 	}
 
@@ -130,6 +140,8 @@ public class DeliveryApp {
 	}
 
 	private static void fillingGaps(List<Store> storesOfRefItem) {
+		// kiểu xoi mói thôi ;), nên đặt là refStores e nghen
+		// số nhiều là phải có s, cơ bản khi code ví dụ refItems hoặc refItemList
 		Map<Integer, Integer> refstore = DataModel.mockRefStores();
 		BigDecimal medium = callCulateMedium(storesOfRefItem);
 		for (Store store : storesOfRefItem) {
@@ -167,6 +179,9 @@ public class DeliveryApp {
 		return storesOfRefItem.stream().filter(it -> it.getStoreId().equals(storeId)).findFirst().orElse(null);
 	}
 
+	// code vẫn chạy đúng
+	// nhưng khuyến khích hàm nhập thì chỉ nên nhâp chứ k nên kiểm tra if else giá trị trong này luôn e nha
+	// hoặc đặt tên hàm khác ;)
 	private static int enterPlanningAmount() {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Please enter Planning amount : ");
@@ -174,6 +189,7 @@ public class DeliveryApp {
 		if (planningAmount < 0) {
 			System.exit(1);
 		}
+		scanner.close();
 		return planningAmount;
 	}
 }
