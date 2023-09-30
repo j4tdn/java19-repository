@@ -31,12 +31,14 @@ public class DeliveryApp {
 		  System.out.println("Stop calculation");
 		  return;
 		}
-		else {
-		  System.out.println("Continue to step 2");
-		}
 		
-		//Step2:
+		// Đã return phía trên thì đây ko cần else em nha
+		System.out.println("Continue to step 2");
 		
+		// Step2:
+		
+		// Tương tự 1 số bạn, em đang code hard code
+		// Kiểu nếu có ref item khác bị missing store potential, code em sẽ ko còn chạy đúng nữa
 		fillEmptyPotentials(lsa77,mapRefStores);
 		System.out.println("Store after filled:");
 		System.out.println(lsa77);
@@ -47,13 +49,14 @@ public class DeliveryApp {
 	            System.out.println("Demand for Store " + store.getStoreId() + ": " + demand);
 	        }
 
-	        for (Store store : lsa77) {
-	            BigDecimal demand = calculateDemand(store, lsa77, mapRefweights, mapStoreTrendFactors);
-	            System.out.println("Demand for Store " + store.getStoreId() + ": " + demand);
-	        }
+        for (Store store : lsa77) {
+            BigDecimal demand = calculateDemand(store, lsa77, mapRefweights, mapStoreTrendFactors);
+            System.out.println("Demand for Store " + store.getStoreId() + ": " + demand);
+        }
 	        
-	     //step4:
-	
+	     //step4: Sao a để hơn 3 tiếng thì phải mà code ít vậy em ?
+	        
+	     ip.close();
     }
 
 	public static BigDecimal calculateAvgPotential(List<Store> stores) {
