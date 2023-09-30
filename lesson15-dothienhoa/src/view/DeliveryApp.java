@@ -22,7 +22,13 @@ public class DeliveryApp {
 		List<Store> mockStoresOfRefItemA77 = DataModel.mockStoresOfRefItemA77();
 		List<Store> mockStoresOfRefItemA55 = DataModel.mockStoresOfRefItemA55();
 		Map<Integer, Integer> refStores = DataModel.mockRefStores();
+		/*
+		 Đúng là hiện tại trong test data a đưa không có trường hợp missing store potential cho 
+		 thằng ref item 55, nhưng đúng thực tế code là e phải gộp 2 cái mock ref item 55, 77 lại thì 1 list tổng
+		 sau đó duyệt tất cả và tính toán thì tính riêng từng ref item mới đúng
+		 */
 		for (Store store : mockStoresOfRefItemA77) {
+			// Nên check thêm null cho an toàn
 			if (store.getStorePotential().compareTo(BigDecimal.ZERO) == 0) {
 				Integer refStoreId = refStores.get(store.getStoreId());
 				if (refStoreId != null) {
@@ -93,6 +99,7 @@ public class DeliveryApp {
 		for (Map.Entry<Integer, BigDecimal> entry : shares.entrySet()) {
 			Integer key = entry.getKey();
 			BigDecimal value = entry.getValue();
+			// Hmm ?
 			if (value.compareTo(new BigDecimal("2")) < 0) {
 				shares.put(key, new BigDecimal("2"));
 			}
