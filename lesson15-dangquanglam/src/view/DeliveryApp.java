@@ -1,33 +1,43 @@
 package view;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import static java.util.stream.Collectors.*;
-
 import bean.Store;
 import model.DataModel;
 
 public class DeliveryApp {
+	
+	// Khi nào trong code trong dự án nếu comment ko dùng thì em có thể xóa luôn
+	
 	public static void main(String[] args) {
 		// Step 1,2
 		List<Store> stores77 = DataModel.mockStoresOfRefItemA55();
 		List<Store> stores55 = DataModel.mockStoresOfRefItemA77();
 
 		Map<Integer, BigDecimal> potentialMap = new HashMap<>();
-
-		// BigDecimal planningAmount = calculatePlanningAmount(stores55);
+		
+		/*
+		    Em chưa hiểu đề
+		    PlanningAmount là số lượng cần được planning, cần được delivery là input có sẵn
+		    chứ ko phải đi tính, nó ko liên quan gì đến store potential hết
+		 */
 		if (calculatePlanningAmount(stores55).compareTo(BigDecimal.valueOf(100)) <= 0) {
 			System.out.println("Planning amount is less than or equal to 100. Stopping calculation.");
 			return;
 		}
-
+		
+		/*
+		    Bước này chắc là bước 2 - filling gaps
+		    Cách code từ đầu chưa hợp lý nên hơi khó khăn lúc code
+		    --> E nên gộp stores77 và stores55 vào 1 List của List hoặc List tổng code sẽ đỡ cực hơn
+		 */
 		processStores(stores55, potentialMap);
 
-//		BigDecimal planningAmount2 = calculatePlanningAmount(stores77);
 		if (calculatePlanningAmount(stores55).compareTo(BigDecimal.valueOf(100)) <= 0) {
 			System.out.println("Planning amount is less than or equal to 100. Stopping calculation.");
 			return;
@@ -38,18 +48,28 @@ public class DeliveryApp {
 		// Step 3: Calculate Store Demand of current Item
 		Map<Integer, BigDecimal> calStoDemand = calStoDemandOfCurItem(DataModel.mockRefStore55(),
 				DataModel.mockRefStore77(), DataModel.mockRefWeights(), DataModel.mockStoreTrendFactors());
+		
 		// Step 4: Sum up Demand to WH Level
 		Map<Integer, BigDecimal> sumUpDemand = sumUpDemandToWHLevel(calStoDemand, DataModel.mockStoresOfRefItemA55());
 
 		// Step 5: Calculate Shares
         Map<Integer, BigDecimal> calculateShares = calculateShares(sumUpDemand);
+        
+        calculateShares.forEach((k, v) -> System.out.println(k + ", " + v));
 	}
-
+	
+	/*
+	 Hàm này chưa đúng logic, như nếu có thể tính lại em nên dùng hàm reduce của stream để xử lý ví dụ như bên dưới
+	 Tập áp dụng stream vào
+	 */
 	private static BigDecimal calculatePlanningAmount(List<Store> stores) {
-		BigDecimal planningAmount = BigDecimal.ZERO;
-		for (Store store : stores) {
-			planningAmount = planningAmount.add(store.getStorePotential());
-		}
+		BigDecimal planningAmount = stores.stream()
+			.map(Store::getStorePotential)
+			.reduce(BigDecimal.ZERO, BigDecimal::add);
+//		BigDecimal planningAmount = BigDecimal.ZERO;
+//		for (Store store : stores) {
+//			planningAmount = planningAmount.add(store.getStorePotential());
+//		}
 		return planningAmount;
 	}
 
@@ -70,6 +90,13 @@ public class DeliveryApp {
 			return potential;
 		}
 
+		/*
+		    Em thiếu bước kiểm tra rằng
+		    Nếu store ko có potential thì phải kiểm tra nó có reference store không đã
+		       Nếu có reference store và reference store có potential thì dùng potential đó
+		       Nếu có reference store mà reference store ko có potential thì mới tính trung bình
+		       Nếu ko có reference store tính trung bình
+		 */
 		BigDecimal sumPotential = BigDecimal.ZERO;
 		int count = 0;
 		for (Store s : stores) {
@@ -78,7 +105,7 @@ public class DeliveryApp {
 				count++;
 			}
 		}
-		return count > 0 ? sumPotential.divide(BigDecimal.valueOf(count), 1, BigDecimal.ROUND_HALF_UP)
+		return count > 0 ? sumPotential.divide(BigDecimal.valueOf(count), RoundingMode.HALF_UP)
 				: BigDecimal.ZERO;
 	}
 
@@ -89,6 +116,10 @@ public class DeliveryApp {
 
 		for (Map.Entry<Integer, BigDecimal> entry : potentialRefA55.entrySet()) {
 			int index = entry.getKey();
+			// Công thức đúng nhưng bị hardcode
+			// hardcode vì đang dùng code cứng cho giá trị 55 và 57
+			// thay vì dùng 55 thì phải là entry.getKey()
+			// còn 57 ko biết code sao là vì e phải gộp 2 danh sách lại với nhau xong duyệt 1 lần
 			BigDecimal newCampaign = ((entry.getValue().multiply(refWeight.get(55)))
 					.add(potentialRefA77.get(index).multiply(refWeight.get(77)))
 					.divide(refWeight.get(55).add(refWeight.get(77))).multiply(storeTrendFactors.get(index)));
@@ -109,7 +140,10 @@ public class DeliveryApp {
             cal = cal.add(bd);
         }
         BigDecimal temp = cal;
-        sumUpDemmand.entrySet().forEach(WH -> result.put(WH.getKey(), WH.getValue().divide(temp)));
+        
+        // chỗ này đang lỗi vì em chưa set số chữ số thập phân cũng như rounding mode cho nó
+        // thêm như phần a sửa là được
+        sumUpDemmand.entrySet().forEach(WH -> result.put(WH.getKey(), WH.getValue().divide(temp, RoundingMode.HALF_UP)));
         return result;
     }
 	
