@@ -62,7 +62,10 @@ public class DeliveryApp {
 		return n;
 	}
 	
-	
+	/*
+	 Kết quả chưa filling gap được cho store 10 và store 12 của ref item 77
+	 Các bước khác sẽ bị sai nếu bước 2 chưa hoàn thành
+	 */
 	public static Map<Integer, BigDecimal> fillingGapsByReferencesOrAverage(Map<Integer, Integer> refStore, Map<Integer, BigDecimal> potentialStore) {
         Map<Integer, BigDecimal> filledMap = new HashMap<>();
 
@@ -81,7 +84,7 @@ public class DeliveryApp {
         for (BigDecimal value : filledMap.values()) {
             sum = sum.add(value);
         }
-        BigDecimal average = sum.divide(new BigDecimal(filledMap.size()), BigDecimal.ROUND_HALF_UP);
+        BigDecimal average = sum.divide(new BigDecimal(filledMap.size()), RoundingMode.HALF_UP);
 
         for (Map.Entry<Integer, BigDecimal> entry : potentialStore.entrySet()) {
             Integer key = entry.getKey();
