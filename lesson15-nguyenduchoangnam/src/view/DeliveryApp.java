@@ -14,6 +14,9 @@ public class DeliveryApp {
     public static void main(String[] args) {
         checkPlanningAmount();
 
+        /*
+         A nhớ để thời gian thoải mái tầm 3h nhưng e chỉ code được 2 steps ít vậy Nam ?
+         */
         fillGapsWithReferencesOrAverage();
     }
 
@@ -21,6 +24,11 @@ public class DeliveryApp {
         List<Store> storesA55 = DataModel.mockStoresOfRefItemA55();
 
         for (Store store : storesA55) {
+        	/*
+        	 Hình như Nam chưa hiểu đề bài
+        	 Planning Amount là số lượng sản phần cần phân phối từ kho hàng đến cửa hàng
+        	 Là do người dùng điền vào, nó ko liên qua gì đến store potential cả em nha
+        	 */
             BigDecimal planningAmount = store.getStorePotential();
 
             System.out.println("Planning Amount for Store " + store.getStoreId() + ": " + planningAmount);
