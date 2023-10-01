@@ -9,3 +9,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
+
+Khi tạo dự án, em đừng tick vào chỗ create module Hưng nha
+Cái này xuất phát từ Java 9, bị thừa

@@ -5,6 +5,7 @@ import bean.Store;
 import static model.DataModel.*;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -12,27 +13,49 @@ public class DeliveryApp {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        // Step 1
+    	
+    	/*
+    	   Tổng quan
+    	   + Code còn hơi nhớp Hưng nghe
+    	   + Có những hàm e gọi rất nhiều lần ví dụ mockRefStores() .. sao ko tạo 1 biến rồi passing qua hàm, vì gọi hàm mà
+    	     nó thực hiện logic hay truy vấn database là chết
+    	     
+    	   --> Code chưa tốt như kì vọng Hưng nghe  
+    	 */
+        
+    	// Step 1
         int planningAmountCountry = sc.nextInt();
         if (planningAmountCountry <= 0) return;
+        
         // Step 2
         Map<Integer, BigDecimal> fillingGapsStore55 = fillingGaps(mockRefStores(), mockRefStore55());
         Map<Integer, BigDecimal> fillingGapsStore77 = fillingGaps(mockRefStores(), mockRefStore77());
+        System.out.println("\nStep 2: Filling gaps");
+        fillingGapsStore77.forEach((k, v) -> {
+        	System.out.println(k + ", " + v);
+        });
+        
         // Step 3
         Map<Integer, BigDecimal> demmandStore = storeDemand(mockRefStore55(), mockRefStore77(), mockRefWeights(), mockStoreTrendFactors());
+        
         // Step 4
         Map<Integer, BigDecimal> sumUpDemmand = sumUpDemmand(demmandStore, mockStoresOfRefItemA55());
+        
         // Step 5
         Map<Integer, BigDecimal> calculateShares = calculateShares(sumUpDemmand);
+        
         // Step 6
         Map<Integer, BigDecimal> allocateByShare = allocateByShare(calculateShares, planningAmountCountry);
+        
         // Step 7
 
 
     }
 
     public static Map<Integer, BigDecimal> fillingGaps(Map<Integer, Integer> refStore, Map<Integer, BigDecimal> potentialMap) {
-        Map<Integer, BigDecimal> fillingRes = new HashMap<>();
+        // Đọc code hơi rồi Hưng ơi
+    	// A có test thử thì cũng chưa filling gap được nữa
+    	Map<Integer, BigDecimal> fillingRes = new HashMap<>();
         Map<Integer, BigDecimal> fillingRefRes = new HashMap<>();
         potentialMap.entrySet().forEach(store -> {
             if (store.getValue() != null) {
@@ -96,7 +119,8 @@ public class DeliveryApp {
             cal = cal.add(bd);
         }
         BigDecimal temp = cal;
-        sumUpDemmand.entrySet().forEach(WH -> result.put(WH.getKey(), WH.getValue().divide(temp)));
+        // Em lỗi ở đây là vì thiếu phần rounding model khi gọi hàm divide
+        sumUpDemmand.entrySet().forEach(WH -> result.put(WH.getKey(), WH.getValue().divide(temp, RoundingMode.HALF_UP)));
         return result;
     }
 
