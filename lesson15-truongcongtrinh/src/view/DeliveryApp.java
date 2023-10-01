@@ -29,7 +29,7 @@ public class DeliveryApp {
 		System.out.println(refA77);
 		
 //		int planningAmount = planningAmount();
-//		
+//		Không đúng yêu cầu trong file excel Trình ơi
 //		if(planningAmount == Integer.MIN_VALUE) {
 //			System.exit(0);
 //		} else {
@@ -39,8 +39,18 @@ public class DeliveryApp {
 		
 		int planningAmount = 10;
 		int minPerStore = 2;
+		
+		// Em bị missed step 1, check planning amount
+		
+		// Step 2: Filling gaps
 		fillingGapPotential(refA55, refStores);
 		fillingGapPotential(refA77, refStores);
+		
+		System.out.println("Step 2: Filling gaps");
+		refA77.forEach(store -> {
+			System.out.println(store.getStoreId() + ", " + store.getStorePotential());
+		});
+		
 		
 		System.out.println("\n================ - calculateDemandStores - =================\n");
 		Map<Integer,BigDecimal> demandMap = calculateDemandStores(refA55,refA77,trendFactors,refWeights);
@@ -143,6 +153,8 @@ public class DeliveryApp {
 	private static Map<Integer, BigDecimal> calculateDemandStores(List<Store> stores55, List<Store> stores77,
 									Map<Integer, BigDecimal> trendFactors,Map<Integer, BigDecimal> refWeights) {
 		
+		// Code ra được, nhưng đây ko phải là 1 cách hay e nghe
+		// Chính xác là hard code, giờ a cho dữ liệu khác 1 phát là code e chạy ko được
 		Map<Integer,BigDecimal> demandRes = new LinkedHashMap<>(14);
 		for (int count = 1; count <= 14; count++) {
 			BigDecimal store55Potential = stores55.get(count-1).getStorePotential();
@@ -183,8 +195,9 @@ public class DeliveryApp {
 	private static void fillingGapPotential(List<Store> stores, Map<Integer,Integer> refStores) {
 		List<Store> missingPotentialStores = stores.stream().filter(s -> s.getStorePotential().compareTo(BigDecimal.ZERO)==0)
 				.collect(Collectors.toList());
-
-		List<Integer> missingPotentialIds = stores.stream().filter(s -> s.getStorePotential().compareTo(BigDecimal.ZERO)==0)
+		
+		// đoạn filter e đã xử lý phía trên, bên dưới code lại trùng nhìn ko dc đẹp
+		List<Integer> missingPotentialIds = missingPotentialStores.stream()
 				.map(Store::getStoreId).collect(Collectors.toList());
 
 		BigDecimal sumOfPotentials = stores.stream().filter(s -> s.getStorePotential().compareTo(BigDecimal.ZERO)>0).map(Store::getStorePotential)
