@@ -25,7 +25,7 @@ public class DataModel {
 			new Store(itemA55, 4, "Store 4", bd(36.4), 1),
 			new Store(itemA55, 5, "Store 5", bd(14), 1),
 			new Store(itemA55, 6, "Store 6", bd(65.52), 1),
-			new Store(itemA55, 7, "Store 7", bd(17.9), 1),
+			new Store(itemA55, 7, "Store 7", bd(17.9), 2),
 			new Store(itemA55, 8, "Store 8", bd(26.7), 2),
 			new Store(itemA55, 9, "Store 9", bd(54.9), 2),
 			new Store(itemA55, 10, "Store 10", bd(35), 2),
