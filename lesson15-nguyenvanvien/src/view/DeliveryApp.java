@@ -14,7 +14,18 @@ import model.DataModel;
 import utils.NumberUtils;
 
 public class DeliveryApp {
-
+	
+	/*
+	 
+	 Em đặt sai tên dự án lesson15.. ko phải lession15..
+	 Code của em bị trùng với bạn Kiên
+	 
+	 + Commit của Viên: https://github.com/j4tdn/java19-repository/commit/9a4b060ac639fb4e667438a9bb6654d2e3181045#diff-c3026d8d582a4ed463664813fe236a536e98aa4ad4bc7ef85e8de021ba85c68a
+	 + Commit của Kiên: https://github.com/j4tdn/java19-repository/commit/d1a83626bd0ab9f93a23f17c84115d03e2ca447a#diff-4ad78dcb7f72b2beb7f4c7a664542322877ef4f256f11d42f76c6ac094cfeadc
+	 
+	 Em có thể xem phần review tại đây nha: https://github.com/j4tdn/java19-repository/commit/5b33377c52943e12231634a22d55e713d172335d
+	 */
+	
 	public static void main(String[] args) {
 		int planningAmount = enterPlanningAmount();
 		List<Store> storesOfRefItemA55 = DataModel.mockStoresOfRefItemA55();
