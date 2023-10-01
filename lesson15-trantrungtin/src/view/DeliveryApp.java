@@ -11,6 +11,13 @@ import model.DataModel;
 public class DeliveryApp {
 
 	public static void main(String[] args) {
+		/*
+		 Kết quả code của a Tín đang giống với kết quả trong excel cuối cùng
+		 Nhưng có vẻ cách làm bị sai bắt đầu từ bước 2 khi a chỉ filling gaps cho stores của ref item 55
+		 Idea ở bước 2 là tính store potential cho stores ở các ref items của item hiện tại
+		 Qua bước 3 mới gộp lại để tính store potential cho từng store
+		 */
+		
 		final Integer planningAmount = 10;
 		List<Store> stores = DataModel.mockStoresOfRefItemA55();
 
@@ -20,11 +27,34 @@ public class DeliveryApp {
 			return;
 		}
 
+		// Step 2: Filling gaps
 		fillGaps(stores);
+		
+		System.out.println("\nStep 2: Filling gaps");
+		stores.forEach(store -> {
+			System.out.println(store.getStoreId() + ", " + store.getStorePotential());
+		});
+		
+		
 		calculateDemand(stores);
+		System.out.println("\nStep 3: Calculate store demands");
+		stores.forEach(store -> {
+			System.out.println(store.getStoreId() + ", " + store.getDemand());
+		});
 
 		Map<Integer, BigDecimal> warehouseDemand = sumDemandToWH(stores);
+		
+		System.out.println("\nStep 4: Calculate warehouse demands");
+		warehouseDemand.forEach((whId, demand) -> {
+			System.out.println(whId + ", " + demand);
+		});
+		
 		Map<Integer, BigDecimal> warehouseShares = calculateShares(warehouseDemand);
+		System.out.println("\nStep 5: Calculate shares");
+		warehouseShares.forEach((whId, share) -> {
+			System.out.println(whId + ", " + share);
+		});
+		
 		Map<Integer, BigDecimal> warehouseAllocations = allocateByShares(warehouseShares, planningAmount);
 		Map<Integer, BigDecimal> warehouseWithMinimum = applyMinimum(stores, warehouseAllocations);
 
@@ -38,7 +68,11 @@ public class DeliveryApp {
 
 	// Step 2: Filling gaps by references or average
 	private static void fillGaps(List<Store> stores) {
-		Map<Integer, BigDecimal> referenceStorePotentials = stores.stream()
+		// Đoạn code 'stores.stream().filter(store -> store.getStorePotential() != null' e thấy sử dụng khá nhiều lần
+		// Có thể filter rồi lưu tạm vào 1 list riêng cũng được
+		
+		// Biến này chính xác hơn là ownStorePotentials, store có chưa giá trị store potential
+		Map<Integer, BigDecimal> ownStorePotentials = stores.stream()
 				.filter(store -> store.getStorePotential() != null)
 				.collect(Collectors.toMap(Store::getStoreId, Store::getStorePotential));
 
@@ -46,12 +80,12 @@ public class DeliveryApp {
 				.map(Store::getStorePotential).reduce(BigDecimal.ZERO, BigDecimal::add)
 				.divide(BigDecimal.valueOf(stores.stream().filter(store -> store.getStorePotential() != null).count()),
 						1, RoundingMode.HALF_UP);
-
+		
 		stores.forEach(store -> {
 			if (store.getStorePotential() == null) {
 				Integer referenceStoreId = store.getReferenceStoreId();
 				if (referenceStoreId != null) {
-					BigDecimal referencePotential = referenceStorePotentials.get(referenceStoreId);
+					BigDecimal referencePotential = ownStorePotentials.get(referenceStoreId);
 					if (referencePotential != null) {
 						store.setStorePotential(referencePotential);
 					} else {
@@ -91,6 +125,7 @@ public class DeliveryApp {
 			BigDecimal demand = store.getDemand();
 
 			if (whId != null && demand != null) {
+				// Hàm này e cũng ít khi sử dụng, great job a ;)
 				warehouseDemand.merge(whId, demand, BigDecimal::add);
 			}
 		});
@@ -206,7 +241,9 @@ public class DeliveryApp {
 		for (BigDecimal allocation : roundedAllocations.values()) {
 			totalRoundedAllocation = totalRoundedAllocation.add(allocation);
 		}
-
+		
+		// Thường e sẽ dùng while để kiểm tra, trong khi totalRoundedAllocation != planningAmount
+		// thì tiếp tục fixRounding, nhưng đệ quy cũng là 1 cách hay
 		if (totalRoundedAllocation.compareTo(BigDecimal.valueOf(planningAmount)) == 0) {
 			return finalAllocations;
 		} else if (totalRoundedAllocation.compareTo(BigDecimal.valueOf(planningAmount)) < 0) {
