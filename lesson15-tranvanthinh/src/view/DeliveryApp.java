@@ -17,24 +17,28 @@ import utils.NumberUtils;
 
 public class DeliveryApp {
 	
+	// Những biến không dùng nên xóa đi em nha
 	private static final String List = null;
 
 	public static void main(String[] args) {
 		
 		Integer planningAmountCountry = 10;
+		
+		// Code ko nên dùng handle e nha, hơi chung chung mơ hồ, tập cho quen để còn code trong project
 		handle(planningAmountCountry);
 
 		
 	}
 	
 	private static void handle(Integer planningAmountCountry) {
-		List<Store> storesA55 =fillingGaps(DataModel.mockStoresOfRefItemA55());
+		List<Store> storesA55 = fillingGaps(DataModel.mockStoresOfRefItemA55());
 		List<Store> storesA77 = fillingGaps(DataModel.mockStoresOfRefItemA77());
 		
-		List<List<Store>> stores = new ArrayList<List<Store>>();
+		List<List<Store>> stores = new ArrayList<>();
 		stores.add(storesA55);
 		stores.add(storesA77);
 		
+		// Sao a ko thấy step tính store demand ?
 		Map<Integer, BigDecimal> demandInWH = calcDemandInWH(stores);
 		CollectionUtils.generate("demand", demandInWH);
 		Map<Integer, BigDecimal> allocateByShare = calcAllocateByShare(demandInWH, planningAmountCountry );
@@ -56,6 +60,7 @@ public class DeliveryApp {
 	}
 	
 	private static BigDecimal caculateExpectSaleForStoresNoPotentialHasReferenceStore(Integer storeId) {
+		// Có thể dùng hàm findFirst chứ get 0 hơi nguy hiểm lỡ list trả về ko có phần tử nào là exception
 		Store storeReference = DataModel.mockStoresOfRefItemA77()
 				.stream()
 				.filter(storeCheck -> storeCheck.getStoreId().equals(storeId))
@@ -70,6 +75,11 @@ public class DeliveryApp {
 		Map<Integer, Integer> refStores = DataModel.mockRefStores();
 		
 		return stores.stream().map(store -> {
+			// BigDecimal thì nên dùng hàm compareTo thay vì equals
+			// 0.00 sẽ khác 0.0
+			
+			// Hàm getAveragePotential e gọi 2 lần trong setStorePotential và caculateExpectSaleForStoresNoPotentialHasReferenceStore
+			// Nên tạo 1 biến rồi truyền tham số qua hàm tránh gọi và tính toán nhiều lần
 			if(store.getStorePotential().equals(NumberUtils.bd(0))) {
 				if(refStores.containsKey(store.getStoreId())) {
 					store.setStorePotential(caculateExpectSaleForStoresNoPotentialHasReferenceStore(refStores.get(store.getStoreId())));
@@ -91,7 +101,12 @@ public class DeliveryApp {
 		BigDecimal sumRefWeight = refWeight.values()
         .stream()
         .reduce(BigDecimal.ZERO, BigDecimal::add);
+		
+		// Em get(0) như này rồi get(1) cho ref item 77 stores đâu rồi
+		// Dù sao đi nữa, học đến collection vs stream rồi mà code 2 vòng for i j như này a thấy ko phải là 1 cách hay
+		// nhìn khó đọc code, e có thể dùng flat map để gộp stores lại
 		for (int i = 0; i < stores.get(0).size(); i++) {
+			// A chưa đọc hết logic nhưng nếu được e nên tách ra 1 hàm từ dòng 108 đến 112 cho dễ đọc
 			BigDecimal demand = BigDecimal.ZERO;
             for (int j = 0; j < stores.size(); j++) {
     			 Integer itemId = stores.get(j).get(i).getItem().getItemId();
@@ -120,6 +135,7 @@ public class DeliveryApp {
 		return allocateByShare;
 	}
 
+	// Vì sao step apply min mà tính luôn cả các step 8 9 10 11
 	private static void applyMin(Map<Integer, BigDecimal> allocateByShare, Integer planningAmountCountry) {
 		boolean checkApplyMin = false;
 		BigDecimal sumAlocateStep7 = BigDecimal.ZERO;
@@ -128,6 +144,7 @@ public class DeliveryApp {
 			if (allocateByShare.get(key).compareTo(NumberUtils.bd(2)) < 0) {
 				allocateByShare.put(key, NumberUtils.bd(2));
 				checkApplyMin = true;
+				// hard code, nên lấy từ 1 biến nào đó chứ k phải luôn luôn 2
 				remain -= 2;
 			}
 			else {
