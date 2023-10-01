@@ -22,17 +22,34 @@ public class DeliveryApp {
 		Map<Integer, BigDecimal> potentialMap = new HashMap<>();
 
 		// step1
+		/*
+		    Em chưa hiểu đề
+		    PlanningAmount là số lượng cần được planning, cần được delivery là input có sẵn
+		    chứ ko phải đi tính, nó ko liên quan gì đến store potential hết
+		 */
 		BigDecimal planningAmount = calculatePlanningAmount(allStores);
 		if (planningAmount.compareTo(BigDecimal.valueOf(100)) <= 0) {
 			System.out.println("Planning amount is less than or equal to 100. Stopping calculation.");
 			return;
 		}
 
-		// step2
+		// step 2: filling gaps
 		processStores(allStores, potentialMap);
+		System.out.println("\nStep 2: Filling gaps");
+		
+		// A có chạy để in kết quả thử thì filling gaps chưa được e nha
+		// Bước 2 sau thì các bước tiếp theo vô nghĩa
+		allStores.forEach(store -> {
+			System.out.println(store.getStoreId() + ", " + store.getStorePotential());
+		});
 
-		// step3
+		// step 3
 		Map<Integer, BigDecimal> storeDemandMap = calculateStoreDemand(allStores);
+		
+		System.out.println("\nStep 3: Calculate store demands");
+		storeDemandMap.forEach((storeId, demand) -> {
+			System.out.println(storeId + ", " + demand);
+		});
 
 		// step4
 		Map<Integer, BigDecimal> warehouseDemandMap = calculateWarehouseDemand(allStores, storeDemandMap);
@@ -58,6 +75,7 @@ public class DeliveryApp {
 				BigDecimal potential = calculatePotential(store, stores, potentialMap);
 				store.setStorePotential(potential);
 			}
+			// e thiếu trường hợp else cũng set scale cho potential = 1, làm tròn 1 chữ số
 		}
 	}
 
@@ -71,6 +89,7 @@ public class DeliveryApp {
 
 		BigDecimal sumPotential = BigDecimal.ZERO;
 		int count = 0;
+		// Quên bài hết Đạt ơi, Em dùng hàm reduce trong stream cho nhanh hi
 		for (Store s : stores) {
 			if (s.getStorePotential() != null) {
 				sumPotential = sumPotential.add(s.getStorePotential());
