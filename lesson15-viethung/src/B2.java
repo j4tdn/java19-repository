@@ -5,19 +5,19 @@ import java.util.Scanner;
 public class B2 {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         System.out.print("Nhập tuổi hiện tại của bạn: ");
-        int age = scanner.nextInt();
+        int age = sc.nextInt();
 
         System.out.print("Nhập thời gian đã ngủ trong ngày (giờ-phút)\n");
         System.out.print("Số giờ: ");
-        int hoursSlept = scanner.nextInt();
+        int hoursSlept = sc.nextInt();
         System.out.print("Số phút: ");
-        int minutesSlept = scanner.nextInt();
+        int minutesSlept = sc.nextInt();
 
         System.out.print("Nhập thời gian bắt đầu ngủ (định dạng 24H, vd: 23H): ");
-        String startTime = scanner.next();
+        String startTime = sc.next();
         int startHour = Integer.parseInt(startTime.substring(0, startTime.length()-1));
 
         int minSleep = 0;
@@ -42,7 +42,5 @@ public class B2 {
         int wakeUpMins = remainingMins % 60;
 
         System.out.println("Bạn nên thức dậy lúc: " + wakeUpHour + "H" + String.format("%02d", wakeUpMins));
-
-        scanner.close();
     }
 }

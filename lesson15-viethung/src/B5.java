@@ -26,10 +26,10 @@ public class B5 {
         Map<String, String> map = new HashMap<>();
 
         File file = new File("F:/Desktop/code/code/untitled7/src/main/java/org/example/student.txt");
-        Scanner input = new Scanner(file);
+        Scanner sc = new Scanner(file);
 
-        while (input.hasNextLine()) {
-            String line = input.nextLine();
+        while (sc.hasNextLine()) {
+            String line = sc.nextLine();
             String[] data = line.split(", ");
 
             String id = data[0];
@@ -39,8 +39,6 @@ public class B5 {
             map.put(id, name);
             students.add(new Student(id, name, gpa, gender));
         }
-
-        input.close();
 
         // a
         Collections.sort(students, new Comparator<Student>() {

@@ -4,13 +4,13 @@ import java.util.Scanner;
 
 public class B1 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         int count = 0;
 
         while (count < 3) {
             System.out.print("Nhập vào 1 số thực có phần thập phân khác 0: ");
-            if (scanner.hasNextDouble()) {
-                double num = scanner.nextDouble();
+            if (sc.hasNextDouble()) {
+                double num = sc.nextDouble();
                 if (num == 0) {
                     System.out.println("Số nhập vào phải có phần thập phân khác 0. Vui lòng nhập lại.");
                 } else {
@@ -27,7 +27,7 @@ public class B1 {
             } else {
                 System.out.println("Giá trị nhập vào không hợp lệ. Vui lòng nhập lại.");
                 count++;
-                scanner.next();
+                sc.next();
             }
         }
 
@@ -35,7 +35,6 @@ public class B1 {
             System.out.println("Đã nhập sai quá 3 lần. Chương trình sẽ thoát.");
         }
 
-        scanner.close();
     }
 
     public static int gcd(int a, int b) {
