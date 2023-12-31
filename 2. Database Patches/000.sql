@@ -12,3 +12,6 @@
 
 005.sql
 --> ORDER, BILL, ORDER_DETAIL, ORDER_STATUS_DETAIL
+
+006.sql
+--> RENAME column KEY to SIZE in table SIZE
