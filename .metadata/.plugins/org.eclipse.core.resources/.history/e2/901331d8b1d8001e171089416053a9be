@@ -1,0 +1,26 @@
+package dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.query.NativeQuery;
+
+import persistence.entities.ItemGroup;
+
+public class HibernateItemGroupDao extends BaseHibernateDao implements ItemGroupDao {
+	
+	// native query: viết query ở dạng ngôn ngữ sql/oracle
+	// jpql/ hql : viết query ở djang entities/attributes
+				// hibernate tự chuyển sang native db mà mình đang kết nối
+	private static final String Q_GET_ALL_ITEM_GROUPS = "" + "SELECT * FROM item_group";
+
+	@Override
+	public List<ItemGroup> getAll() {
+		 Session session = openSession();
+		 NativeQuery<ItemGroup> nativeQuery =  session.createNativeQuery(Q_GET_ALL_ITEM_GROUPS, ItemGroup.class);
+		 
+		 return  nativeQuery.getResultList();
+	}
+
+}

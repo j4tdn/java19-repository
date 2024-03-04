@@ -1,0 +1,13 @@
+package dao;
+
+import java.util.List;
+
+import persistence.entities.Customer;
+
+public class HibernateCustomerDao extends BaseHibernateDao implements CustomerDao {
+	@Override
+	public List<Customer> getCustomer() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

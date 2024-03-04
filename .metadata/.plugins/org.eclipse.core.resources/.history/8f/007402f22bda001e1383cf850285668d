@@ -1,0 +1,13 @@
+package persistence.dto;
+
+import java.time.LocalDateTime;
+
+public class ItemGroupDto {
+	public static String PROP_ID = "id";
+	public static String PROP_NAME = "name";
+	public static String PROP_AMOUNT_OF_ITEM = "amountOfItem";
+	
+	private Integer id;
+	private String name;
+	private Integer amountOfItem;
+}

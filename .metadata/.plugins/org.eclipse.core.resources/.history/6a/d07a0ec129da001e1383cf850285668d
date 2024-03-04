@@ -1,0 +1,18 @@
+package view;
+
+import connection.DbConnection;
+
+public class ExLession18 {
+	private static ItemService itemService;
+
+	static {
+		itemService = new ItemServiceImpl();
+	}
+	
+	public static void main(String[] args) {
+		final var sessionFactory = DbConnection.getSessionFactory();
+		System.out.println("session Factory --> " + sessionFactory);
+		
+		
+	}
+}

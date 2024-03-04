@@ -1,0 +1,26 @@
+package view;
+
+import connection.DbConnection;
+import service.ItemService;
+import service.ItemServiceImpl;
+
+import static utils.CollectionUtils.*;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+
+public class ExLession18 {
+	private static ItemService itemService;
+
+	static {
+		itemService = new ItemServiceImpl();
+	}
+
+	public static void main(String[] args) {
+		final var sessionFactory = DbConnection.getSessionFactory();
+		System.out.println("session Factory --> " + sessionFactory);
+		
+		generate("Get Item by Date", itemService.getItemByDate(LocalDateTime.of(LocalDate.of(2023, 9, 7), LocalTime.of(0, 0))));
+	}
+}

@@ -1,0 +1,55 @@
+package dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.query.NativeQuery;
+import org.hibernate.type.StringType;
+
+import com.mysql.cj.Query;
+
+import persistence.entities.ItemGroup;
+
+public class HibernateItemGroupDao extends BaseHibernateDao implements ItemGroupDao {
+
+	// native query: viết query ở dạng ngôn ngữ sql/oracle
+	// jpql/ hql : viết query ở djang entities/attributes
+	// hibernate tự chuyển sang native db mà mình đang kết nối
+//	private static final String Q_GET_ALL_ITEM_GROUPS = "" + "SELECT * FROM item_group";
+	private static final String Q_GET_ALL_ITEM_GROUPS = "FROM ItemGroup";
+	private static final String Q_GET_ITEM_GROUP_BY_NAME = "SELECT * FROM item_group WHERE NAME = :pName";
+	
+//	@Override
+//	public List<ItemGroup> getAll() {
+//		return openSession().createNativeQuery(Q_GET_ALL_ITEM_GROUPS, ItemGroup.class)
+//				.getResultList();
+//	}
+	
+	//jpql/ hql
+//	@Override
+//	public List<ItemGroup> getAll() {
+//		return openSession().createQuery(Q_GET_ALL_ITEM_GROUPS, ItemGroup.class)
+//				.getResultList();
+//	}
+	
+	@Override
+	public List<ItemGroup> getAll() {
+		return openSession().createNamedQuery(ItemGroup.Q_GET_ALL, ItemGroup.class)
+				.getResultList();
+	}
+	
+	@Override
+	public ItemGroup get(int id) {
+		return openSession().get(ItemGroup.class, id);
+	}
+	
+	@Override
+	public ItemGroup get(String name) {
+		NativeQuery<ItemGroup> nativeQuery =  openSession().createNativeQuery(Q_GET_ITEM_GROUP_BY_NAME, ItemGroup.class);
+		nativeQuery.setParameter("pName", name, StringType.INSTANCE);
+		
+		return null;
+	}
+
+}

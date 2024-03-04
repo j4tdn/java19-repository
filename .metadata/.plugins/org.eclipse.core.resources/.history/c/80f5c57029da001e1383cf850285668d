@@ -1,0 +1,27 @@
+package dao;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+import persistence.dto.ItemDto;
+
+public class HibernateItemDao extends BaseHibernateDao implements ItemDao {
+	private static final String Q_GET_ITEM_BY_DATE = "" + 
+			"SELECT it.id, \n" 
+			+"it.`NAME`, \n"
+			+"od.CREATED_AT \n"
+			+ "from item it " + 
+			"join item_detail id " + 
+			"on id.ITEM_ID = it.ID " + 
+			"join order_detail odd "
+			+ "on odd.ITEM_DETAIL_ID = id.ID " + 
+			"join `order` od " + "on od.ID = odd.ORDER_ID "
+			+ "WHERE CAST(od.CREATED_AT AS DATE) = :pDate";
+
+	@Override
+	public List<ItemDto> getItemByDate(LocalDateTime lDateTime) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

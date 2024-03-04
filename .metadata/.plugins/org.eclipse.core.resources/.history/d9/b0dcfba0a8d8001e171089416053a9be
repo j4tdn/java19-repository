@@ -1,0 +1,13 @@
+package connection;
+
+import com.mysql.cj.xdevapi.SessionFactory;
+
+public class DbConnection {
+	
+	private static SessionFactory sessionFactory;
+	
+	public DbConnection() {
+	}
+	
+	
+}

@@ -1,0 +1,14 @@
+package dao;
+
+import java.util.List;
+
+import persistence.entities.ItemGroup;
+
+public class HibernateItemGroupDao implements ItemGroupDao {
+
+	@Override
+	public List<ItemGroup> getAll() {
+		return null;
+	}
+
+}

@@ -1,0 +1,41 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import connection.DbConnection;
+import persistence.Customer;
+
+public class JdbcCustomerDao implements CustomerDao {
+	
+	private final String Q_INSERT_CUSTOMER = ""
+			+ "INSERT INTO customer(ID, NAME, EMAIL, ADDRESS, PHONE, PASSWORK)"
+			+ "VALUES(?, ?, ?, ?, ?, ?)";
+	
+	private Connection connection;
+	private PreparedStatement pst;
+	private ResultSet rs;
+	
+	public JdbcCustomerDao() {
+		connection = DbConnection.getConnection();
+	}
+
+	@Override
+	public void save(Customer customer) {
+		try {
+			pst = connection.prepareStatement(Q_INSERT_CUSTOMER);
+			pst.setInt(1, customer.getId());
+			pst.setString(2, customer.getName());
+			pst.setString(3, customer.getEmail());
+			pst.setString(4, customer.getAddress());
+			pst.setString(5, customer.getPhone());
+			pst.setString(6, customer.getPasswork());
+			pst.executeUpdate();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+	
+}

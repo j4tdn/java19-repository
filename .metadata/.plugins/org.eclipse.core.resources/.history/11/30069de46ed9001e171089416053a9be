@@ -1,0 +1,13 @@
+package service;
+
+public class CacheServiceImpl implements CacheService {
+	@Override
+	public void firstLevelCache() {
+		
+	}
+	
+	@Override
+	public void secondLevelCache() {
+		
+	}
+}

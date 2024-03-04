@@ -1,0 +1,9 @@
+package persistence.dto;
+
+import java.time.LocalDate;
+
+public class ItemDto {
+	private Integer id;
+	private String name;
+	private LocalDate ldate;
+}

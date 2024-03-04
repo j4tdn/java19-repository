@@ -1,0 +1,20 @@
+package service;
+
+import dao.CustomerDao;
+import persistence.Customer;
+
+public class CustomerServiceImpl implements CustomerService {
+	
+	private CustomerDao customerDao;
+	
+	public CustomerServiceImpl() {
+		
+	}
+
+	@Override
+	public void save(Customer customer) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
