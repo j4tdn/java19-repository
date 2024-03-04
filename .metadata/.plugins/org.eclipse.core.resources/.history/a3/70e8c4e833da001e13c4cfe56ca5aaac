@@ -1,0 +1,47 @@
+package service;
+
+import java.time.LocalDate;
+import java.util.List;
+import java.util.Objects;
+
+import dao.HibenateItemDao;
+import dao.HibernateItemGroupDao;
+import dao.ItemDao;
+import dao.ItemGroupDao;
+import persistence.dto.ItemByDateDto;
+import persistence.entities.Item;
+import persistence.entities.ItemGroup;
+
+public class ItemServiceImpl implements ItemService {
+
+	private ItemDao itemDao;
+	private ItemGroupDao itemGroupDao;
+	
+	public ItemServiceImpl() {
+		itemDao = new HibenateItemDao();
+		itemGroupDao = new HibernateItemGroupDao();
+	}
+	
+	@Override
+	public List<Item> getAll() {
+		return itemDao.getAll();
+	}
+
+	@Override
+	public void save(ItemGroup itemGroup) {
+		Objects.requireNonNull(itemGroup, "item group should not be null");
+//		ItemDao
+	}
+
+	@Override
+	public List<ItemByDateDto> getItemsByDate(LocalDate localDate) {
+		return itemDao.getItemByDate(localDate);
+	}
+
+	@Override
+	public List<String> bai3(LocalDate localDate) {
+		// TODO Auto-generated method stub
+		return itemDao.bai3(localDate);
+	}
+
+}

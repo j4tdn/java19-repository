@@ -1,0 +1,53 @@
+package dao;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+import org.hibernate.transform.Transformers;
+import org.hibernate.type.IntegerType;
+import org.hibernate.type.LocalDateTimeType;
+import org.hibernate.type.LocalDateType;
+import org.hibernate.type.LongType;
+import org.hibernate.type.StringType;
+
+import persistence.dto.ItemByDateDto;
+import persistence.dto.ItemDetailDto;
+import persistence.dto.ItemGroupDto;
+import persistence.entities.Item;
+
+public class HibenateItemDao extends BaseHibernateDao implements ItemDao {
+
+	private static final String Q_GET_ALL_ITEMS = "SELECT * FROM item";
+	private static final String Q_GET_ITEMS_BY_DATE = ""
+			+ "select i.id " + ItemByDateDto.PROP_IG_ID + ",\n"
+			+ "i.name " + ItemByDateDto.PROP_IG_NAME + ",\n"
+			+ "o.created_at " + ItemByDateDto.PROP_CREATED_AT + ",\n"
+			+ "from \n"
+			+ "	`order` o join `order_detail` od on o.id = od.order_id \n"
+			+ "	join `item_detail` id on od.item_detail_id = id.id \n"
+			+ "	join `item` i on id.item_id = i.id \n"
+			+ "ORDER BY \n"
+			+ "where o.created_at = :pDate"; 
+
+	@Override
+	public List<Item> getAll() {
+		return openSession().createNativeQuery(Q_GET_ALL_ITEMS, getEntityClass()).getResultList();
+	}
+
+	private Class<Item> getEntityClass() {
+		return Item.class;
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Item> getItemByDate(LocalDate localDateTime) {
+		return openSession().createNativeQuery(Q_GET_ITEMS_BY_DATE)
+				.addScalar(ItemByDateDto.PROP_IG_ID, IntegerType.INSTANCE)
+				.addScalar(ItemByDateDto.PROP_IG_NAME, StringType.INSTANCE)
+				.addScalar(ItemByDateDto.PROP_CREATED_AT, LocalDateTimeType.INSTANCE)
+				.setParameter("pDate", localDateTime, LocalDateTimeType.INSTANCE)
+				.setResultTransformer(Transformers.aliasToBean(ItemByDateDto.class)).getResultList();
+				
+	}
+
+}

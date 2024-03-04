@@ -1,0 +1,26 @@
+INDEX VERSION 1.131+D:\BecomeJavaDev\java19\4. Database Connection\.metadata\.plugins\org.eclipse.jdt.core
+2495127364.index
+3499812393.index
+3048885867.index
+3567499234.index
+1707779141.index
+335449252.index
+2042390745.index
+2696664491.index
+3804782286.index
+3195854062.index
+636641420.index
+3329326932.index
+3793311859.index
+1624916304.index
+1865797976.index
+151954762.index
+3169983315.index
+982846338.index
+2596669763.index
+615425001.index
+1477479592.index
+2730893330.index
+84357696.index
+1390835334.index
+2271065215.index

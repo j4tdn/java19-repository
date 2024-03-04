@@ -1,0 +1,8 @@
+package persistence.dto;
+
+public class bai2DTO {
+	public static String PROP_IG_ID = "ID";
+	public static String PROP_IG_NAME = "NAME";
+	public static String PROP_CREATED_AT = "created_time";
+	
+}

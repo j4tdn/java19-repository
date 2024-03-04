@@ -1,0 +1,13 @@
+package service;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+import persistence.entities.Item;
+import persistence.entities.ItemGroup;
+
+public interface ItemService {
+	List<Item> getAll();
+	void save(ItemGroup itemGroup);
+	List<Item> getItemsByDate(LocalDate localDateTime);
+}

@@ -1,0 +1,23 @@
+package view;
+
+import static utils.CollectionUtils.generate;
+
+import java.time.LocalDate;
+
+import service.ItemGroupService;
+import service.ItemGroupServiceImpl;
+import service.ItemService;
+import service.ItemServiceImpl;
+
+public class bai2 {
+	private static ItemGroupService itemGroupService;
+
+	static {
+		itemGroupService = new ItemGroupServiceImpl();
+	}
+	public static void main(String[] args) {
+		generate("Câu 2: Thống kê số lượng mặt hàng đang tồn kho của mỗi loại\r\n"
+				+ "hàng.", itemGroupService.thongke());
+
+	}
+}
