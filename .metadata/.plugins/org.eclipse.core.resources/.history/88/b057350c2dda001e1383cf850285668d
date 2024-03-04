@@ -1,9 +1,0 @@
-package view;
-
-import static utils.CollectionUtils.generate;
-
-public class ItemGroupView {
-	public static void main(String[] args) {
-		generate("Count Item of ItemGroup", itemService.coun);
-	}
-}

@@ -1,5 +1,0 @@
-package persistence.entities;
-
-public class Customer {
-
-}

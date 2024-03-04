@@ -1,7 +1,0 @@
-package service;
-
-import persistence.Customer;
-
-public interface CustomerServiceDao {
-	void save(Customer customer);
-}

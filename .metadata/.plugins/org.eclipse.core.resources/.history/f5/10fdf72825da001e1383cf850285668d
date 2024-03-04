@@ -1,8 +1,0 @@
-package view;
-
-public class ExLession18 {
-	public static void main(String[] args) {
-		final var sessionFactory = DbConnection.getSessionFactory();
-		System.out.println("session Factory --> " + sessionFactory);
-	}
-}

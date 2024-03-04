@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy package &apos;utils&apos; to &apos;lession18-jpahibernate/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;lession17-database-connection&apos;&#x0D;&#x0A;- Destination element: &apos;lession18-jpahibernate/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;lession17-database-connection/src/main/java/utils&apos;" description="Copy package" destination="=lession18-jpahibernate/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;utils" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1709397138153" version="1.0"/>
-</session>

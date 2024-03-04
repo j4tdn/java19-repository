@@ -1,8 +1,0 @@
-package persistence.entities;
-
-public class Size {
-	private Integer id;
-	
-	private String size;
-	private Boolean gender;
-}

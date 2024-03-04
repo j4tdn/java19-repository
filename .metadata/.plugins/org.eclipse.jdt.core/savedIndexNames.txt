@@ -1,5 +1,0 @@
-INDEX VERSION 1.131+F:\JAVABKIT\java19\4.Database Connection\.metadata\.plugins\org.eclipse.jdt.core
-1865797976.index
-3817774810.index
-4192462366.index
-667033314.index

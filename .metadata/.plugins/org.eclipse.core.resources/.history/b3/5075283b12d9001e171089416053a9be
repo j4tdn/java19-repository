@@ -1,7 +1,0 @@
-package view;
-
-import service.ItemService;
-
-public class Ex03ItemView {
-	private static ItemService itemService;
-}

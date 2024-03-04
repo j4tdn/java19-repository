@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE xml>
-<ehcache>
-    <cache name="persistence.entit.ItemGroup"  
-    	maxElementsInMemory="1000"
-    	timeToIdleSeconds="3"
-    />
-</ehcache>

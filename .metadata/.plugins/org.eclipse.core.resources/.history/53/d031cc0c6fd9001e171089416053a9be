@@ -1,9 +1,0 @@
-package view;
-
-public class Ex04CacheView {
-	
-	private static Chac
-	public static void main(String[] args) {
-		
-	}
-}

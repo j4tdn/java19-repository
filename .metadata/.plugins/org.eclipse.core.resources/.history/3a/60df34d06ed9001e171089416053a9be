@@ -1,9 +1,0 @@
-package service;
-
-public class CacheServiceImpl implements CacheService {
-	@Override
-	public void firstLevelCache() {
-		// TODO Auto-generated method stub
-		
-	}
-}

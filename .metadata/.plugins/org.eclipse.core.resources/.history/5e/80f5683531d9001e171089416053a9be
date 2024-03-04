@@ -1,6 +1,0 @@
-package dao;
-
-public class CacheDao {
-	void firstLevelCache();
-	void secondLevelCache();
-}
