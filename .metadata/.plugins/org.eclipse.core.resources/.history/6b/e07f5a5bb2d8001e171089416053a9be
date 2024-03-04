@@ -1,0 +1,11 @@
+package view;
+
+import service.ItemGroupService;
+
+public class Ex02ItemGroupView {
+	
+	private static ItemGroupService itemGroupService;
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,11 @@
+package dao;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+import persistence.dto.ItemDto;
+
+public interface ItemDao {
+	List<ItemDto> getItemByDate(LocalDateTime lDateTime);
+	List<String> topThreeItemBestSeller();
+}

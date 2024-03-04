@@ -1,0 +1,20 @@
+package service;
+
+import dao.CustomerDao;
+import dao.JdbcCustomerDao;
+import persistence.Customer;
+
+public class CustomerServiceImpl implements CustomerService {
+	
+	private CustomerDao customerDao;
+	
+	public CustomerServiceImpl() {
+		customerDao = new JdbcCustomerDao();
+	}
+
+	@Override
+	public void save(Customer customer) {
+		customerDao.save(customer);
+	}
+
+}

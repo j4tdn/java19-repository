@@ -1,0 +1,12 @@
+package service;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+import persistence.dto.ItemDto;
+
+public interface ItemService {
+	List<Item> getAll();
+	List<ItemDto> getItemByDate(LocalDateTime lDateTime);
+	List<String> topThreeItemBestSeller();
+}

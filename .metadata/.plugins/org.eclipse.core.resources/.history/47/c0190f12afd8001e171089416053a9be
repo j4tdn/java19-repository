@@ -1,0 +1,24 @@
+package persistence.entities;
+
+
+/*
+ * Sử dụng ORM framwork để mapping class trong java với database
+ * 
+ * Tên class bất kì
+ * tên table bất kì
+ * 
+ * Mapping class với table name
+ * mapping attributes với table columns
+ * Mapping constraints
+ * 
+ * Không phải mapping 1/all classes với tables
+ * khi nào cần truy vấn trả vè dạng entity thì mình mới mapping
+ * để đỡ phải set tay column với entity
+ * 
+ * */
+
+
+
+public class ItemGroup {
+
+}

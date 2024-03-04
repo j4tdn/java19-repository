@@ -1,0 +1,18 @@
+package dao;
+
+import java.util.List;
+
+import persistence.entities.ItemGroup;
+
+public class HibernateItemGroupDao implements ItemGroupDao {
+	
+	// native quey: sql/oracle
+	// hybrid
+	private static final String Q_GET_ALL_ITEM_GROUPS = "" + "SELECT * FROM item_group";
+
+	@Override
+	public List<ItemGroup> getAll() {
+		return null;
+	}
+
+}

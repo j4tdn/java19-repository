@@ -1,0 +1,20 @@
+package view;
+import java.util.Collection.*;
+import connection.DbConnection;
+import service.ItemService;
+import service.ItemServiceImpl;
+
+public class ExLession18 {
+	private static ItemService itemService;
+
+	static {
+		itemService = new ItemServiceImpl();
+	}
+	
+	public static void main(String[] args) {
+		final var sessionFactory = DbConnection.getSessionFactory();
+		System.out.println("session Factory --> " + sessionFactory);
+		
+		generat
+	}
+}

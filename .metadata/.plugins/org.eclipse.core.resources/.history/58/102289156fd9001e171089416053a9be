@@ -1,0 +1,11 @@
+package view;
+
+import service.CacheService;
+
+public class Ex04CacheView {
+	
+	private static CacheService cacheService;
+	public static void main(String[] args) {
+		
+	}
+}

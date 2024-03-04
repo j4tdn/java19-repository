@@ -1,0 +1,23 @@
+package service;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+import dao.HibernateItemDao;
+import dao.ItemDao;
+import persistence.dto.ItemDto;
+
+public class ItemServiceImpl implements ItemService {
+	
+	private ItemDao itemDao;
+	
+	public ItemServiceImpl() {
+		itemDao = new HibernateItemDao();
+	}
+
+	@Override
+	public List<ItemDto> getItemByDate(LocalDateTime lDateTime) {
+		return itemDao.getItemByDate(lDateTime);
+	}
+	
+}
