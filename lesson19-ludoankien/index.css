@@ -1,0 +1,64 @@
+i {
+  padding: 4px;
+  align-items: center;
+  justify-content: center;
+}
+
+#btn-add {
+  text-align: center;
+  background-color: #ccc;
+  border: 2px solid #ccc;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+#btn-add:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+#btn-add a {
+  text-decoration: none;
+  color: #000;
+}
+
+#btn-add a i {
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+
+table tbody tr:nth-last-child(2n + 1) {
+  background: #ddd;
+}
+
+table td {
+  text-align: center;
+}
+
+td i {
+  padding: 0 10px;
+}
+
+.pagination {
+  display: flex;
+}
+
+.pagination-item {
+  text-align: center;
+  margin: 0 4px;
+  height: 25px;
+  width: 25px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.pagination-item span {
+  line-height: 24px;
+}
+
+.active {
+  color: #fff;
+  background-color: green;
+  border: green;
+}
