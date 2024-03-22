@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Web Page</title>
+    <script src="https://kit.fontawesome.com/766ccaa93a.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <style>
+        .header {
+            display: block;
+            width: fit-content;
+            margin: 20px;
+        }
+
+        hr.hr2 {
+            border: 1px solid;
+        }
+
+        .search-element {
+            border: 1px solid #ccc;
+            width: fit-content;
+
+            border-radius: 25px;
+            margin: 20px;
+            display: block;
+            height: 28px;
+        }
+
+        .search-input {
+            border: none;
+            width: 77%;
+        }
+
+        .add-element {
+            border: 1px solid #ccc;
+            margin: 20px;
+            display: inline-block;
+            height: 40px;
+        }
+
+        .add-btn {
+            margin: 20px;
+    width: 150px;
+    height: 40px;
+    border: 1px solid;
+    display: inline-block;
+    text-align: center;
+        }
+
+        .add-btn a {
+            text-decoration: none;
+            line-height: 40px;
+        }
+
+        td{
+            text-align: center;
+        }
+
+        .pagination-item {
+            border: solid;
+            border-radius: 19px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            margin: 0px 5px 0px
+        }
+        .pagination-item span {
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h3>Student Web App - Spring MVC</h3>
+        <hr class="hr2" />
+    </div>
+    <div class="search-element">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true" style="margin-left: 10px;line-height: 28px;"></i>
+        <input type="text" class="search-input" placeholder="search">
+    </div>
+    <div class="add-btn">
+        <a href="form.html"><i class="fa-solid fa-plus"></i>Add New Student</a>
+    </div>
+
+    <table border="1" cellspacing="0" cellpadding="10" style="width: 500px">
+        <thead>
+            <tr>
+                <th><i class="fa-regular fa-square-check"></i></th>
+                <th>Name</th>
+                <th>Class</th>
+                <th></th>
+            </tr>
+            
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" name="" id=""></td>
+                <td>John Smith</td>
+                <td>12T8</td>
+                <td>
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" id=""></td>
+                <td>Mina Tran</td>
+                <td>10X3</td>
+                <td>
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" id=""></td>
+                <td>Lee Ha</td>
+                <td>14T2</td>
+                <td>
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="display: flex; margin: 20px;">
+        <i class="fa-solid fa-chevron-left" style="line-height: 30px;"></i>
+        <div class="pagination-item active">
+            <span>1</span>
+        </div>
+        <div class="pagination-item">
+            <span>2</span>
+        </div>
+        <div class="pagination-item">
+            <span>3</span>
+        </div>
+        <i class="fa-solid fa-chevron-right" style="line-height: 30px;"></i>
+    </div>
+</body>
+
+</html>
