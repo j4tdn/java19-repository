@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Web Page</title>
+    <style>
+        .chosses-element {
+            display: block;
+            width: 200px;
+            height: 30px;
+            margin: 20px;
+            border: solid;
+        }
+
+        .btn-add {
+            display: block;
+            margin: 20px;
+            width: 70px;
+            height: 35px;
+        }
+
+        hr.hr1 {
+            margin: 0px 20px 0px;
+            border: solid;
+        }
+
+        .back-to-home {
+            display: inline-block;
+            margin: 20px;
+        }
+
+        hr.hr2 {
+            border: 1px solid;
+        }
+
+        .back-to-home a {
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 style="margin: 20px;">Student Page - Add</h3>
+    <form action="POST">
+        <input class="chosses-element" type="text" placeholder="Enter your name">
+        <select id="class" class="chosses-element">
+            <option value="" disabled selected>Class</option>
+            <option value="A1">A1</option>
+            <option value="A2">A2</option>
+            <option value="A3">A3</option>
+            <option value="A4">A4</option>
+        </select>
+        <button type="submit" class="btn-add">Save</button>
+        <hr class="hr1" />
+        <div class="back-to-home">
+            <a href="index.html">Back to Home Page</a>
+            <hr class="hr2" />
+        </div>
+    </form>
+</body>
+</html>
