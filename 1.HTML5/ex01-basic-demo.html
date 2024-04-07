@@ -1,0 +1,87 @@
+<!DOCTYPE> <!-- Support HTML5 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon"  href="images/world.png">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ex01-Basic-Demo-HTML</title>
+
+
+	<!-- Internal Css -->
+	<style>
+		table tbody tr:nth-child(2n + 1) {
+			background-color: violet;
+		}
+	</style>
+
+</head>
+<body>
+	<h1>This is H1 tag</h1>
+
+	<h3>This is H3 tag</h3>
+
+	<h5>This is H5 tag</h5>
+
+	<!-- Paragraph -->
+	<p>Lorem ipsum dolor sit amet, <strong>consectetur adipisicing</strong> <em>elit</em>, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. <br><br> Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<!-- Images -->
+	<img src="images/cake.jpg" alt= "cake" width="220" height="220" >
+
+	<hr>
+
+	<!-- Table -->
+	<!-- 
+		border: đường viền cho từng ô, table
+		cellspacing: khoảng cách giữa các ô
+		cellpadding: khoảng cách từ viền của từng ô với nội dụng trong ô
+	 -->
+		<table border="1px" cellspacing="0" cellpadding="5px">
+
+		<thead>
+			<tr>
+				<th rowspan="2">Name</th>
+				<th rowspan="2">Age</th>
+				<th rowspan="2">Eye Color</th>
+				<th colspan="2">Phone</th>
+
+			</tr>
+			<tr>
+				<th>Fax 1</th>
+				<th>Fax 2</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>Peter</td>
+				<td>18</td>
+				<td>Blue</td>
+				<td>12345</td>
+				<td>12345</td>
+			</tr>
+
+			<tr>
+				<td>Kate</td>
+				<td>22</td>
+				<td>Green</td>
+				<td>12346</td>
+				<td>12346</td>
+			</tr>
+
+			<tr>
+				<td>Oliver</td>
+				<td>24</td>
+				<td>Gray</td>
+				<td>12347</td>
+				<td>12347</td>
+			</tr>
+		</tbody>
+		</table>
+	</body>
+	</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE> <!-- Support HTML5 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon"  href="images/world.png">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ex01-Basic-Demo-HTML</title>
+
+	<style>
+		/*0. Tô màu cho tất cả các dòng 
+		table tbody {
+			background-color: grey;
+		}
+		1. Dòng đầu tiên tô màu xám
+		table tbody tr:first-child {
+			background-color: grey;
+		}
+		2. Dòng cuối cùng tô màu xám
+		table tbody tr:last-child {
+			background-color: grey;
+		}
+		3. Dòng thứ tư tô màu xám
+		table tbody tr:nth-child(2){
+			background-color: grey;
+		}
+		4. 3 dòng đầu tiên tô màu xám
+		table tbody tr:nth-child(-n + 3){
+			background-color: violet;
+		}
+		5. 2 dòng cuối cùng tô màu xám
+		table tbody tr:nth-last-child(-n + 2){
+			background-color: violet;
+		}
+		6. Cứ 2 dòng 1 lần tô màu xám, tính từ dòng đầu tiên
+		table tbody tr:nth-child(2n + 1){
+			background-color: violet;
+		7. Cứ 3 dòng 1 lần tô màu xám, tính từ dòng thứ 2
+		table tbody tr:nth-child(3n + 2){
+			background-color: violet;
+		8. từ dòng 3 đến dòng thứ 7
+		table tbody tr:nth-child(n + 3):nth-child(-n + 7){
+			background-color: violet;
+		}
+		}
+		*/
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		
+
+		
+
+	</style>
+</head>
+	<body>
+		<table border="1" cellspacing="0" cellpadding="4">
+			<thead>
+				<tr>
+					<th colspan="2">Table Of Contents</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td><a href="#block-image-tag">Image Part</a></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td><a href="#block-image-tag">Anchor Part</a></td>
+				</tr>
+			</tbody>
+		</table>
+
+	<h1>This is H1 tag</h1>
+
+	<h3>This is H3 tag</h3>
+
+	<h5>This is H5 tag</h5>
+	<ul>
+		<li>Cake 1</li>
+		<li>Cake 2</li>
+		<li>Cake 3</li>
+	</ul>
+		
+	<ol>
+		<li>Cake 1</li>
+		<li>Cake 2</li>
+		<li>Cake 3</li>
+	</ol>
+
+	<hr>
+
+	<b style="border: 1px solid red"> Text Inline Bold More Extra Text </b>
+	<i> Text Inline Italic </i>
+	<h3> style= "border: 1px solic blue"> Text Block Heading </h3>
+
+	<hr>
+
+	<table border="1px" cellspacing="0" cellpadding="5px">
+
+		<thead>
+			<tr>
+				<th rowspan="2">Name</th>
+				<th rowspan="2">Age</th>
+				<th rowspan="2">Eye Color</th>
+				<th colspan="2">Phone</th>
+
+			</tr>
+			<tr>
+				<th>Fax 1</th>
+				<th>Fax 2</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>Peter</td>
+				<td>18</td>
+				<td>Blue</td>
+				<td>12345</td>
+				<td>12345</td>
+			</tr>
+
+			<tr>
+				<td>Kate</td>
+				<td>22</td>
+				<td>Green</td>
+				<td>12346</td>
+				<td>12346</td>
+			</tr>
+
+			<tr>
+				<td>Oliver</td>
+				<td>24</td>
+				<td>Gray</td>
+				<td>12347</td>
+				<td>12347</td>
+			</tr>
+
+			<tr>
+				<td>Oliver</td>
+				<td>24</td>
+				<td>Gray</td>
+				<td>12347</td>
+				<td>12347</td>
+			</tr>
+
+			<tr>
+				<td>Oliver</td>
+				<td>24</td>
+				<td>Gray</td>
+				<td>12347</td>
+				<td>12347</td>
+			</tr>
+
+			<tr>
+				<td>Oliver</td>
+				<td>24</td>
+				<td>Gray</td>
+				<td>12347</td>
+				<td>12347</td>
+			</tr>
+
+			<tr>
+				<td>Oliver</td>
+				<td>24</td>
+				<td>Gray</td>
+				<td>12347</td>
+				<td>12347</td>
+			</tr>
+
+			<tr>
+				<td>Oliver</td>
+				<td>24</td>
+				<td>Gray</td>
+				<td>12347</td>
+				<td>12347</td>
+			</tr>
+		</tbody>
+		</table>
+
+		<hr>
+
+		<h4 id="block-a-tag">Anchor Tag - Link</h4>
+		<a href="https://www.google.com/" target="_blank">Link to Google Page</a> 
+		<br>
+		<a href="https://en.wikipedia.org/wiki/Lemonade" target="_blank">
+			<img src="images/lemon.png" width="120" height="220" alt="lemonade wiki" title="Move to lemonade page">
+
+		</a>
+		<br>
+		<a href="sub-pages/page1.html">Move To Page 1</a>
+		<br>
+		<a href="sub-pages/page2.html">Move To Page 2</a>
+			
+
+	<h4 id="block-image-tag">Image - Offline Source</h4>
+	<img src="images/lemon.png" alt="lemon" width="140" height="200">
+
+	<h4>Image - Online Source</h4>
+	<img src="https://cdn.britannica.com/84/73184-050-05ED59CB/Sunflower-field-Fargo-North-Dakota.jpg" alt="lemon" width="220" height="200">
+
+	</body>
+	</html>
