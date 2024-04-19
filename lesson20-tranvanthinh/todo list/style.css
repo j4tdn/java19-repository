@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 100%;
+    height: 1000px;
+    margin: 0 auto;
+    background-color: #FFFFE3;
+}
+
+#warning{
+    text-align: center;
+    padding: 20px;
+    color: red;
+}
+
+.todo-list-app {
+    width: 500px;
+    height: 336px;
+    background-color: aqua;
+    border-radius: 30px;
+    overflow: hidden; 
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px 0px #888888;
+}
+
+.title {
+    background-color: #5095D8;
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
+    color: #fff;
+	text-transform: uppercase;
+}
+
+#input-task{
+    height: 100%;
+    width: 89%;
+    border: none;
+    text-indent: 20px;
+}
+
+.row{
+    width: 100%;
+    height: 50px;
+    border: 1px solid #D3D8DB
+}
+.icon {
+    float: right;
+    text-align: center;
+    width: 11%;
+    height: 100%;
+    background-color: #BFDEFB;
+}
+.icon:hover{
+    background-color: #97c7f4;
+    cursor: pointer;
+}
+
+.icon i {
+    margin-top: 1em;
+}
+
+.checkbox, .task-name {
+    height: 100%;
+    float: left;
+}
+.checkbox{
+    width: 10%;
+    text-align: center;
+    background-color: #BFDEFB;
+}
+.checkbox input{
+    margin-top: 1.5em;
+}
+.task-name{
+    width: 79%;
+    background-color: white;
+    line-height: 50px;
+}
+.task-name span {
+    margin-left: 10px;
+}
