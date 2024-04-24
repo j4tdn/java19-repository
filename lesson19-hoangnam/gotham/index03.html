@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GOTHAM</title>
+    <link rel="stylesheet" href="style03.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="menu menu-left">
+        <a href="#culture">CULTURE</a>
+        <a href="#events">EVENTS</a>
+        <a href="#food">FOOD</a>
+      </div>
+      <img src="img03/logo.png" alt="Logo Gotham" class="logo" />
+      <div class="menu menu-right">
+        <a href="#travelling">TRAVELLING</a>
+        <a href="#fashion">FASHION</a>
+        <a href="#other">OTHER</a>
+      </div>
+    </nav>
+
+    <div class="main-content">
+      <div class="articles-container">
+        <div class="article">
+          <img
+            src="img03/article-1.jpg"
+            alt="Cannes Film Festival"
+            class="article-image"
+          />
+          <div class="article-content">
+            <h2>
+              5 Standout Things to Know About the 2033 Cannes Film Festival
+            </h2>
+            <div class="article-meta">
+              <span>June 8, 2033</span> | <span>by Thomas Smith</span> |
+              <span class="article-category">Culture</span>
+            </div>
+            <p>
+              The Cannes Film Festival is an annual film festival held in
+              Cannes, France, which previews new films of all genres, including
+              documentaries from all around the world. Here are nine of the
+              films that generated the most buzz ...
+            </p>
+            <div class="article-stats">
+              <img
+                src="img03/visible-opened-eye-interface-option.png"
+                alt="Likes"
+                class="icon likes"
+              />
+              <span>266</span>
+              <p>|</p>
+              <img
+                src="img03/speech-bubble.png"
+                alt="Comments"
+                class="icon comments"
+              />
+              <span class="cmt">3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="article">
+          <img
+            src="img03/article-2.jpg"
+            alt="Time Management"
+            class="article-image"
+          />
+          <div class="article-content">
+            <h2>15 Time Management Tips for Achieving Your Goals</h2>
+            <div class="article-meta">
+              <span>June 8, 2033</span> | <span>by Thomas Smith</span> |
+              <span class="article-category">Business</span>
+            </div>
+            <p>
+              Time management is the process of planning and exercising
+              conscious control of time spent on specific activities, especially
+              to increase effectiveness, efficiency, or productivity. It is a
+              juggling act of various demands of study, social life ...
+            </p>
+            <div class="article-stats">
+              <img
+                src="img03/visible-opened-eye-interface-option.png"
+                alt="Likes"
+                class="icon likes"
+              />
+              <span>163</span>
+              <p>|</p>
+              <img
+                src="img03/speech-bubble.png"
+                alt="Comments"
+                class="icon comments"
+              />
+              <span class="cmt">0</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- them cac article khac phia duoi -->
+        <div class="more-articles-button">
+            <a href="#" class="more-articles">MORE ARTICLES</a>
+          </div>
+          
+      </div>
+
+      <aside class="sidebar">
+        <input type="text" id="search" placeholder="Keyword" />
+        <div id="calendar-container">
+          <div id="datepicker"></div>
+        </div>
+        <div class="popular-news">
+          <h3>Popular News</h3>
+          <div class="news-item">
+            <span class="news-date">June 5, 2033</span>
+            <span class="news-title">Scene: The Guide</span>
+          </div>
+          <div class="news-item">
+            <span class="news-date">June 5, 2033</span>
+            <span class="news-title"
+              >Discovering Relatives and Relics in Southern Sweden</span
+            >
+          </div>
+          <div class="news-item">
+            <span class="news-date">May 29, 2033</span>
+            <span class="news-title"
+              >Wileman Home Tour: Exeter History Restored</span
+            >
+          </div>
+          <div class="news-item">
+            <span class="news-date">May 27, 2033</span>
+            <span class="news-title">Spring Seafood Medley</span>
+          </div>
+          <div class="news-item">
+            <span class="news-date">May 19, 2033</span>
+            <span class="news-title">Easter Brunch with a Bite</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $("#datepicker").datepicker({
+          showOtherMonths: true,
+          selectOtherMonths: true,
+        });
+      });
+    </script>
+
+    <footer class="footer">
+      <p>© 2023 Gotham. All rights reserved</p>
+      <div class="footer-links">
+        <a href="#about">About Blog</a>
+        <a href="#help">Need Help?</a>
+        <a href="#content">Content Guide</a>
+      </div>
+      <div class="social-media">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+      </div>
+    </footer>
+  </body>
+</html>
