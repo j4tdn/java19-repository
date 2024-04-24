@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .todo-app {
+    background-color: #e0e0e0;
+    width: 400px; 
+    margin: 50px auto;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .header {
+    background-color: #3f8fd7;
+    color: white;
+    padding: 20px; 
+    text-align: center;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .add-task {
+    display: flex;
+    padding: 15px;
+  }
+  
+  .add-task input {
+    flex: 1;
+    padding: 15px; 
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px; 
+  }
+  
+  .add-button {
+    background-color: #3f8fd7;
+    color: white;
+    padding: 15px 20px; 
+    border: none;
+    border-radius: 4px; 
+    font-size: 18px; 
+    cursor: pointer;
+  }
+  
+  .task-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .task-list li {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 5px; 
+    padding: 20px;
+    border-radius: 4px;
+  }
+  .task-list li:last-child {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 5px; 
+    padding: 20px;
+    border-end-end-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+  .task-list li label {
+    flex: 1;
+    margin-right: 10px; 
+    font-size: 18px; 
+  }
+  
+  .delete-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .delete-button img {
+    width: 24px;
+    height: 24px;
+  }
+  
