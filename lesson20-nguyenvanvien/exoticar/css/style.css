@@ -1,0 +1,138 @@
+.wrapper {
+    height: 60px;
+    background-color: black;
+    position: relative;
+}
+
+.logo {
+	margin-left: 10px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header-nav {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header-nav > ul > li {
+    color: white;
+    text-align: center;
+	float: left;
+	padding-right: 10px;
+}
+
+.banner{
+	position: relative;
+}
+
+.banner > img{
+	width: 100%;
+	scale: calc(100%);
+	height: 20%;
+}
+
+.content{
+	position: absolute;
+	color: white;
+	top: 20%;
+    left: 50%;
+	transform: translateX(-50%);
+}
+
+.content >h1{
+	font-size: 60px;
+	text-align: center;
+}
+
+.content > h3{
+	margin-top: 10px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.content > h3:last-child{
+	position: absolute;
+	transform: translateX(-50%);
+	padding: 10px 0 10px 0;
+	left: 50%;
+	width: 200px;
+	background-color: red;
+}
+
+.container{
+	position: relative;
+	margin-top: -10px;
+	background: #ffffff;
+	background: linear-gradient(95deg, #ffffff 0%,#ffffff 50%,#1b1b1b 50%,#1b1b1b 100%);;
+}
+
+.container p:first-child{
+	font-size: 24px;
+	font-weight: 300;
+}
+
+.container p:nth-child(3){
+	font-size: 20px;
+	font-weight: 300;
+}
+
+.container p:nth-child(n+4){
+	font-size: 16px;
+	font-weight: 300;
+	margin-top: 20px;
+}
+
+.line {
+	margin: 10px 0 10px 0;
+    width: 40px;
+    height: 2px;
+    background-color: red;
+}
+
+
+.sport-car{
+	padding: 30px 40px 30px 40px;
+	width: 40%;
+	display: inline-block;
+}
+.seating-layout{
+	padding: 30px 0px 0px 0px;
+	margin-right: 40px;
+	width: 40%;
+	float: right;
+	top: 0;
+	color: white;
+}
+
+footer{
+	background-color: #1b1b1b;
+}
+
+.footer-container {
+	width: 80%;
+	margin-left: 10%;
+	padding: 20px 0 20px 0;
+	display: inline-block;
+	color: white;
+}
+
+footer ul {
+	width: 25%;
+	float: left;
+    list-style-type: none;
+    padding: 0;
+}
+
+footer li:nth-child(n+2) {
+    margin: 5px 0;
+	color: gray;
+}
+
+footer p {
+    font-weight: bold;
+}
