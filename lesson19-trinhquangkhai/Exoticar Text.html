@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exoticar Text</title>
+	 <link rel="stylesheet"  href="css/all.min.css">
+</head>
+
+<style>
+
+	.navbar {
+    overflow: hidden;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+
+}
+
+	.navbar nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.navbar nav .logo {
+		margin-right: 20px;
+		height: 100%;
+	}
+
+
+	.navbar nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+	.navbar nav ul li {
+    float: right;
+}
+
+	.navbar nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    letter-spacing: 10px;
+    font-size: 15px;
+}
+
+	.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+	.image {
+    width: auto;
+    width: 100%;
+    height: auto;
+}
+
+	.text-overlay,
+	.text-overlay2 {
+    position: absolute;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+	.text-overlay {
+    top: 40%;
+    font-size: 60px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+	.text-overlay2 {
+    top: 45%;
+    font-size: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+	.infor {
+	position: absolute;
+	padding: 15px 20px;
+	background-color: red;
+	font-size: 100%;
+	color: white;
+	border: none;
+	cursor: pointer;
+
+}
+
+	.container2 {
+	display: flex;
+	justify-content: center;
+}
+
+	.text {
+	background: linear-gradient(100deg, white 50%, black 50%);
+	display: flex;
+	/*height: 500px;*/
+	
+
+}
+
+	.left-text,
+	.right-text {
+	
+	height: 100%;
+	width: 50%;
+	padding: 20px;
+	box-sizing: border-box;
+
+}
+
+	.right-text h1 {
+		text-decoration: underline;
+		text-decoration-color: red;
+	}
+
+	.left-text h1 {
+		text-decoration: underline;
+		text-decoration-color: red;
+	}
+
+	.right-text {
+	
+	text-align: left;
+    
+    color: white;
+}
+
+footer {
+    overflow: hidden;
+    background-color: #262626;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+
+}
+
+footer .footer-section ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+footer .footer-section ul li {
+    float: right;
+}
+
+footer .footer-section ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    letter-spacing: 10px;
+    font-size: 15px;
+}
+
+.container_inner {
+	display: flex;
+}
+
+.column1 .column2 .column3 {
+	flex: 1;
+}
+	
+.container3 {
+	position: static;
+	padding: 0;
+	width: 100%;
+}
+
+.four_column_clearfix {
+	width: 100%;
+}
+
+.footer .container_inner {
+	position: relative;
+}
+
+.container_inner {
+	width: 1100px;
+	margin: 0 auto;
+}
+
+.column1, .column2, .column3 {
+	height: 100%;
+}
+
+.four_column_clearfix > .column1,
+.four_column_clearfix > .column2,
+.four_column_clearfix > .column3,
+.four_column_clearfix > .column4 {
+	display: inline-block;
+	width: 25%;
+	float: left;
+	/*background-color: black;*/
+	color: white;
+	font-size: 16px;
+}
+
+.column4 {
+    display: flex;
+    flex-direction: row;
+}
+
+.column4 p {
+	margin: 0;
+}
+
+
+
+
+
+</style>
+<body>
+
+	<header class="navbar">
+		<nav>
+			<img src="images/logo.png" alt="Logo" class="logo">
+		<ul>
+                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#investor">INVESTOR</a></li>
+                <li><a href="#service">SERVICE</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#home">HOME</a></li>
+        </ul>
+		</nav>
+	</header>
+
+	<div class="container">
+		<img class="image" src="images/banner.png">
+		<div class="text-overlay">CREATING THE FUTURE</div>
+		<div class="text-overlay2">Your new experience. Your new friend.</div>
+		<button class="infor">LEARN MORE</button>
+	</div>
+
+	<div class="container2">
+	<div class="text">
+		<div class="left-text">
+		<h1>Sports Car</h1>
+		<h2>What is a sports car? A car may be a sporting automobile without being a sports car.</h2>
+		<p>
+			
+			A sports car, or sportscar, is a small, usually two-seater, two-door automobile designed for spirited performance and nimble handling. The term "sports car" was used in The Times, London in 1919. According to USA's Merriam-Webster dictionary, USA's first known use of the term was in 1928. Sports cars started to become popular during the 1920s. </p>
+
+			<p> Sports cars may be spartan or luxurious, but high maneuverability and light weight are requisite. Sports cars are usually aerodynamically shaped (since the 1950s), and have a low center of gravity compared to standard models. Steering and suspension are typically designed for precise control at high speeds. Traditionally sports cars were open roadsters, but closed coupés also started to become popular during the 1930s, and the distinction between a sports car and a grand tourer is not absolute.
+		</p>
+		</div>
+
+		<div class="right-text">
+		<h1>Seating Layout</h1>
+		<h2>Traditional sports cars were typically two-seat roadsters.</h2>
+		<p>
+			Although the first sports cars were derived from fast tourers, and early sporting regulations often demanded four seats (even three-seaters were often produced by coachbuilders), two seats became common from about the mid-1920s. Modern sports cars may also have small back seats that are often really only suitable for luggage or small children; such a configuration is referred to as a 2+2 (two full seats + two "occasional" seats). </p>
+
+			<p> Over the years, some manufacturers of sports cars have sought to increase the practicality of their vehicles by increasing the seating room. One method is to place the driver's seat in the center of the car, which allows two full-sized passenger seats on each side and slightly behind the driver. The arrangement was originally considered for the Lamborghini Miura, but abandoned as impractical because of the difficulty for the driver to enter/exit the vehicle. McLaren used the design in their F1.
+		</p>
+		</div>
+	</div>
+	
+</div>
+	
+	<footer>
+	<!-- <div class="footer_inner_clearfix"> -->
+			<div class="container3">
+				<div class="container_inner">
+					<div class="four_column_clearfix">
+			
+					<div class="column1">
+			<h2>About</h2>
+				<br>
+				<p>
+					<strong>
+						<a>
+						Privacy Policy
+						</a>
+					</strong>
+				</p>
+				<br>
+				 
+				 <p>
+				 	<strong>
+				 		<a>Terms of Use</a>
+				 	</strong>
+				 </p>
+				<br>
+        		
+        		<p>
+        			<strong>
+        				<a>News</a>
+        			</strong>
+        		</p>
+	        		<br>
+        		
+        		<p>
+        			<strong>
+        				<a>Events</a>
+        			</strong>
+        		</p>
+		</div>
+			
+					<div class="column2">
+				<h2>Get Involved</h2>
+				<div class="textwidget">
+					<p>
+						<strong>
+							<a>Work with Us</a>
+						</strong>
+					</p>
+					<br>
+
+					<p>
+						<strong>
+							<a>Subcribe for Newsletter</a>
+						</strong>
+					</p>
+					<br>
+
+					<p>
+						<strong>
+							<a>Forum</a>
+						</strong>
+					</p>
+				</div>
+			</div>	
+				
+					<div class="column3">
+								<h2>Help Center</h2>
+									<p>
+										<strong>
+											<a>FAQs</a>
+										</strong>
+									</p>
+									<br>
+
+									<p>
+										<strong>
+											<a>Contact Us</a>
+										</strong>
+									</p>
+									<br>
+
+									<p>
+										<strong>
+											<a>How to Start a Challenge</a>
+										</strong>
+									</p>
+								</div>
+
+					<div class="column4">
+								<h2>Social</h2>
+								
+									<p>
+										<strong>
+											<a href="#"><i class="fa-brands fa-facebook"></i></a>
+										</strong>
+									</p>
+									<br>
+
+									<p>
+										<strong>
+											<a href="#"><i class="fa-brands fa-twitter"></i></a>
+										</strong>
+									</p>
+									<br>
+
+									<p>
+										<strong>
+											<a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+										</strong>
+									</p>
+
+								
+								</div>
+							</div>
+						</div>
+					</div>
+	
+	</footer>
+
+
+	
+</body>
+</html>
