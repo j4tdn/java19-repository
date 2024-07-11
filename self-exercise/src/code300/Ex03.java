@@ -21,23 +21,30 @@ public static void main(String[] args) {
 			}
 		}
 		System.out.println("các phần tử chung là: " + longestCommonPrefix(sts));
+		break;
 			}
 		
 	catch(IllegalArgumentException e) {
 		System.out.println(e.getMessage());
 	}
-}}
+}
+ 	}
 public static String longestCommonPrefix(String[] strs) {
 	
-		String result = strs[0];
-	for(int i = 1; i< strs.length; i++) {
-	 if(strs[i].startsWith(result)){
-		result = result.substring(0,strs.length);
-	} if (result.isEmpty()){
-		result = "";
-	}
-	}
-	return result;
-
-}}
+	  if(strs == null || strs.length == 0){
+          return "";
+      }
+      
+      String prefix = strs[0];
+     for (int i = 1; i < strs.length; i++) {
+          while (strs[i].indexOf(prefix) != 0) {
+              prefix = prefix.substring(0, prefix.length() - 1);
+              if (prefix.isEmpty()) {
+                  return "";
+              }
+          }
+      }
+      return prefix;
+}
+}
 

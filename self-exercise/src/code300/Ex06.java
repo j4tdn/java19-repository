@@ -3,6 +3,8 @@ package code300;
 import java.util.Arrays;
 import java.util.Scanner;
 
+import javax.crypto.spec.ChaCha20ParameterSpec;
+
 public class Ex06 {
 public static void main(String[] args) {
 	Scanner ip = new Scanner(System.in);

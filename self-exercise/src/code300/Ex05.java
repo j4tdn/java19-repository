@@ -7,15 +7,14 @@ public class Ex05 {
 public static void main(String[] args) {
 	Scanner ip = new Scanner(System.in);
 	String str = "A man, a plan, a canal: Panama";
-
-	 boolean s = isPalidrome(str);
-	 System.out.println(s);
+	System.out.println(isPalidrome(str));
 	
 //	System.out.println("Nhập chuỗi: ");
 //	String str = ip.nextLine();
 }
 private static boolean isPalidrome(String str) {
-	str = str.replaceAll("[,:\\s]", "").toLowerCase();
+	str = str.replaceAll("[^a-zA-Z0-9\\s]", "").toLowerCase();
+	str = str.replaceAll("[\\s+]", "");
 	System.out.println(str);
 	String s1 = reverseString(str);
 	System.out.println(s1);
