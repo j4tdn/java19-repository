@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" type="images/header.png">
+	<link rel="stylesheet"  href="css/style.css">
+	<title>Ex09 - CSS Position Properties</title>
+	<style>
+		.w2h2 {
+			width: 200px;
+			height: 200px;
+		}
+
+		.circle {
+			border-radius: 50%;
+		}
+
+		.orange {
+			background-color: orange;
+		}
+
+		.green {
+			background-color: green;
+			position: absolute;
+			z-index: 2;
+		}
+
+		.blue {
+			background-color: blue;
+			height: 300px;
+			left: 100px;
+			bottom: 50px;
+			position: relative;
+			z-index: 1;
+		}
+
+		#parent {
+			width: 800px;
+			height: 600px;
+			margin: 0 auto;
+			border: 2px solid red;
+			position: relative;
+		}
+		/*Thuộc tính position
+		  Mặc định: static -> theo workflow của web browser inline, block
+			relative
+			-> khi gần position: relative cho 1 element(mặc định static), có thể di chuyển element sang một vị trí khác (left, right, bottom, top) so với vị trí ban đầu(static)
+			
+			position 
+			-> khi gán position: absolute cho 1 element(mặc định static), có thể di chuyển element đó sang một vị trí khác(left, right, bottom, top) so với vị trí của element cha 
+			nếu element cha có position là relative: thằng con sẽ dịch chuyển so với vị trí của cha 
+
+			nếu element cha có position không phải là relative(không có element cha(cha là body)): thăng con sẽ dịch chuyển so với root element (html top-left corner 0:0)
+		  */
+
+		.score-counter {
+			width: 200px;
+			height: 42px;
+			background-color: lightslategrey;
+			text-align: center;
+			line-height: 42px;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			position: fixed;
+			bottom: 2px;
+			left: calc(50% - 100px);
+			border: 1px dashed;
+		}
+	</style>
+	<body>
+		<h2>Page - Ex09 Position Properties</h2>
+		<hr>
+
+		<!-- <div class="w2h2 orange"></div>
+
+		<div class="w2h2 green"></div>
+
+		<div class="w2h2 blue"></div>
+ -->
+		<hr>
+
+		<div id="parent">
+			<div class="w2h2 orange "></div>
+
+			<div class="w2h2 green "></div>
+
+			<div class="w2h2 blue "></div>
+		</div>
+
+		<div class="score-counter">--- Your Point is 88</div>
+	</body>
+</head>
+</html>

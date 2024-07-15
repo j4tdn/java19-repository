@@ -1,0 +1,122 @@
+
+
+/*
+selector:nth-child(an + b)
+
+selector:nth-of-type(an + b)
+-> tương tự nth-child(), không quan tâm đến các thẻ khác làm thẻ con mà chỉ quan tâm thẻ selector(p, div...)
+
+CSS Selector: Tập các cách để gọi các element, tag của html để thêm Css vào 
+ 			: gọi thông qua tên thẻ, thuộc tính thẻ...
+
+VD1: p {} -> Css cho elements có tên thẻ là p 
+VD2: ul li {} -> Css cho các elements là thẻ li con thẻ ul 
+VD3: table tr:first-child {} -> Css cho thẻ tr đầu tiên trong table 
+
+Nếu như Css selector dựa vào tên thẻ -> có nhiều hạn chế, vì 1 trang có thể dùng rất nhiều thẻ trùng nhau, các thẻ đó là muốn có Css 
+khác nhau -> thêm thuộc tính, giá trị thuộc tính cho thẻ để phân biệt các thẻ khác 
+
+class: các elements có thể có giá trị trùng nhau cho thuộc tính class
+id   : mỗi elements sẽ có id là duy nhất, không trùng nhau 
+
+
+
+*/
+
+:root {
+	--todo-green: LightSeaGreen;
+}
+
+@font-face {
+			font-family: Chantelli;
+			src: url('webfonts/Chantelli_Antiqua.woff') format('woff');
+		}
+
+.block-1 {
+	width: 100px;
+	height: 100px;
+}
+
+h4::after {
+	content: '\2705' !important;
+}
+
+.block-md-2 {
+	width: 200px;
+	height: 200px;
+	border: 2px solid blue;
+}
+
+.block-md-2-blue {
+
+}
+
+.block-33-bg-orange {
+	width: 300px;
+	height: 300px;
+	background: orange;
+}
+
+.block-62-bg-blue {
+	width: 600px;
+	height: 200px;
+	background: blue;
+}
+
+.bg-green {
+	background: var(--todo-green);
+}
+
+.title {
+	color: var(--todo-green);
+	text-transform: copitalize;
+}
+
+.text-green {
+	color: var(--todo-green);
+}
+
+.text-bold {
+	font-weight: 700;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-justify {
+	text-align: justify;
+}
+
+.text-deco-line-through {
+	text-decoration: line-through;
+}
+
+.bg-red {
+	background: red;
+}
+
+.bg-blue {
+	background: blue;
+}
+
+.bg-pink {
+	background: pink;
+}
+
+.bg-orange {
+	background: orange;
+}
+
+.clear-left {
+	clear: left;
+}
+
+.clear-right {
+	clear: right;
+}
+
+.clear-both {
+	clear: both;
+}
+
