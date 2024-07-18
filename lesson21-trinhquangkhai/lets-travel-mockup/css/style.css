@@ -1,0 +1,61 @@
+
+
+.row {
+	*[class ^= col] {
+		height: 120px;
+	}
+
+}
+
+.collaspe {
+	margin: 0 auto;
+}
+
+.ul-c {
+	.nav-item {
+		text-align: center;
+	}
+}
+
+.me-2 {
+	margin-right: .5rem !important;
+}
+
+.form-control {
+	display: block;
+	width: 100%;
+
+}
+
+.nav-link .disabled {
+    color: gray;
+    pointer-events: auto;
+  }
+
+ body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centers elements horizontally */
+    align-items: center;     /* Centers elements vertically */
+}
+
+.boder {
+    display: flex;
+    justify-content: center; /* Centers elements within the container horizontally */
+    align-items: center;     /* Centers elements within the container vertically */
+    gap: 10px;               /* Adds space between the elements */
+}
+
+.footer {
+            position:relative;
+            bottom: 0;
+            width: 100%;
+            background-color: #f8f9fa;
+            padding: 10px 0;
+ }
+.contact-button {
+            position: absolute;
+            bottom: 10px;
+            right: 200px;
+ }
