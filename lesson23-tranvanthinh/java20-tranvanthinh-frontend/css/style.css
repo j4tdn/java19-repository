@@ -1,0 +1,247 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.logo span {
+  font-size: 12px;
+  color: #0051ba;
+}
+
+.search-bar {
+  flex-grow: 1;
+  max-width: 600px;
+  margin: 0 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.nav-menu {
+  background-color: #0051ba;
+  padding: 10px 0;
+}
+
+.nav-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 5px 10px;
+}
+
+.categories-dropdown {
+  display: none;
+}
+
+.all-categories:hover {
+  .categories-dropdown {
+    display: flex;
+  }
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* padding: 20px; */
+}
+
+.hero {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  font-size: 2em;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-bottom: 30px;
+}
+
+.category-item {
+  text-align: center;
+}
+
+.category-item img {
+  width: 100%;
+  height: auto;
+}
+
+.collections {
+  margin: 0 10px;
+  ;
+
+  h2 {
+    font-size: 36px;
+    font-weight: 300;
+    margin: 30px 0;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .collections-grid {
+    .content {
+      display: flex;
+    }
+
+    .collections-content {
+      width: 100%;
+    }
+
+    .decor {
+      margin-right: 30px;
+      flex: 1;
+      background-size: cover;
+      background-image: url('/lesson23-tranvanthinh/java20-tranvanthinh-frontend/images/collection/decor.jpg');
+    }
+
+    .right-side {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .row {
+      display: flex;
+      flex: 1;
+    }
+
+    .row:nth-child(2) {
+      margin-top: 30px;
+    }
+
+    .decor,
+    .kitchen,
+    .bathroom,
+    .sleep {
+      position: relative;
+      flex: 1;
+    }
+
+    .kitchen,
+    .bathroom {
+      height: 200px;
+      background-size: cover;
+    }
+
+    .kitchen {
+      margin-right: 30px;
+      background-image: url('/lesson23-tranvanthinh/java20-tranvanthinh-frontend/images/collection/banan.jpg');
+    }
+
+    .bathroom {
+      background-image: url('/lesson23-tranvanthinh/java20-tranvanthinh-frontend/images/collection/phongtam.jpg');
+    }
+
+    .sleep {
+      flex: 1;
+      height: 200px;
+      background-size: cover;
+      background-image: url('/lesson23-tranvanthinh/java20-tranvanthinh-frontend/images/collection/phongngu.jpg');
+    }
+
+    .text-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #ffffff;
+      background-color: #000000;
+      padding: 5px 10px;
+      opacity: 0.7;
+    }
+  }
+}
+
+.products {
+  h2 {
+    font-size: 36px;
+    font-weight: 300;
+    margin: 30px 0px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .product-category {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+  }
+
+  .product-category div {
+    flex: 0 1 auto;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid gray;
+    padding: 10px;
+  }
+
+  .product-category div:hover {
+    background-color: #ffd740;
+    color: white;
+  }
+
+  .product-items {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+
+  .product-item {
+    text-align: center;
+    width: 200px;
+  }
+
+  .product-item img {
+    width: 100%;
+    height: auto;
+  }
+}

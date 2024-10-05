@@ -1,0 +1,132 @@
+.body{
+	font-family: sans-serif;
+}
+
+.site-header{
+	background: #fff;
+	height: 111px;
+}
+
+.section-center{
+	padding-top: 19px;
+	padding-bottom: 14px;
+}
+
+.wrapper{
+	display: flex;
+	text-align: center;
+	justify-content: between;
+}
+
+.img {
+    width: 60%;
+    height: 100%;
+    margin-left: 42%;
+}
+
+
+.input-group{
+	display: block;
+}
+
+.search-header {
+	height: 45px;
+	width: 44%;
+	padding-left: 13%;
+}
+
+.input{	
+	width: 100%;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	height: 40px;
+	color: #000;
+}
+
+.search-container {
+    position: relative; /* Make the container relative for absolute positioning of the button */
+    display: flex; /* Flexbox layout to align items */
+}
+
+.input {
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    height: 40px;
+    padding-right: 40px; /* Add padding to the right to avoid text overlap with the button */
+}
+
+.search-btn {
+    position: absolute;
+    right: 10px; 
+    top: 50%;
+    transform: translateY(-50%); 
+    background: none;
+    border: none; 
+    color: #000; 
+    cursor: pointer; 
+}
+
+
+
+
+
+.nav-center{
+	background: #0051ba;
+	height: 32px;
+}
+
+.nav-center .site-nav {
+    font-size: 16px;
+    cursor: default;
+    display: flex;
+    margin-left: 6%;
+    justify-content: flex-start;
+}
+
+.nav-center .site-nav > li{
+	padding:5px 10px;
+	list-style: none;
+	border-right: 1px solid #bdb8b8;
+}
+
+.nav-center .site-nav > li:hover {
+	background-color: #003b87;
+	color: #fff;
+}
+
+.nav-center .site-nav > li > a{
+	text-decoration: none;
+	white-space: nowrap;
+	font-weight: 700;
+	font-size: 16px;
+	color: #fff;
+	font-size: 12px;
+	padding-right: 10px;
+}
+
+
+
+.department{
+	border-bottom: 1pix solid #eee;
+	display: block;
+	margin-top:40px;
+	margin-bottom: 10px;
+	padding: 50px;
+}
+.department > .row > div > ul > li {
+	margin-bottom: 5px;
+} 
+
+.department > .row > div > ul > li > a {
+	text-decoration: none;
+	color: #333;
+	font-size: 12px;
+	line-height: 18px;
+	letter-spacing: 0;
+} 
+.col{
+	font-size:12px;color: #333;
+	font-weight: bold;letter-spacing:0px;
+	line-height: 18px;
+}
