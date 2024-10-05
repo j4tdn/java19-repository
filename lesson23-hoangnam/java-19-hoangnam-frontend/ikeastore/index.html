@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IKEA Store</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="header-container"></div>
+
+    <div id="navbar-container"></div>
+
+    <div class="ads-image-section">
+      <div class="ads-image-row">
+        <div class="ads-image-large">
+          <img src="./images/image_slider2.webp" alt="Hình ảnh phòng khách" />
+        </div>
+      </div>
+
+      <div class="ads-image-row">
+        <div class="ads-image-small">
+          <img
+            src="./images/custom_banner_1_image.webp"
+            alt="Hình ảnh đồ bếp"
+          />
+        </div>
+        <div class="ads-image-small">
+          <img
+            src="./images/custom_banner_2_image.webp"
+            alt="Hình ảnh đồ trang trí"
+          />
+        </div>
+        <div class="ads-image-small">
+          <img
+            src="./images/custom_banner_3_image.webp"
+            alt="Hình ảnh đồ gia dụng"
+          />
+        </div>
+      </div>
+    </div>
+
+    <section class="product-section">
+      <h2 class="text-center">SẢN PHẨM</h2>
+      <div class="product-tabs text-center">
+        <button class="product-tab active" data-target="banchay">
+          Sản phẩm bán chạy
+        </button>
+        <button class="product-tab" data-target="moi">Sản phẩm mới</button>
+        <button class="product-tab" data-target="khuyenmai">
+          Sản phẩm khuyến mãi
+        </button>
+      </div>
+
+      <div class="product-content">
+        <div id="banchay" class="product-list active">
+          <div class="product-item">
+            <div class="sold-out-label">Hết Hàng</div>
+            <img src="images/product1.jpg" alt="Bàn chải sơn màu Ikea Mala" />
+            <p class="product-title">Bàn chải sơn màu Ikea Mala</p>
+            <span class="product-code">901.933.20</span>
+            <strong>118,000₫</strong>
+          </div>
+          <div class="product-item">
+            <img src="images/product2.jpg" alt="Bộ 3 móc treo KUNGSFORS" />
+            <p class="product-title">Bộ 3 móc treo KUNGSFORS</p>
+            <span class="product-code">bằng thép không gỉ</span>
+            <strong>145,000₫</strong>
+          </div>
+          <div class="product-item">
+            <img
+              src="images/product3.jpg"
+              alt="Bộ lọ hoa GRADVIS màu xanh hồng"
+            />
+            <p class="product-title">Bộ lọ hoa GRADVIS</p>
+            <span class="product-code">màu xanh hồng</span>
+            <strong>359,000₫</strong>
+          </div>
+          <div class="product-item">
+            <img
+              src="images/product4.jpg"
+              alt="Cây lăn bụi quần áo ikea BASTIS"
+            />
+            <p class="product-title">Cây lăn bụi quần áo ikea BASTIS</p>
+            <span class="product-code"></span>
+            <strong>55,000₫</strong>
+          </div>
+        </div>
+
+        <div id="moi" class="product-list"></div>
+
+        <div id="khuyenmai" class="product-list"></div>
+      </div>
+    </section>
+    <div class="collection-section">
+      <div class="collection-banner">
+        <div class="collection-image">
+          <img
+            src="./images/banner_1_imagev2.webp"
+            alt="Bộ Sưu Tập Đồ Bếp 2017"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="feature-section">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-4 col-sm-12 feature-box">
+            <div class="feature-icon" style="background-color: #f7d65a">
+              <i class="fas fa-paper-plane"></i>
+            </div>
+            <div class="feature-text">
+              <h5 class="feature-title">Giao hàng COD toàn quốc</h5>
+              <p class="feature-subtitle">Giao hàng 24/7</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12 feature-box">
+            <div class="feature-icon" style="background-color: #7ac643">
+              <i class="fas fa-box"></i>
+            </div>
+            <div class="feature-text">
+              <h5 class="feature-title">Hàng chính hãng 100%</h5>
+              <p class="feature-subtitle">Phát hiện hàng giả đền gấp 10</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12 feature-box">
+            <div class="feature-icon" style="background-color: #a68fdd">
+              <i class="fas fa-hand-peace"></i>
+            </div>
+            <div class="feature-text">
+              <h5 class="feature-title">Mua hàng online tiện lợi</h5>
+              <p class="feature-subtitle">Nhận hàng trước trả tiền sau</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-section">
+      <div class="container">
+        <h2 class="section-title">TIN TỨC</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-5 col-sm-6 news-box">
+            <div class="news-image">
+              <img
+                src="./images/untitled-2_3a504052e1184f38aa8ea7f234389b7f.jpg"
+                alt="Thảm phòng khách phong cách châu Âu"
+              />
+            </div>
+            <div class="news-content">
+              <h5 class="news-title">THẢM PHÒNG KHÁCH PHONG CÁCH CHÂU ÂU</h5>
+              <p class="news-description">
+                Thảm phòng khách phong cách châu Âu thường được dùng để tạo điểm
+                nhấn cho phòng khách...
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-5 col-sm-6 news-box">
+            <div class="news-image">
+              <img
+                src="./images/untitled-2_3a504052e1184f38aa8ea7f234389b7f.jpg"
+                alt="Thiết kế phòng ngủ mới mẻ"
+              />
+            </div>
+            <div class="news-content">
+              <h5 class="news-title">THIẾT KẾ PHÒNG NGỦ MỚI MẺ</h5>
+              <p class="news-description">
+                Trong kiến trúc của một ngôi nhà, thiết kế phòng ngủ mang lại sự
+                thoải mái và thư giãn...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonials-section">
+      <div class="testimonial active">
+        <div class="testimonial-img">
+          <img src="./images/testimonial_img_2 (1).jpg" alt="Hoang Anh" />
+        </div>
+        <div class="testimonial-content">
+          <p>
+            "Tôi rất vui vì trở thành khách hàng thân thiết của IKEA. Sản phẩm ở
+            đây khiến tôi rất thích."
+          </p>
+          <h4>Hoàng Anh</h4>
+          <span>CEO</span>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="testimonial-img">
+          <img src="./images/testimonial_img_1.webp" alt="Lan Huong" />
+        </div>
+        <div class="testimonial-content">
+          <p>
+            "Các dụng cụ làm bếp của IKEA luôn giúp tôi nấu ăn một cách nhanh
+            chóng. Tôi thực sự thích thú và hài lòng với tất cả các sản phẩm
+            này."
+          </p>
+          <h4>Chị Lan Hương</h4>
+          <span>Nhân Viên</span>
+        </div>
+      </div>
+
+      <div class="dots-wrapper">
+        <span class="dot active" onclick="currentTestimonial(1)"></span>
+        <span class="dot" onclick="currentTestimonial(2)"></span>
+      </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <div class="phone-icon-wrapper">
+      <div class="phone-icon">
+        <i class="fas fa-phone-alt"></i>
+        <div class="phone-info">Gọi ngay: 0973464543</div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
