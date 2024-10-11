@@ -1,0 +1,19 @@
+Phần 1: Database(30)
++ Câu 1: 5
++ Câu 2: 6
++ Câu 3: 6
++ Câu 4: 6
++ Câu 5: 6
+--> 29
+
+Phần 2: Java(20)
++ 15
+
+Phần 3: FrontEnd(50đ)
++ Header: x
++ Slider:
++ Bộ sưu tập:
++ Sản phẩm:
++ Tin tức:
++ Footer: x
+--> Hmm, Trình làm FE chưa tốt lắm em nghen, chỉ mới được sơ sơ Footer và Header

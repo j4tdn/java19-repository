@@ -22,3 +22,5 @@ WHERE (SELECT COUNT(*)
        ) AS B
        WHERE B.Thang = A.Thang AND B.TongSoLuong >= A.TongSoLuong) <= 2
 ORDER BY A.Thang, A.TongSoLuong DESC;
+
+--> 6đ

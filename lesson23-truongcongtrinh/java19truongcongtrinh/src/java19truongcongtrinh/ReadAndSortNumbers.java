@@ -36,6 +36,10 @@ public class ReadAndSortNumbers {
                 return;
             }
 
+            // Code phía trên hơi dài chưa tốt lắm
+            // E suy nghĩ xem đọc file còn các nào ngắn hơn không vì có hàm xử lý rồi
+            // gợi ý class file
+
             Pattern pattern = Pattern.compile("\\d+");
 
             for (String str : inputStrings) {
@@ -46,6 +50,7 @@ public class ReadAndSortNumbers {
                     numbers.add(number);
                 }
             }
+            // ok nhưng e có thể dùng stream sau đó map/flatMap qua code sẽ gọn hơn
 
             Collections.sort(numbers);
 

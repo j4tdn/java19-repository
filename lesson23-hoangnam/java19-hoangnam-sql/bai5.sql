@@ -1,3 +1,5 @@
 SELECT * 
 FROM PHONG 
 WHERE MaPhong LIKE 'VIP%';
+
+--> 6đ

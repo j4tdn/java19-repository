@@ -15,13 +15,16 @@ public class NumberExtractor {
             int length = line.length();
             String tempNumber = "";
 
+            // cách xử lý chưa hay, còn dài
             for (int j = 0; j < length; j++) {
                 char currentChar = line.charAt(j);
 
                 if (Character.isDigit(currentChar)) {
+                    // khi cộng chuỗi trong vòng lặp nhiều chuỗi, nên sử dụng StringBuilder hoặc StringBuffer nếu bài toán
+                    // đa luồng
                     tempNumber += currentChar;
                 } else {
-                    if (!tempNumber.equals("")) {
+                    if (!tempNumber.equals("")) { // thay thế bằng isEmpty
                         numbers.add(Integer.parseInt(tempNumber));
                         tempNumber = "";
                     }

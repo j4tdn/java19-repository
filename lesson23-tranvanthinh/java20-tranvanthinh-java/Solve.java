@@ -8,9 +8,9 @@ public class Solve {
         try {
             List<Integer> numbersList = Files.lines(Paths.get("D:\\BecomeJavaDev\\java19\\5. Frontend\\lesson23-tranvanthinh\\java\\input.txt"))
                     .skip(1) 
-                    .flatMap(line -> extractNumbers(line))
+                    .flatMap(Solve::extractNumbers)
                     .sorted()
-                    .collect(Collectors.toList());
+                    .toList();
 
             Files.write(Paths.get("D:\\BecomeJavaDev\\java19\\5. Frontend\\lesson23-tranvanthinh\\java\\output.txt"), 
                          numbersList.stream()
